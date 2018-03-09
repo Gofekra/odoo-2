@@ -1,0 +1,10 @@
+<templates xml:space="import_data_by_fields">
+
+    <t t-extend="ImportView">
+        <t t-jquery="label[for=oe_import_advanced_mode]" t-operation="after">
+            <input style='margin-left:20px' type="checkbox" class="oe_import_by_number" id="oe_import_by_number"/>
+            <label for="oe_import_by_number">更新数据</label>
+        </t>
+    </t>
+
+</templates>

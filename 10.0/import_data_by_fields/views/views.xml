@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="zx_base_import_list" model="ir.ui.view">
+            <field name="name">zx_base_import_list</field>
+            <field name="model">zx.base.import</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="fields"/>
+                </tree>
+            </field>
+        </record>
+        <record id="zx_base_import_form" model="ir.ui.view">
+            <field name="name">zx_base_import_form</field>
+            <field name="model">zx.base.import</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="fields" domain="[('model_id','=',context.get('name'))]"
+                                   widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="zx_base_import_search" model="ir.ui.view">
+            <field name="name">zx_base_import_search</field>
+            <field name="model">zx.base.import</field>
+            <field name="arch" type="xml">
+                <search string="">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+        <record id="zx_base_import_action" model="ir.actions.act_window">
+            <field name="name">导入设置</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">zx.base.import</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    请创建导入数据时，需要约束的模型以及唯一性指定字段
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="zx_base_import_menu" name="导入设置" parent="base.menu_administration"
+                  action="zx_base_import_action" sequence="5"/>
+    </data>
+</odoo>

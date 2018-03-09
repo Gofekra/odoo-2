@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+        <record id="login_error_times" model="ir.config_parameter">
+            <field name="key">auth_time_limit.login_error_times</field>
+            <field name="value">9</field>
+        </record>
+    </data>
+</odoo>
