@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="sms_config" model="ir.ui.view">
+            <field name="name">sms_config</field>
+            <field name="model">sms.config.settings</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Configure" class="oe_form_configuration" version="7.0">
+                    <header>
+                        <button string="应用" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="取消" type="object" name="cancel" class="oe_link"/>
+                    </header>
+
+                    <separator string="253配置"/>
+                    <group>
+                        <field name="account" class="oe_inline"/>
+                        <field name="password" class="oe_inline"/>
+                        <field name="host_sign" class="oe_inline"/>
+                        <field name="host_marketing" class="oe_inline"/>
+                        <field name="sms_heard" class="oe_inline"/>
+                    </group>
+
+
+                </form>
+            </field>
+        </record>
+        <record id="sms_config_settings_action" model="ir.actions.act_window">
+            <field name="name">253配置</field>
+            <field name="res_model">sms.config.settings</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem action="sms_config_settings_action" id="sms_config_settings_menuitem"
+                  name="sms配置" parent="ct_marketing_message.comm_function_message"/>
+
+    </data>
+</openerp>

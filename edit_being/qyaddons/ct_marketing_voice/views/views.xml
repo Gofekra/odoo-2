@@ -1,0 +1,232 @@
+<odoo>
+  <data>
+
+     <record model="ir.ui.view" id="dudu_voice_line_tree">
+      <field name="name">dudu_voice_line_tree</field>
+      <field name="model">dudu.voice.line</field>
+      <field name="arch" type="xml">
+        <tree create="0">
+           <field name="customer_id"/>
+            <field name="digits"/>
+            <field name="send"/>
+            <field name="replied"/>
+            <field name="failed"/>
+            <field name="voice_check"/>
+            <field name="session_id"/>
+            <field name="voice_id"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="dudu_voice_tree">
+      <field name="name">dudu_voice_tree</field>
+      <field name="model">dudu.voice</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="send_date"/>
+            <field name="send_type"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="dudu_voice_form"   model="ir.ui.view" >
+      <field name="name">dudu_voice_form</field>
+      <field name="model">dudu.voice</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+              <button name="send_voice" string="发送" type="object" states="draft"/>
+               <button name="draft_send_voice" string="再次发送" type="object" states="canel"/>
+               <button name="canel_send_voice" string="取消发送" type="object" states="send"/>
+               <button name="search_send_voice" string="查询发送结果" type="object" states="send"/>
+              <field name="state" widget="statusbar" statusbar_visible="draft,loading,send,canel" />
+          </header>
+           <sheet>
+            <div class="oe_button_box" name="button_box">
+                <button name="search_send" class="oe_stat_button" type="object">
+                    <field name="send" string="已发送" widget="percentpie"/>
+                </button>
+                <button name="search_replied" class="oe_stat_button"
+                     attrs="{'invisible': [('send_type', 'not in', 'voice_survey')]}"  type="object">
+                    <field name="replied" string="已回复" widget="percentpie"/>
+                </button>
+                <button name="search_failed" class="oe_stat_button" type="object">
+                    <field name="failed" string="已失败" widget="percentpie"/>
+                </button>
+            </div>
+          <group>
+              <group>
+                  <field name="name" attrs="{'readonly':[('state','in',['loading','send'])]}"/>
+                   <field name="context" attrs="{'readonly':[('state','in',['loading','send'])]}"/>
+                  <field name="context_rel" attrs="{'readonly':[('state','in',['loading','send'])]}"/>
+
+
+              </group>
+            <group>
+                <field name="send_date" attrs="{'readonly':[('state','in',['loading','send'])]}"/>
+                 <field name="send_type" widget="radio" attrs="{'readonly':[('state','in',['loading','send'])]}"/>
+                <field name="batch_number" readonly="1" />
+
+            </group>
+
+          </group>
+
+          <notebook>
+             <page string="发送对象">
+                <group attrs="{'readonly':[('state','in',['loading','send'])]}">
+                    <field name="subject" widget="radio" options="{'horizontal': true}" attrs="{'readonly':[('state','in',['loading','send'])]}"/>
+                    <field name="category_id" widget="many2many_tags"  attrs="{'required': [('subject','in','lead')],'invisible': [('subject', 'not in', 'lead')],'readonly':[('state','in',['loading','send'])]}"/>
+                    </group>
+                   <field name="partner_id" attrs="{'readonly':[('state','in',['loading','send'])]}">
+                     <tree>
+                        <field name="name"/>
+                        <field name="mobile"/>
+                       <field name="phone"/>
+                     </tree>
+               </field>
+            </page>
+          </notebook>
+           </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+        <record id='dudu_voice_model_view_search' model='ir.ui.view'>
+            <field name="name">dudu_voice_model_view_search</field>
+            <field name="model">dudu.voice</field>
+            <field name="arch" type="xml">
+                <search string="Vehicles costs" >
+                    <field name="send_type" />
+                    <field name="state" />
+                     <filter string="草稿" name="state" domain="[('state','=','draft')]"/>
+                    <filter string="已发送" name="state" domain="[('state','=','send')]"/>
+                    <group expand="1" string="Group By">
+                        <filter name="groupby_brand" context="{'group_by' : 'send_type'}" string="发送类型"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+
+    <record model="ir.actions.act_window" id="dudu_voice_action">
+      <field name="name">语音</field>
+      <field name="res_model">dudu.voice</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+    <record model="ir.ui.view" id="template_voice_tree">
+      <field name="name">template_voice_tree</field>
+      <field name="model">template.voice</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="context"/>
+          <field name="voice"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="template_voice_form"   model="ir.ui.view" >
+      <field name="name">template_voice_form</field>
+      <field name="model">template.voice</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+              <button name="change_voice" string="转换" type="object" states="draft"/>
+              <field name="state" widget="statusbar" statusbar_visible="draft,complte" />
+          </header>
+           <sheet>
+          <group>
+              <group>
+                <field name="name"/>
+                <field name="context"/>
+                <field name="voice_name" invisible="1"/>
+                <field name="voice" string="语音" filename="voice_name"/>
+                  <field name="voice_url"/>
+
+                <div>
+                     <field name="url" widget="voice_audio" attrs="{'invisible':[('state','=','draft')]}" />
+                </div>
+              </group>
+          </group>
+             <notebook>
+               <page string="上传信息">
+                 <group>
+                    <field name="mediaName" readonly="1"/>
+                     <field name="voice_file" readonly="1"/>
+                 </group>
+               </page>
+             </notebook>
+           </sheet>
+        </form>
+      </field>
+    </record>
+
+
+       <record id="server_audio_voice_wizard" model="ir.actions.server">
+          <field name="name">上传语音</field>
+          <field name="model_id" ref="model_template_voice"/>
+          <field name="state">code</field>
+          <field name="code">
+          for r in records:
+              r.commit_audio()
+          </field>
+      </record>
+
+          <record id="ir_server_audio_voice_wizard" model="ir.values">
+              <field eval="'client_action_multi'" name="key2"/>
+              <field eval="'template.voice'" name="model"/>
+              <field name="name">上传语音</field>
+              <field eval="'ir.actions.server,%d'%server_audio_voice_wizard" name="value"/>
+         </record>
+
+
+
+       <record id="server_message_voice_wizard" model="ir.actions.server">
+          <field name="name">上传文字</field>
+          <field name="model_id" ref="model_template_voice"/>
+          <field name="state">code</field>
+          <field name="code">
+          for r in records:
+              r.commit_message()
+          </field>
+      </record>
+
+          <record id="ir_server_message_voice_wizard" model="ir.values">
+              <field eval="'client_action_multi'" name="key2"/>
+              <field eval="'template.voice'" name="model"/>
+              <field name="name">上传文字</field>
+              <field eval="'ir.actions.server,%d'%server_message_voice_wizard" name="value"/>
+         </record>
+
+
+    <record model="ir.actions.act_window" id="template_voice_action">
+      <field name="name">语音模板</field>
+      <field name="res_model">template.voice</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <menuitem name="语音" id="voice_dudu"/>
+    <menuitem name="语音" id="comm_function" parent="voice_dudu"/>
+    <menuitem name="语音群发" id="short_voice" parent="comm_function"
+              action="dudu_voice_action"/>
+    <menuitem name="语音模板" id="template_voice" parent="comm_function"
+              action="template_voice_action"/>
+  </data>
+</odoo>

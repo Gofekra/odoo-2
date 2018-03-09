@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+         <template id="assets_voice_slide" name="web_slide_voice assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/ct_marketing_voice/static/css/slide.css"/>
+                <script type="text/javascript" src="/ct_marketing_voice/static/js/lib/jquery.easyaudioeffects.1.0.0.min.js"/>
+                <script type="text/javascript" src="/ct_marketing_voice/static/js/voice_audio.js"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

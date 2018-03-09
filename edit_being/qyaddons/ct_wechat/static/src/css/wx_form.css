@@ -1,0 +1,33 @@
+.wrapper .vercode_form_group > .input-group{
+    margin: 24px auto;
+}
+.wrapper .vercode_form_group > .input-group > span.input-group-addon{
+    background-color: transparent;
+    border:none;
+}
+.wrapper .vercode_form_group > .input-group > .form-control{
+	height: 48px;
+	box-shadow: none;
+	border-left-width: 0;
+	border-right-width: 0;
+	border-top-width: 0;
+	outline: none;
+}
+.wrapper .vercode_form_group > .input-group > div.input-group-addon
+{
+	background-color:transparent;
+	border:none;
+	padding: 0;
+	padding-left: 12px;
+}
+.wrapper .vercode_form_group > .input-group > div.input-group-addon > .btn{
+	background-color: #eee;
+    border-color: transparent;
+    padding: 12px 16px;
+}
+.wrapper .vercode_form_group > .form-group{
+	margin: 0;
+}
+.wrapper .vercode_form_group > .field-clause{
+    margin-top: 10px;
+}

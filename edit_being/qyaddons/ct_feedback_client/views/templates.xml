@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <template id="assets_backend" name="feedback assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/css" href="/ct_feedback_client/static/src/css/bootstrap-table.css"/>
+                <link rel="stylesheet" type="text/css" href="/ct_feedback_client/static/src/css/wangEditor.min.css"/>
+                <link rel="stylesheet" href="/ct_feedback_client/static/src/css/feedback.css"/>
+                <script type="text/javascript" src="/ct_feedback_client/static/src/js/feedback.js"/>
+                <script type="text/javascript" src="/ct_feedback_client/static/src/js/feedback_client.js"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

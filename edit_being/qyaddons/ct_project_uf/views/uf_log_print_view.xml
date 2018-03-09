@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+    <!--
+         <template id="assets_backend" name="cotong_project_uf assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/cotong_project_uf/static/src/css/my.css"/>
+                <script type="text/JavaScript" src="/cotong_project_uf/static/src/js/myjs.js"></script>
+            </xpath>
+        </template>
+
+        <record id="action_mybtn" model="ir.actions.client">
+            <field name="name">action_mybtn</field>
+            <field name="tag">mytest</field>
+        </record>
+
+        <record id="action_myurl" model="ir.actions.act_url">
+            <field name="name">action_myurl</field>
+            <field name="target">self</field>
+            <field name="url">http://www.sina.com</field>
+        </record>
+   -->
+    <record id="view_form_uf_log_print" model="ir.ui.view">
+      <field name="name">UfLogPrint Form</field>
+      <field name="model">uf.log.print</field>
+      <field name="arch" type="xml">
+        <form string="UfLogPrint">
+          <header>
+            <button name="do_print" type="object" string="打印" class="oe_highlight"/>
+            <button name="do_preview" type="object" string="预览" class="oe_highlight"/>
+          </header>
+          <sheet>
+            <group string="实施工作日志">
+              <group>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="task_id"/>
+                <field name="user_id"/>
+              </group>
+              <group>
+                <field name="impldate"/>
+                <field name="print_date"/>
+                <field name="arrive"/>
+                <field name="leave"/>
+              </group>
+            </group>
+            <field name="line_ids">
+              <tree string="Task Log" editable="bottom">
+                <field name="name"/>
+                <field name="begin_date"/>
+                <field name="end_date"/>
+              </tree>
+            </field>
+            <field name="note" placeholder="备注"/>
+          </sheet>
+        </form>
+
+      </field>
+    </record>
+
+    <record id="view_tree_uf_log_print" model="ir.ui.view">
+      <field name="name">UfLogPrint Tree</field>
+      <field name="model">uf.log.print</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="project_id"/>
+          <field name="user_id"/>
+          <!-- <field name="company_id"/>-->
+          <field name="print_date"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_filter_uf_log_print" model="ir.ui.view">
+      <field name="name">UfLogPrint Filter</field>
+      <field name="model">uf.log.print</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <group expand="0" string="Group By">
+            <filter string="日期" domain="[]" context="{'group_by':'print_date'}"/>
+            <filter string="人员" domain="[]" context="{'group_by':'user_id'}"/>
+            <filter string="项目" domain="[]" context="{'group_by':'project_id'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <!-- Action to open uf_log_print list -->
+    <act_window id="action_uf_log_print"
+                name="客户日志"
+                res_model="uf.log.print"
+                view_mode="tree,form"/>
+
+    <!-- Menu item to open uf_log_print -->
+    <!--<menuitem id='menu_cotong_project_uf' name='CotongProjectUf' sequence="10" groups="group_cotong_project_uf_user"/>
+    <menuitem id="menu_cotong_project_uf_grp1" name="CotongProjectUf" parent="menu_cotong_project_uf"  sequence="10" />
+    -->
+    <menuitem id="menu_cotong_project_uf_uf_log_print"
+              name="盖章工作日志"
+              parent="menu_ct_project_uf_grp1"
+              sequence="15"
+              action="action_uf_log_print"/>
+  </data>
+  <menuitem action="action_uf_log_print" id="menu_action_view_logprint" parent="project.menu_project_management" sequence="51"/>
+
+</openerp>

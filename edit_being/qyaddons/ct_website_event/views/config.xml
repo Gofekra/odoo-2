@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="ct_website_event" name="Cotong Website Less"
+                  inherit_id="website.assets_frontend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/ct_website_event/static/src/js/website_localization.js"/>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>

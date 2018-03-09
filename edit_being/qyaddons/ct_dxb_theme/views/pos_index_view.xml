@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <template id="assets_backend" name="pos_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+           <link rel="stylesheet" href="/ct_dxb_theme/static/src/less/bootstrap-datepicker3.less"/>
+            <link rel="stylesheet" href="/ct_dxb_theme/static/src/less/web.less"/>
+            <link rel="stylesheet" href="/ct_dxb_theme/static/src/less/pos.less"/>
+            <script type="text/javascript" src="/ct_dxb_theme/static/src/js/views/form_view.js"/>
+            <script type="text/javascript" src="/ct_dxb_theme/static/src/js/app_window_title.js"/>
+            <script type="text/javascript" src="/ct_dxb_theme/static/src/js/web_client.js"/>
+            <script type="text/javascript" src="/ct_dxb_theme/static/src/js/pos.js"/>
+            <script type="text/javascript" src="/ct_dxb_theme/static/src/js/control_panel.js"/>
+            <script type="text/javascript" src="/ct_dxb_theme/static/src/js/menu.js"/>
+        </xpath>
+    </template>
+
+    <record id="action_home_page" model="ir.actions.client">
+        <field name="name">首页</field>
+        <field name="tag">pos_today.index</field>
+    </record>
+
+    <record id="action_home_page_today" model="ir.actions.client">
+        <field name="name">今天</field>
+        <field name="tag">pos_today.index</field>
+    </record>
+
+    <record id="action_home_page_Yesterday" model="ir.actions.client">
+        <field name="name">昨天</field>
+        <field name="tag">pos_Yesterday.index</field>
+    </record>
+
+    <record id="action_home_page_This_week" model="ir.actions.client">
+        <field name="name">本周</field>
+        <field name="tag">pos_This_week.index</field>
+    </record>
+
+    <record id="action_home_page_This_month" model="ir.actions.client">
+        <field name="name">本月</field>
+        <field name="tag">pos_This_month.index</field>
+    </record>
+
+    <menuitem id="pos_index_menu" name="首页" parent="point_of_sale.menu_point_root" sequence="-1" action="action_home_page"/>
+    
+    <menuitem id="pos_index_today_menu" name="今天" parent="ct_dxb_theme.pos_index_menu" sequence="1" action="action_home_page_today"/>
+
+    <menuitem id="pos_index_Yesterday_menu" name="昨天" parent="ct_dxb_theme.pos_index_menu" sequence="2" action="action_home_page_Yesterday"/>
+
+    <menuitem id="pos_index_This_week_menu" name="本周" parent="ct_dxb_theme.pos_index_menu" sequence="3" action="action_home_page_This_week"/>
+
+    <menuitem id="pos_index_This_month_menu" name="本月" parent="ct_dxb_theme.pos_index_menu" sequence="4" action="action_home_page_This_month"/>
+
+
+</data>
+</odoo>

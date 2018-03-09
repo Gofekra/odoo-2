@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+<!-- 	<t t-extend="OrderSelectorWidget">
+		<t t-jquery=".orders.touch-scrollable" t-operation="before">
+			<span class="slidebar slidebar-left" onclick="$('body').addClass('st-menu-open')">
+				<i class="fa fa-fw fa-angle-double-left"></i>
+			</span>
+		</t>
+	</t>
+	<t t-extend="Chrome">
+		<t t-jquery=".pos-logo" t-operation="before">
+			<div class="slidebar slidebar-right" onclick="$('body.st-menu-open').removeClass('st-menu-open');">
+				<i class="fa fa-fw fa-angle-double-right"></i>
+			</div>
+		</t>
+	</t> -->
+</templates>

@@ -1,0 +1,12 @@
+.TDrag{
+    position: relative;
+    top:0;
+    z-index: 99;
+    cursor: move;
+}
+thead tr th.TDrag{
+  background-color:#d6d6d3;
+}
+tbody tr td.TDrag{
+    background-color: rgba(0,0,0,.2);
+}

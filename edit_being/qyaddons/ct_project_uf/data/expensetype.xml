@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+       <record id="my_mgr_expense" model="account.account">
+            <field name="code">5502</field>
+            <field name="name">管理费用</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+       <record id="my_mgr_person_expense" model="account.account">
+            <field name="code">550201</field>
+            <field name="name">人员费用</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+       <record id="my_mgr_person_fl_expense" model="account.account">
+            <field name="code">55020105</field>
+            <field name="name">员工福利</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+        <record id="my_mgr_daily_expense" model="account.account">
+            <field name="code">550202</field>
+            <field name="name">日常费用</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+        <record id="my_mgr_special_expense" model="account.account">
+            <field name="code">550203</field>
+            <field name="name">专项费用</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+        <record id="my_mgr_pub_expense" model="account.account">
+            <field name="code">550204</field>
+            <field name="name">公用费用</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+        <record id="my_mgr_pub_offic_expense" model="account.account">
+            <field name="code">55020401</field>
+            <field name="name">办公费用</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+        <record id="my_mgr_pub_entertain_expense" model="account.account">
+            <field name="code">55020402</field>
+            <field name="name">招待费</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+        <record id="my_mgr_pub_traval_expense" model="account.account">
+            <field name="code">55020403</field>
+            <field name="name">交通费</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+        <record id="my_mgr_pub_hotel_expense" model="account.account">
+            <field name="code">55020405</field>
+            <field name="name">差旅费</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+        <!--<record id="my_mgr_pub_rent_expense" model="account.account">-->
+            <!--<field name="code">55020406</field>-->
+            <!--<field name="name">房租</field>-->
+            <!--<field name="user_type_id" ref="account.data_account_type_expenses"/>-->
+        <!--</record>-->
+
+        <record id="my_mgr_pub_propertyfee_expense" model="account.account">
+            <field name="code">55020406</field>
+            <field name="name">物业费</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+        </record>
+
+        <record id="bus_travel" model="product.product">
+            <field name="list_price">2</field>
+            <field name="standard_price">2</field>
+            <field name="type">service</field>
+            <field name="name">公交费</field>
+            <field name="default_code">PUBTRA</field>
+            <field name="uom_id" ref="product.product_uom_km"/>
+            <field name="uom_po_id" ref="product.product_uom_km"/>
+            <field name="categ_id" ref="hr_expense.cat_expense"/>
+            <field name="can_be_expensed" eval="True" />
+           <field name="property_account_expense_id" ref="my_mgr_pub_traval_expense"/>
+            <field name="image" type="base64" file="hr_expense/static/img/car_travel-image.jpg"/>
+        </record>
+
+        <record id="tax_travel" model="product.product">
+            <field name="list_price">14</field>
+            <field name="standard_price">14</field>
+            <field name="type">service</field>
+            <field name="name">打车费</field>
+            <field name="default_code">TAXTRA</field>
+            <field name="uom_id" ref="product.product_uom_km"/>
+            <field name="uom_po_id" ref="product.product_uom_km"/>
+            <field name="categ_id" ref="hr_expense.cat_expense"/>
+            <field name="can_be_expensed" eval="True" />
+            <field name="property_account_expense_id" ref="my_mgr_pub_traval_expense"/>
+            <field name="image" type="base64" file="hr_expense/static/img/car_travel-image.jpg"/>
+        </record>
+
+        <record id="myhotel_rent" model="product.product">
+            <field name="list_price">400.0</field>
+            <field name="standard_price">400.0</field>
+            <field name="type">service</field>
+            <field name="name">差旅费</field>
+            <field name="default_code">MYHOTEL</field>
+            <field name="uom_id" ref="product.product_uom_day"/>
+            <field name="uom_po_id" ref="product.product_uom_day"/>
+            <field name="categ_id" ref="hr_expense.cat_expense"/>
+            <field name="can_be_expensed" eval="True" />
+           <field name="property_account_expense_id" ref="my_mgr_pub_hotel_expense"/>
+            <field name="image" type="base64" file="hr_expense/static/img/hotel_rent-image.jpg"/>
+        </record>
+
+        <record id="myair_ticket" model="product.product">
+            <field name="list_price">1000.0</field>
+            <field name="standard_price">1000.0</field>
+            <field name="type">service</field>
+            <field name="name">飞机票</field>
+            <field name="default_code">MYAT</field>
+            <field name="categ_id" ref="hr_expense.cat_expense"/>
+            <field name="can_be_expensed" eval="True" />
+            <field name="image" type="base64" file="hr_expense/static/img/air_ticket-image.jpg"/>
+        </record>
+
+        <record id="employee_fl" model="product.product">
+            <field name="list_price">1.0</field>
+            <field name="standard_price">1.0</field>
+            <field name="type">service</field>
+            <field name="name">员工福利</field>
+            <field name="default_code">EMFL</field>
+            <field name="categ_id" ref="hr_expense.cat_expense"/>
+            <field name="can_be_expensed" eval="True" />
+            <field name="property_account_expense_id" ref="my_mgr_person_fl_expense"/>
+            <field name="image" type="base64" file="hr_expense/static/img/air_ticket-image.jpg"/>
+            <field name="grptype_id" ref="group_expensetype_off"/>
+        </record>
+
+        <record id="office_fee" model="product.product">
+            <field name="list_price">1.0</field>
+            <field name="standard_price">1.0</field>
+            <field name="type">service</field>
+            <field name="name">办公费用</field>
+            <field name="default_code">OFEE</field>
+            <field name="categ_id" ref="hr_expense.cat_expense"/>
+            <field name="can_be_expensed" eval="True" />
+           <field name="property_account_expense_id" ref="my_mgr_pub_offic_expense"/>
+            <field name="image" type="base64" file="hr_expense/static/img/air_ticket-image.jpg"/>
+           <field name="grptype_id" ref="group_expensetype_off"/>
+        </record>
+
+    </data>
+</odoo>

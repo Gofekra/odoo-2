@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+<data noupdate="1">>
+    <record id="data_work_hour_hour" model="uf.work.hour">
+      <field name="name">小时</field>
+      <field name="coeficient">60</field>
+    </record>
+    <record id="data_work_hour_minute" model="uf.work.hour">
+      <field name="name">分钟</field>
+      <field name="coeficient">1</field>
+    </record>
+    <record id="data_work_hour_halfday" model="uf.work.hour">
+      <field name="name">半天</field>
+      <field name="coeficient">240</field>
+    </record>
+  </data>
+</odoo>

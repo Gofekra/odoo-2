@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+      <template id="snippet_share_link_other" name="分享链接">
+        <section class="oe_snippet_body section_animate">
+          <div class="container">
+            <div class="row">
+              <div class="share_button">
+                  <h3 class="col-md-1 mt0">分享</h3>
+                  <div class="bshare-custom icon-medium-plus col-md-11 mt8 animate_css">
+
+
+                    <a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a>
+                      <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=38214db9-88cd-4313-8b85-498771f81e2c&amp;style=1&amp;bp=qqmb,bsharesync,sinaminiblog,qzone,189share,sohuminiblog,renren,xinhuamb,tianya,shouji,ifengmb,neteasemb,qqxiaoyou,kaixin001,weixin,douban,qqim"/>
+                    <script type="text/javascript">
+                              var cln='sinnpet_big_picture_imgs',
+                              urls=location.href,
+                              imgs='/ct_website_image_text_1/static/src/img/s_big_picture.png';
+                              var descript = $("."+cln).html();
+                            bShare.addEntry({
+                                title: '来自80erp的学习分享',
+                                url: urls,
+                                summary: descript,
+                                pic: imgs
+                            });
+                    </script>
+
+
+                      <!---->
+                    <!--<a title="分享到微信" class="bshare-weixin" href="javascript:void(0);" > </a>-->
+                    <!--<a title="分享到QQ空间" class="bshare-qzone"> </a>-->
+                    <!--<a title="分享到新浪微博" class="bshare-sinaminiblog"> </a>-->
+                    <!--<a title="分享到网易微博" class="bshare-neteasemb" href="javascript:void(0);"> </a>-->
+                    <!--<a title="分享到豆瓣" class="bshare-douban" href="javascript:void(0);"> </a>-->
+                    <!--<a title="分享到腾讯微博" class="bshare-qqmb"> </a>-->
+                    <!--<a title="分享到人人网" class="bshare-renren" href="javascript:void(0);"> </a>-->
+                    <!--<a title="分享到一键通" class="bshare-bsharesync" href="javascript:void(0);">  </a>-->
+                    <!--<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"> </a>-->
+                    <!--<span class="BSHARE_COUNT bshare-share-count" style="float: none;">0</span> -->
+                  </div>
+              <!--<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=e0b345b6-08ba-4435-9443-9813adee189b&amp;pophcol=2&amp;lang=zh"></script>-->
+              <!--<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>-->
+
+
+                </div>
+            </div>
+          </div>
+        </section>
+      </template>
+
+      <template id="snippet_contact_us" name="联系我们">
+        <section class="snippet_contact_us section_animate">
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-12 col-lg-12 text-center mb24">
+                      <h3>联系我们</h3>
+                      <p>有任何问题，请联系我们,我们将尽快回复您。</p>
+                  </div>
+             
+                <form class="form-horizontal" action=""  method="post" target="_parent" name="form" id="form">
+                  
+
+                      <div class="col-sm-6 col-md-5 col-md-offset-1">
+                        <div class="form-group">
+                            <label class="col-xs-12 col-sm-4 col-md-2 control-label" for="name">
+                                姓名<span style="margin-left: 5px;">*</span>
+                            </label>
+                            <div class="col-xs-12 col-sm-8 col-md-8">
+                              <input type="text" class="form-control" name="name" id="name"/>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-5">
+                        <div class="form-group">
+                          <label class="col-xs-12 col-sm-4 col-md-2 control-label" for="phone">
+                             手机<span style="margin-left: 5px;">*</span>
+                          </label>
+                          <div class="col-xs-12 col-sm-8 col-md-8">
+                            <input type="tel" maxlength="11" minlength="7" required="required" class="form-control" name="phone" id="phone"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-5 col-md-offset-1">
+                        <div class="form-group">
+                          <label class="col-xs-12 col-sm-4 col-md-2 control-label" for="partner_name">
+                           公司<span style="margin-left: 5px;">*</span>
+                         </label>
+                          <div class="col-xs-12 col-sm-8 col-md-8">
+                            <input type="text" class="form-control" name="partner_name" id="partner_name"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-5">
+                        <div class="form-group">
+                          <label class="col-xs-12 col-sm-4 col-md-2 control-label" for="email">
+                           邮箱<span style="margin-left: 5%;">*</span>
+                         </label>
+                          <div class="col-xs-12 col-sm-8 col-md-8">
+                            <input type="email" class="form-control" name="email" id="email"/>
+                          </div>
+                        </div>
+                      </div>
+
+              
+
+                      <div class="col-sm-6 col-md-10 col-md-offset-1">
+                        <div class="form-group">
+                          <label class="col-xs-12 col-sm-4 col-md-1 control-label" for="abstract">
+                           摘要<span style="margin-left: 5%;">*</span>
+                         </label>
+                          <div class="col-xs-12 col-sm-8 col-md-10">
+                            <input type="text" class="form-control" name="abstract" id="abstract"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6 col-md-10 col-md-offset-1">
+                        <div class="form-group">
+                          <label class="col-xs-12 col-sm-4 col-md-1 control-label" for="description">
+                           问题<span style="margin-left: 5%;">*</span>
+                         </label>
+                          <div class="col-xs-12 col-sm-8 col-md-10">
+                           <textarea class="form-control o_website_form_input" name="description"     required="" style="margin: 0px -0.5px 0px 0px;"> 
+                            </textarea>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12 text-center mt16">
+                         <button type="submit" class="btn btn-primary">提交</button>
+                      </div>
+                  
+                </form>
+
+              </div>
+            </div>
+        </section>
+      </template>
+    </data>
+</odoo>

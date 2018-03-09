@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <template id="baidu_map_event_description" inherit_id="website_event.event_description_full" customize_show="False" name="Baidu Map Event Description">
+            <xpath expr="//div[@t-if='event.address_id']" position="replace">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>地点</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div id="website_event_map" style="height:300px">
+                            <script t-att-src="'http://api.map.baidu.com/api?v=2.0&amp;ak='+event.segments_count"/>
+                            <script type="text/javascript">
+                                var event_city = '<t t-esc="event.address_id.city"/>';
+                                var event_area_road = '<t t-esc="event.address_id.street2"/>';
+                                var event_street = '<t t-esc="event.address_id.street"/>';
+                                var event_address_name = '<t t-esc="event.address_id.name"/>';
+                                var event_company_tel = '<t t-esc="event.event_phone"/>';
+                                var event_msg = event_city + event_area_road + event_street;
+
+                                if (event_msg) {
+                                    var map = new BMap.Map("website_event_map");
+                                    map.centerAndZoom(event_city + event_area_road + event_street, 14);
+                                    map.enableScrollWheelZoom();
+                                    map.enableContinuousZoom();
+                                    map.addControl(new BMap.NavigationControl());
+                                    map.addControl(new BMap.OverviewMapControl());
+                                    map.addControl(new BMap.OverviewMapControl({isOpen: false, anchor: BMAP_ANCHOR_BOTTOM_RIGHT}));
+                                    var localSearch = new BMap.LocalSearch(map);
+                                    localSearch.enableAutoViewport();
+                                    localSearch.setSearchCompleteCallback(function (searchResult) {
+                                        var poi = searchResult.getPoi(0);
+                                        map.centerAndZoom(poi.point, 17);
+                                        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));
+                                        map.addOverlay(marker);
+                                        var event_company_telphone = '<a href="tel:' + event_company_tel + '">' + event_company_tel + '</a>';
+                                        var infoWindow = new BMap.InfoWindow(event_address_name + '<br/>活动地点：' + event_msg + '<br/>活动热线：' + event_company_telphone);
+                                        marker.addEventListener("click", function () {
+                                            this.openInfoWindow(infoWindow);
+                                        });
+                                    });
+                                    localSearch.search(event_city + event_area_road + event_street);
+                                } else {
+                                    document.getElementById("website_event_map").style.border = "1px solid #ddd";
+                                    document.getElementById("website_event_map").style.padding = "20px";
+                                    document.getElementById("website_event_map").style.color = "red";
+                                    document.getElementById("website_event_map").innerHTML = '对不起，尚未定位到您的活动地点，请核实地点';
+                                }
+                            </script>
+                        </div>
+                        <div itemprop="location" class="mt16 mb8" t-field="event.address_id" t-options='{
+                            "widget": "contact",
+                            "fields": ["name", "address", "phone", "mobile", "fax", "email"]
+                            }'/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</openerp>

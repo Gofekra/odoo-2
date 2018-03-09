@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+
+
+        <function model="ex.submit" name="create_feedback_user"/>
+
+
+
+        <record id="feedback_config_settings_demo" model="feedback.config.settings">
+            <field name="feedback_url">http://localhost:8069</field>
+            <field name="feedback_db">fullodoo</field>
+            <field name="feedback_username">admin</field>
+            <field name="feedback_password">admin</field>
+        </record>
+
+        <record id="feedback_sequence" model="ir.sequence">
+            <field name="name">Feedback Info Question</field>
+            <field name="code">question.info</field>
+            <field name="implementation">no_gap</field>
+            <field name="padding">4</field>
+            <field name="number_increment">1</field>
+            <field name="prefix">Q%(year)s%(month)s%(day)s</field>
+        </record>
+
+    </data>
+</odoo>

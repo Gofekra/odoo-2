@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <function model="decimal.precision" name="_edit_product_float"/>
+
+        <!--会员隐藏字段：网站、语言【默认中文】、传真、内部备注页签、收件方式、邮件退订、退回、-->
+        <record id="res_partner_inhert_from" model="ir.ui.view">
+            <field name="name">res_partner_inhert_from</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <!--网站-->
+                <field name="website" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--语言-->
+                <field name="lang" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--传真-->
+                <field name="fax" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--内部备注页签-->
+                <page name="internal_notes" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </page>
+                <!--邮件退订-->
+                <field name="opt_out" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--退回-->
+                <field name="message_bounce" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="notify_email" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+        <!--会员隐藏按钮：已开票-->
+        <record id="pos_partner_view_buttons" model="ir.ui.view">
+            <field name="name">pos_partner_view_buttons</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.partner_view_buttons"/>
+            <field name="arch" type="xml">
+                <button name="open_partner_history" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </button>
+            </field>
+        </record>
+        <!--会员隐藏按钮：销售订单-->
+        <record id="sale.res_partner_view_buttons" model="ir.ui.view">
+            <field name="name">res.partner.view.buttons</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority" eval="20"/>
+            <field name="groups_id" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+            <field name="arch" type="xml">
+                <button name="toggle_active" position="before">
+                    <button class="oe_stat_button" type="action" name="%(sale.act_res_partner_2_sale_order)d"
+                            invisible="1"
+                            icon="fa-usd">
+                        <field string="Sales" name="sale_order_count" widget="statinfo"/>
+                    </button>
+                </button>
+                <page name="internal_notes" position="inside">
+                    <group colspan="2" col="2" groups="sale.group_warning_sale">
+                        <separator string="Warning on the Sales Order" colspan="4"/>
+                        <field name="sale_warn" nolabel="1"/>
+                        <field name="sale_warn_msg" colspan="3" nolabel="1"
+                               attrs="{'required':[('sale_warn','!=','no-message')],'readonly':[('sale_warn','=','no-message')]}"/>
+                    </group>
+                </page>
+            </field>
+        </record>
+
+        <!--商品隐藏追溯按钮-->
+        <record model="ir.ui.view" id="stock.product_form_view_procurement_button">
+            <field name="name">product.product.procurement</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <header position="inside">
+                        <button string="Update Qty On Hand"
+                                type="action"
+                                name="%(stock.action_view_change_product_quantity)d"
+                                attrs="{'invisible': [('type', '!=', 'product')]}"/>
+                        <button string="Procurement Request"
+                                type="action"
+                                name="%(stock.act_make_procurement)d"
+                                attrs="{'invisible': [('type', '!=', 'product')]}"/>
+                    </header>
+                    <div name="button_box" position="inside">
+                        <button class="oe_stat_button"
+                                name="%(stock.product_open_quants)d"
+                                icon="fa-building-o"
+                                type="action" attrs="{'invisible':[('type', '!=', 'product')]}">
+                            <field name="qty_available" widget="statinfo" string="On Hand"/>
+                        </button>
+                        <button type="action"
+                                name="%(stock.action_stock_level_forecast_report_product)d"
+                                attrs="{'invisible':[('type', '!=', 'product')]}"
+                                class="oe_stat_button" icon="fa-building-o">
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="virtual_available" widget="statinfo" nolabel="1"/>
+                                    <span attrs="{'invisible':[('outgoing_qty', '=', 0),('incoming_qty','=',0)]}">
+                                        (-
+                                        <field name="outgoing_qty" widget="statinfo" nolabel="1"/>
+                                        +<field name="incoming_qty" widget="statinfo" nolabel="1"/>)
+                                    </span>
+                                </span>
+                                <span class="o_stat_text">Forecasted</span>
+                            </div>
+                        </button>
+                        <button string="Traceability"
+                                type="action"
+                                name="%(stock.act_product_stock_move_open)d"
+                                invisible='1'
+                                class="oe_stat_button" icon="fa-arrows-v"
+                                groups="stock.group_stock_user"/>
+                        <button type="action"
+                                name="%(stock.product_open_orderpoint)d"
+                                attrs="{'invisible':['|',('type', '!=', 'product'),('nbr_reordering_rules', '==', 1)]}"
+                                class="oe_stat_button" icon="fa-refresh">
+                            <field name="nbr_reordering_rules" widget="statinfo"/>
+                        </button>
+                        <button name="%(stock.product_open_orderpoint)d" type="action"
+                                attrs="{'invisible':['|',('type', 'not in', ['product', 'consu']),('nbr_reordering_rules', '!=', 1)]}"
+                                class="oe_stat_button" icon="fa-refresh">
+                            <div class="o_form_field o_stat_info mr4">
+                                <span class="o_stat_text">Min :</span>
+                                <span class="o_stat_text">Max:</span>
+                            </div>
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="reordering_min_qty"/>
+                                </span>
+                                <span class="o_stat_value">
+                                    <field name="reordering_max_qty"/>
+                                </span>
+                            </div>
+                        </button>
+                        <button string="Routes" type="object"
+                                name="stock.action_view_routes"
+                                attrs="{'invisible':[('type', '!=', 'product')]}"
+                                class="oe_stat_button" icon="fa-cogs" groups="stock.group_adv_location"/>
+                    </div>
+                </data>
+            </field>
+        </record>
+        <!--商品隐藏补货按钮-->
+        <record id="procurement.product_product_view_form_procurement_button" model="ir.ui.view">
+            <field name="name">product.product.procurement.stat.button</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button class="oe_stat_button"
+                            name="%(procurement.procurement_order_action_product_product_stat)d"
+                            icon="fa-truck" string="Procurements" type="action"
+                            groups="base.group_no_one"
+                            invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!--会员隐藏字段：仓库【客户库位、供应商库位】-->
+        <record id="pos_res_partner_stock_property_form_inherit" model="ir.ui.view">
+            <field name="name">pos_res_partner_stock_property_form_inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="stock.view_partner_stock_form"/>
+            <field name="arch" type="xml">
+                <group name="container_row_stock" position='replace'>
+                    <!--<attribute name="invisible">1</attribute>-->
+                </group>
+            </field>
+        </record>
+
+
+        <!--会员隐藏字段：会计页签-->
+        <record id="pos_view_partner_property_form" model="ir.ui.view">
+            <field name="name">pos_view_partner_property_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <page name="accounting" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </page>
+                <page name="accounting_disabled" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </page>
+            </field>
+        </record>
+        <!--首选项隐藏字段：语言【默认中文】、时区【默认上海】、签名-->
+        <record id="pos_res_users_preferences_form" model="ir.ui.view">
+            <field name="name">pos_res_users_preferences_form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+            <field name="arch" type="xml">
+                <!--语言时区-->
+                <group name="preferences" position='replace'></group>
+                <!--签名-->
+                <field name="signature" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+        <!--首选项隐藏字段：收件方式-->
+        <record id="pos_view_users_form_simple_modif_mail" model="ir.ui.view">
+            <field name="name">pos_view_users_form_simple_modif_mail</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="mail.view_users_form_simple_modif_mail"/>
+            <field name="arch" type="xml">
+                <field name="notify_email" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+        <!--门店项隐藏字段：网站、传真、税号、币种【默认CNY】、公司注册地-->
+        <record id="pos_view_company_form" model="ir.ui.view">
+            <field name="name">pos_view_company_form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <!--网站-->
+                <field name="website" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--传真-->
+                <field name="fax" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--税号-->
+                <field name="vat" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--公司注册地-->
+                <field name="company_registry" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--币种-->
+                <field name="currency_id" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--<label for="id" position="attributes">-->
+                <!--<attribute name="invisible">1</attribute>-->
+                <!--</label>-->
+                <!--<label for="id" position="attributes">-->
+                <!--<attribute name="invisible">1</attribute>-->
+                <!--</label>-->
+            </field>
+        </record>
+        <record id="base.action_view_company_form_link_2_currencies" model="ir.ui.view">
+            <field name="name">res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@id='company_currency']" position="after">
+                    <label for="id"/>
+                    <p class="text-muted">
+                        <!--Activate <a href="" type="action" name="%(base.action_currency_form_company)d">here</a> a new currency before creating a new company.-->
+                    </p>
+                </xpath>
+            </field>
+        </record>
+        <!--商品:1.Tree视图取消现存量、可用量字段-->
+        <!--商品:1.Tree视图添加pos分类-->
+        <record id="pos_view_stock_product_tree" model="ir.ui.view">
+            <field name="name">pos_view_stock_product_tree</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.view_stock_product_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position='after'>
+                    <field name="pos_categ_id"/>
+                </field>
+                <!--现存量-->
+                <field name="qty_available" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--可用量-->
+                <field name="virtual_available" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+        <!--订单-支付-结算单:隐藏凭证按钮-->
+        <record id="pos_view_bank_statement_form" model="ir.ui.view">
+            <field name="name">pos_view_bank_statement_form</field>
+            <field name="model">account.bank.statement</field>
+            <field name="inherit_id" ref="account.view_bank_statement_form"/>
+            <field name="arch" type="xml">
+                <div name="button_box" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </div>
+            </field>
+        </record>
+
+        <!--商品:库存页签取消以下字段：路线、补货库位、生产库位、
+        盘点库位【使用默认后隐藏】，销售页签取消以下字段：客户提前期，
+        会计页签取消以下字段：销项税、进项税【默认为空后隐藏】、销售开票方式，取消备注页签-->
+        <record id="pos_product_normal_form_view" model="ir.ui.view">
+            <field name="name">pos_product_normal_form_view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <!--<group name="inventory" position='replace'>-->
+                <!--</group>-->
+                <field name="categ_id" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--客户提前期-->
+                <group name="sale_condition" position='replace'>
+                </group>
+                <!--&lt;!&ndash;补货库位、生产库位&ndash;&gt;-->
+                <!--<group name="stock_property" position='replace'>-->
+                <!--</group>-->
+                <!--备注页签-->
+                <page name="notes" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </page>
+                <page name="invoicing" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </page>
+                <!--隐藏销售page称重-->
+                <field name="to_weight" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--隐藏基本信息page采购单位-->
+                <field name="uom_po_id" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <!--隐藏采购字段-->
+                <field name="purchase_ok" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <label for="purchase_ok" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </label>
+            </field>
+        </record>
+
+        <record id="pos_view_template_property_form" model="ir.ui.view">
+            <field name="name">pos_view_template_property_form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="stock.view_template_property_form"/>
+            <field name="arch" type="xml">
+                <group name="inventory" position="replace">
+                    <group name="group_lots_and_weight">
+                        <label for="weight" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}"
+                               modifiers="{'invisible': [['type', 'not in', ['product', 'consu']]]}"/>
+                        <div class="o_row" name="weight"
+                             attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}"
+                             modifiers="{'invisible': [['type', 'not in', ['product', 'consu']]]}">
+                            <field name="weight" modifiers="{}"/>
+                        </div>
+                        <field name="tracking" widget="radio" on_change="1" invisible="1"
+                               modifiers="{'invisible': true, 'required': true}"/>
+                        <label for="volume" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}"
+                               modifiers="{'invisible': [['type', 'not in', ['product', 'consu']]]}"/>
+                        <div class="o_row" name="volume"
+                             attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}"
+                             modifiers="{'invisible': [['type', 'not in', ['product', 'consu']]]}">
+                            <field name="volume" string="体积" modifiers="{}"/>
+                        </div>
+                    </group>
+                </group>
+            </field>
+        </record>
+        <!--订单-->
+        <record id="pos_point_of_sale_view_pos_pos_form" model="ir.ui.view">
+            <field name="name">pos_point_of_sale_view_pos_pos_form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <!--应税设定-->
+                <field name="fiscal_position_id" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="tax_ids_after_fiscal_position" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="price_subtotal" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="amount_tax" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="picking_id" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="lines">
+                    <form>
+                        <group col="4">
+                            <field name="product_id"/>
+                            <field name="qty"/>
+                            <field name="discount" widget="monetary"/>
+                            <field name="price_unit" widget="monetary"/>
+                            <field name="price_subtotal" invisible="1" widget="monetary"/>
+                            <field name="price_subtotal_incl" invisible="1" widget="monetary"/>
+                            <field name="notice"/>
+                        </group>
+                    </form>
+                </field>
+
+                <page name="extra" position='replace'>
+                    <page name="pos_extra" string="附加信息">
+                        <group string="基本信息">
+                            <field name="company_id" can_create="true" can_write="true" invisible="1"
+                                   modifiers="{'invisible': true, 'readonly': true, 'required': true}"/>
+                            <field name="location_id" widget="selection" can_create="true" can_write="true"
+                                   invisible="1" modifiers="{'invisible': true, 'readonly': true}"/>
+                            <field name="user_id" can_create="true" can_write="true"
+                                   modifiers="{'readonly': [['state', 'in', ['done', 'invoiced']]]}"/>
+                            <field name="pricelist_id" can_create="true" can_write="true" invisible="1"
+                                   modifiers="{'invisible': true, 'readonly': [['state', 'not in', ['draft']]], 'required': true}"/>
+                            <field name="picking_id" readonly="1" invisible="1" can_create="true" can_write="true"
+                                   modifiers="{'invisible': true, 'readonly': true}"/>
+                            <field name="pos_reference" modifiers="{'readonly': true}"/>
+                        </group>
+                        <group name="loyalty" string="积分规则">
+                            <field name="loyalty_points" modifiers="{}"/>
+                        </group>
+                    </page>
+                </page>
+
+            </field>
+        </record>
+
+        <!-- 退货操作窗口-->
+        <record model="ir.ui.view" id="sales_change_form">
+            <field name="name">退货处理</field>
+            <field name="model">sales.change</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="退货处理">
+
+                    <group>
+                        <field name="name" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="partner_id" readonly="1"/>
+                    </group>
+
+                    <group>
+                        <field name="product_return_moves" nolabel="1">
+                            <tree editable="top" create="0">
+                                <field name="product_id"/>
+                                <field name="quantity"/>
+                                <field name="last_quantity" readonly="1"/>
+
+                            </tree>
+                        </field>
+                    </group>
+                    <footer>
+                        <button name="action_change" string="确定" type="object" class="btn-primary"/>
+                        <button string="取消" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="sales_change_act" model="ir.actions.act_window">
+            <field name="name">换货处理</field>
+            <field name="res_model">sales.change</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <!--pos中隐藏tree视图-->
+        <record id="point_of_sale.action_pos_config_kanban" model="ir.actions.act_window">
+            <field name="name">Point of Sale</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.config</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="domain"></field>
+            <field name="search_view_id" ref="point_of_sale.view_pos_config_search"/>
+        </record>
+        <!--定义kanban视图-->
+        <record id="view_pos_pos_kanban" model="ir.ui.view">
+            <field name="name">pos.order.kanban</field>
+            <field name="model">pos.order</field>
+            <field name="arch" type="xml">
+                <kanban string="Point of Sale Orders" create="false">
+                    <field name="name"/>
+                    <field name="date_order"/>
+                    <field name="partner_id"/>
+                    <field name="slae_type"/>
+                    <field name="amount_total"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div>
+                                    <strong>
+                                        <field name="name"/>
+                                    </strong>
+
+                                    <strong t-if="record.partner_id.raw_value">
+                                        <field name="partner_id"/>
+                                    </strong>
+                                    <br/>
+                                    <br/>
+
+                                    <field name="date_order"/>
+                                    <br/>
+                                    <field name="slae_type"/>
+                                    合计:￥
+                                    <field name="amount_total"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!--订单中增加kanban视图-->
+        <record id="point_of_sale.action_pos_pos_form" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pos.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain">[]</field>
+        </record>
+        <!--会员中增加kanban视图-->
+        <!--<record id="pos_loyalty.action_loyalty_program_form" model="ir.actions.act_window">-->
+        <!--<field name="name">Loyalty Programs</field>-->
+        <!--<field name="type">ir.actions.act_window</field>-->
+        <!--<field name="res_model">loyalty.program</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">kanban,tree,form</field>-->
+        <!--</record>-->
+
+        <!--隐藏pos设置中的财政状况，默认财政状况-->
+        <record id="pos_view_pos_config_form" model="ir.ui.view">
+            <field name="name">pos_view_pos_config_form</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_config_form"/>
+            <field name="arch" type="xml">
+                <field name="fiscal_position_ids" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="default_fiscal_position_id" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+
+        <!--隐藏会员首选项标签-->
+        <record id="res_users_inhert_form" model="ir.ui.view">
+            <field name="name">res_users_inhert_form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <!--<notebook colspan="4" position='attributes'>-->
+                <!--<attribute name="invisible">1</attribute>-->
+                <!--</notebook>-->
+                <!---->
+                <notebook colspan="4" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </notebook>
+            </field>
+        </record>
+
+        <!--隐藏会员tree视图语言-->
+        <record id="bas_view_users_tree_replace" model="ir.ui.view">
+            <field name="name">res_users_inhert_form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_tree"/>
+            <field name="arch" type="xml">
+                <field name="lang" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+	
+     <record model="ir.ui.view" id="ct_dashboard_tree_view">
+            <field name="model">ct.dashboard</field>
+            <field name="arch" type="xml">
+                <tree string="仪表盘">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="group_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="ct_dashboard_form_view">
+            <field name="model">ct.dashboard</field>
+            <field name="arch" type="xml">
+                <form string="仪表盘">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="group_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="action_tree_ct_dashboard">
+            <field name="name">Dashboard</field>
+            <field name="res_model">ct.dashboard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ct_dashboard_tree_view"/>
+        </record>
+
+        <menuitem id="menu_ct_dashboard"
+            name="仪表盘" parent="base.next_id_2"
+            action="action_tree_ct_dashboard" sequence="50"/>
+
+        <record id="echart1" model="ct.dashboard">
+            <field name="name">待办事项</field>
+            <field name="code">echart1</field>
+            <field name="group_ids"  eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+<!--         <record id="echart2" model="ct.dashboard">
+            <field name="name">例行工作</field>
+            <field name="code">echart2</field> -->
+            <!-- <field name="group_ids"  eval="[(4, ref('base.group_user'))]"/> -->
+        <!-- </record> -->
+
+        <record id="echart3" model="ct.dashboard">
+            <field name="name">常用入口</field>
+            <field name="code">echart3</field>
+            <field name="group_ids"  eval="[(4, ref('base.group_user'))]"/>
+        </record>
+		
+	<template id="cot_echart" name="dashboard_cotong" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/ct_dashboard/static/src/js/dashboard.js"/>
+            <script type="text/javascript" src="/ct_dashboard/static/src/js/home.js"/>
+            <link rel="stylesheet" type="text/css" href="/ct_dashboard/static/src/css/dashboard.css"/>
+        </xpath>
+    </template>
+
+
+</data>
+</odoo>

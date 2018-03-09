@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_uf_handover_user,uf.handover.user,model_uf_handover,base.group_user,1,1,1,1
+access_uf_handover_service_user,uf.handover.service.user,model_uf_handover_service,base.group_user,1,1,1,1
+access_uf_soft_user,uf.soft.user,model_uf_soft,base.group_user,1,1,1,1
+access_uf_soft_module_user,uf.soft.module.user,model_uf_soft_module,base.group_user,1,1,1,1
+access_uf_log_user,uf.log.user,model_uf_log,base.group_user,1,1,1,1
+access_uf_log_print_user,uf.log.print.user,model_uf_log_print,base.group_user,1,1,1,1
+access_uf_log_line_user,uf.log.line.user,model_uf_log_line,base.group_user,1,1,1,1
+access_uf_rpt_milestone_user,uf.rpt.milestone.user,model_uf_rpt_milestone,base.group_user,1,1,1,1
+access_uf_rpt_stage_user,uf.rpt.stage.user,model_uf_rpt_stage,base.group_user,1,1,1,1
+access_uf_data_static_user,uf.data.static.user,model_uf_data_static,base.group_user,1,1,1,1
+access_uf_data_dynamic_user,uf.data.dynamic.user,model_uf_data_dynamic,base.group_user,1,1,1,1
+access_uf_work_tpl_user,uf.work.tpl.user,model_uf_work_tpl,base.group_user,1,1,1,1
+access_uf_work_line_user,uf.work.line.user,model_uf_work_line,base.group_user,1,1,1,1
+access_uf_work_hour_user,uf.work.hour.user,model_uf_work_hour,base.group_user,1,1,1,1
+access_uf_work_wizard_user,uf.work.wizard.user,model_uf_work_wizard,base.group_user,1,1,1,1

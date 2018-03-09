@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="wizard_form_view">
+			<field name="name">svn_wizard.form</field>
+			<field name="model">ct_project_dev.svn_wizard</field>
+			<field name="arch" type="xml">
+				<form string="Module upload wizard">
+					<h2 states="transfer">Module uplaod wizard</h2>
+					<h2 states="revert">Module revert wizard</h2>
+					<p>
+					    This wizard allows you to transfer the module from the development server to the test server by SVN.<br/>
+					    <strong>You may fill the form with accurate svn information for the operation to be successful.</strong>
+					</p>
+					<newline />
+					<group>
+						<field name="state" invisible="1"/>
+						<field name="task_id" invisible="1"/>
+						<field name="name" readonly="1"/>
+						<field name="svn_repository" readonly="1"/>
+						<field name="current_revision" attrs="{'invisible':[('state','!=','revert')]}"/>
+
+							<field name="version"/>
+							<field name="tag" attrs="{'invisible':[('state','!=','revert')]}"/>
+
+						<field name="revision_message" readonly="1"/>
+						<field name="revert_stage" widget="selection" attrs="{'invisible':[('state','!=','revert')]}"/>
+						<field name="sender_svn_account" readonly="1"/>
+						<field name="sender_svn_password" password="1" invisible="1"/>
+						<field name="auto_install" />
+						<field name="reload" attrs="{'invisible':[('auto_install','=',True)]}"/>
+					</group>
+					<footer>
+						<div class="oe_button_box oe_right">
+							<!--<button type="object" class="oe_highlight" string="Transfer" name="execute" />-->
+							<button type="object" class="oe_highlight" states="transfer" string="Transfer" name="execute_py_svn" />
+							<button type="object" class="oe_highlight" states="revert" string="Revert" name="execute_py_svn" />
+							<button type="special" name="cancel" string="Cancel"/>
+						</div>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="cmd_wizard_form_view">
+			<field name="name">ct_project_dev.linux_cmd.wizard.form</field>
+			<field name="model">ct_project_dev.linux_cmd.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Linux command run">
+					<h2>Linux command running wizard</h2>
+					<p>
+						Not all king of command can be run successfully.
+					</p>
+					<div>
+						<label for="cmd"/><field width="50%" class="oe_inline" name="cmd"/> - <button type="object" icon="fa-run" class="oe_inline oe_highlight" string="Run" name="execute" />
+					</div>
+					<group string="Output">
+						<field name="output" nolabel="1"/>
+					</group>
+					<footer>
+						<div class="oe_button_box oe_right">
+							<button type="special" name="cancel" string="Close"/>
+						</div>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+
+		<record model="ir.ui.view" id="wizard_change_svn_view">
+			<field name="name">res.users.svn.wizard.form</field>
+			<field name="model">res.users.svn.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Change svn credentials">
+					<h2 >Changing your svn credentials</h2>
+					<group>
+						<field name="current_user_password" password="1"/>
+						<field name="svn_account" />
+						<field name="svn_password" password="1"/>
+					</group>
+					<footer>
+						<div class="oe_button_box oe_right">
+							<button type="object" class="oe_highlight" string="Change" name="change_svn_credentials" />
+							<button type="special" name="cancel" string="Cancel"/>
+						</div>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+
+	</data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+        <template id="assets_backend" name="Change Tree View" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/ct_treeview/static/src/js/change_tree_view.js"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>

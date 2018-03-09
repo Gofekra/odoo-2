@@ -1,0 +1,6 @@
+.m .video-js{
+    width: 640px; height: 500px; margin-left: auto; margin-right: auto; margin-top: 10px;
+}
+.embed-responsive-4by3 {
+    padding-bottom: 50% !important;
+}

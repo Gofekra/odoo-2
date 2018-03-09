@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="module_intro" name="功能说明">
+
+            <section class="container m_center">
+
+                <div class="text-center headline">
+                    <h2>
+                        功能说明
+                    </h2>
+
+                </div>
+
+                <div class="container">
+
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/sales">
+                                <img src="/ct_website_module_menu/static/src/img/sale.png"
+                                     class="img img-responsive"
+                                     alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/sales">销售管理</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/crm">
+                                <img src="/ct_website_module_menu/static/src/img/crm.png"
+                                     class="img img-responsive"
+                                     alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/crm">客户管理</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/pos">
+                                <img src="/ct_website_module_menu/static/src/img/pos.png"
+                                     class="img img-responsive"
+                                     alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/pos col-sm-6 col-xs-6">零售管理</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/wms">
+                                <img src="/ct_website_module_menu/static/src/img/wms.png"
+                                     class="img img-responsive"
+                                     alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/wms">仓库管理</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/pur">
+                                <img src="/ct_website_module_menu/static/src/img/pur.png"
+                                     class="img img-responsive"
+                                     alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/pur">采购管理</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/mfg">
+                                <img src="/ct_website_module_menu/static/src/img/mfg.png"
+                                     class="img img-responsive"
+                                     alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/mfg">生产管理</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/pm">
+                                <img src="/ct_website_module_menu/static/src/img/pm.png"
+                                     class="img img-responsive"
+                                     alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/pm">项目管理</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/fin">
+                                <img src="/ct_website_module_menu/static/src/img/fin.png"
+                                     class="img img-responsive"
+                                     alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/fin">财务管理</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/hr">
+                                <img src="/ct_website_module_menu/static/src/img/hr.png"
+                                     class="img img-responsive"
+                                     alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/hr">人力资源</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/web">
+                                <img src="/ct_website_module_menu/static/src/img/web.png"
+                                     class="img img-responsive" alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/web">企业建站</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/ec">
+                                <img src="/ct_website_module_menu/static/src/img/ec.png"
+                                     class="img img-responsive" alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/ec">电子商务</a>
+                        </dd>
+                    </dl>
+                    <dl class="module_image_text col-md-2 col-sm-6 col-xs-6">
+                        <dt class="text-center">
+                            <a href="/module/sns">
+                                <img src="/ct_website_module_menu/static/src/img/sns.png"
+                                     class="img img-responsive" alt=""/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <a href="/module/sns">社交网络</a>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+        </template>
+    </data>
+</openerp>

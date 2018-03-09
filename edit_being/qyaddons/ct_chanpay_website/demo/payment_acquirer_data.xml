@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record  id = "payment_acquirer_chanpay" model="payment.acquirer">
+            <field name="name">Chanpay</field>
+            <field name="provider">chanpay</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="chanpay_acquirer_button"/>
+            <field name="environment">test</field>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the chanpay website after clicking on the payment button.</p>]]></field>
+            <field name="service">cjt_create_instant_trade</field>
+            <field name="partner_id">200000900237</field>
+             <field name="private_key">-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDH9ni6VUhe+u3ba9LQBBupv3A1VmufXYdoQMHBrBlr8/eHHhc+
+g/F0hPzH50jk8o+AHW3bSOqELS15/RwnyKfA9E/n8uaWWdgNWANiwR4U79WGOsfh
+GZk7N0GQ9rjNbOg4G/BYWSkch/BP+pRVgn+691iQoYzDsQkb4r5B40YVowIDAQAB
+AoGAJRPWnvZhTPtKT31WwauBVaBhtgIoQoydJv+a7cZzkEjUhQFXXggpJWnjVU3V
+fl5brW3HiPmkQo39+LiuF9JlCFZSXVy0Z3OolU9AO1WFUuhxWV6muK+YAbybsFYq
+tu6CZvWvQfFFx+51+DbXBZKhTa6vx2HUyPjHQTGrf0GvXoECQQDpd+OujeWXom18
+3HXmtPuIsym7KA8OUUpRVBRon8EbydKeZ2AXlF+qsBJ0KclunyRdbXnUE0AUgzls
+SkEDSsH7AkEA20LJzlY+UvpH4smsLysSCNXPRM4DH1JcqU93zA2mKSYIoKCSc6QM
+fZGrTnrNQ8OYHkT1D/T9LJzuk9jvPQpSeQJBAI5vXVHOMidbqi6GFcwl2Fui6q/L
+Fbxnbc7GXBkkddztOXj4mpBoLiFlgCysnb7GipoRQ0VWZT7efDcL6jQG9OcCQAsW
+W4IVll03zr7HF+/iq6zKswp1qG7DCXB+Vj55Sje2dqU4uW8jkoYfAZycVRjiISUW
+s5W0+8Bvxxiu1ZoulXECQDzHGU3737kJ+j2D8EmFTEhjUEtP12jmhHxKNA/alpN6
+SR4gTgQMMtRaNWp2hWGxFJ20IHVelbBiEDDWx8R07PM=
+-----END RSA PRIVATE KEY-----</field>
+             <field name="public_key">-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDH9ni6VUhe+u3ba9LQBBupv3A1
+VmufXYdoQMHBrBlr8/eHHhc+g/F0hPzH50jk8o+AHW3bSOqELS15/RwnyKfA9E/n
+8uaWWdgNWANiwR4U79WGOsfhGZk7N0GQ9rjNbOg4G/BYWSkch/BP+pRVgn+691iQ
+oYzDsQkb4r5B40YVowIDAQAB
+-----END PUBLIC KEY-----</field>
+             <field name="form_url">https://pay.chanpay.com/mag/gateway/receiveOrder.do?</field>
+        </record>
+
+    </data>
+</odoo>

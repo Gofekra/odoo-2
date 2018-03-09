@@ -1,0 +1,55 @@
+<odoo>
+  <data>
+
+        <template id="assets" name="point_of_sale assets" inherit_id="point_of_sale.assets">
+            <xpath expr="//script[@src='/point_of_sale/static/src/js/screens.js']" position="after">
+                <link type="text/less" rel="stylesheet" href="/ct_chanpay_pos/static/less/cut.less"/>
+                <script type="text/javascript" src="/ct_chanpay_pos/static/js/cut.js"></script>
+            </xpath>
+        </template>
+
+
+        <record id="view_pos_order_form" model="ir.ui.view">
+            <field name="name">view_pos_order_form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <button name="refund" position="attributes" >
+                    <attribute name="invisible">[('retufuse','=',True)]</attribute>
+                </button>
+
+                <field name="partner_id"   position="after">
+                      <field name='origin'  readonly="1"/>
+                      <field name='retufuse'  readonly="1"/>
+                      <field name='retufu_pay'  readonly="1"/>
+                      <field name='retufu_moneny'  attrs="{'invisible':[('retufu_pay','=',False)]}"  readonly="1"/>
+                </field>
+
+                  <xpath expr="//page[@name='extra']" position="inside">
+                      <group string="支付记录">
+                            <field name='merchantid' readonly="1"/>
+                          <field name='traceno' readonly="1"/>
+                          <field name='txntime' readonly="1"/>
+                          <field name='indexcode' readonly="1"/>
+                          <field name='ext' readonly="1"/>
+                      </group>
+                  </xpath>
+            </field>
+    </record>
+
+
+     <record id="view_pos_order_tree" model="ir.ui.view">
+            <field name="name">view_pos_order_tree</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+            <field name="arch" type="xml">
+                  <field name="state" position="after">
+                      <field name='retufuse'/>
+                      <field name='retufu_pay'/>
+                  </field>
+            </field>
+    </record>
+
+
+  </data>
+</odoo>

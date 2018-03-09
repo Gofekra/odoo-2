@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-extend="mail.Attachment">
+		<t t-jquery=".o_image" t-operation="replace">
+            <a class="o_image" t-att-href='attachment.url' target="_blank" t-att-data-mimetype="attachment.mimetype" t-attf-data-src="/web/image/#{attachment.id}/" t-att-style="new RegExp('image.*(gif|jpeg|jpg|png)').test(attachment.mimetype)?'background:url(/web/image/'+(attachment.id)+'/) no-repeat scroll 0/100%':''">
+                <span class='o_attachment_name'><t t-esc='attachment.name'/></span>
+            </a>
+		</t>
+	</t>
+</templates>

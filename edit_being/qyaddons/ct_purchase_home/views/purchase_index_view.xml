@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+	<template id="assets_backend" name="purchase_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/ct_purchase_home/static/src/css/purchase.css"/>
+            <script type="text/javascript" src="/ct_purchase_home/static/src/js/purchase.js"/>
+        </xpath>
+    </template>
+
+    <record id="action_home_page" model="ir.actions.client">
+        <field name="name">首页</field>
+        <field name="tag">Purchase.index</field>
+    </record>
+
+    <menuitem id="purchase_index_menu" name="首页" parent="purchase.menu_purchase_root" sequence="-1" action="action_home_page"/>
+</data>
+</odoo>

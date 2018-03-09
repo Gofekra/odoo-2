@@ -1,0 +1,33 @@
+<openerp>
+  <data>
+
+      	 <record id="video_slide_view" model="ir.ui.view">
+                  <field name="name">video_slide_view</field>
+                  <field name="model">slide.slide</field>
+                  <field name="inherit_id" ref="website_slides.view_slide_slide_form"/>
+                  <field name="arch" type="xml">
+                    <!--<xpath expr="//notebook" position="inside">-->
+                          <!--<page string="预览播放" name="video_slide">-->
+                                <!--<field name="video_url" widget="slide_video"/>-->
+                          <!--</page>-->
+                     <!--</xpath>-->
+                      <field name="slide_type"  position="replace">
+                           <field name="slide_type"/>
+                      </field>
+
+                         <field name="document_id"  position="replace">
+                           <field name="document_id"/>
+                      </field>
+
+                         <field name="mime_type"  position="replace">
+                           <field name="mime_type"/>
+                      </field>
+
+                      <field name="datas"  position="replace">
+                           <field name="datas"/>
+                      </field>
+                  </field>
+         </record>
+
+  </data>
+</openerp>

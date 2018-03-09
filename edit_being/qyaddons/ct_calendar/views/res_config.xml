@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+         <record id="view_config_settings" model="ir.ui.view">
+            <field name="name">Cotong meeting settings</field>
+            <field name="model">ct_calendar.config.settings</field>
+            <field name="priority" eval="20"/>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <group string="PMO Groups Management" name="ct_pmo_groups_management">
+                        <!--<field name="user_ids" context="{'create':False}"/>-->
+                        <field name="user_ids"/>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="followers_config_action">
+            <field name="name">Cotong meeting settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ct_calendar.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem
+                id="menu_meeting_rights_configuration"
+                name="Meeting Rights configuration"
+                parent="calendar.menu_calendar_configuration"
+                action="followers_config_action"/>
+
+    </data>
+</odoo>

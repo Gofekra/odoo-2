@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="chjie_pay">
+        <div class='chjie screen'>
+            <div class='screen-content'>
+                <div class="paymentmethods-container">
+
+                <div class="report text-center">条形码</div>
+                <div class="paymentmethods">
+
+                <div class="button end paymentmethod">
+                    支付完成
+                </div>
+
+                <div class="button cancel paymentmethod">
+                   取消支付
+                </div>
+
+                </div>
+                </div>
+             </div>
+         </div>
+     </t>
+</templates>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_partner_inhert_tree" model="ir.ui.view">
+            <field name="name">res_partner_inhert_tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position='after'>
+                    <field name="open_id"/>
+                    <field name="username"/>
+                    <field name="user_password"/>
+                </field>
+                <page name="sales_purchases" position="after">
+                    <page name="about_user" string="关联用户">
+                        <field name="about_user_ids">
+                            <tree>
+                                <field name="username"/>
+                                <field name="user_password"/>
+                                <field name="open_id"/>
+                                <field name="mobile"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

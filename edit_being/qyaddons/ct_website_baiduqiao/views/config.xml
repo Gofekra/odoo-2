@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       
+        <template id="cotong_baidu_qiao" inherit_id="website.layout" name="Baidu Statistics">
+            <xpath expr="//div[@id='wrapwrap']" position="after">
+               <link rel="stylesheet" type="text/css"
+                      href="/ct_website_baiduqiao/static/src/less/website_statistics.css"/>
+
+              <script src="/ct_website_baiduqiao/static/src/js/statistics.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

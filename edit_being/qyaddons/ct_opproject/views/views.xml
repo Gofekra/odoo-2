@@ -1,0 +1,187 @@
+<odoo>
+  <data>
+
+
+
+      <!-- 客户-->
+    <record id="inhert_beifu_partner_form" model="ir.ui.view">
+        <field name="name">inhert_beifu_partner_form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='name']"  position="replace">
+                    <!--<attribute name="default_focus">请填写客户名称</attribute>-->
+                      <field name="name" default_focus="1" placeholder="请填写客户名称"
+                             attrs="{'required' : [('type', '=', 'contact')]}" required="1"/>
+                </xpath>
+                 <xpath expr="//field[@name='street2']"  position="replace">
+                     <field name="street2" invisible="1" />
+
+                 </xpath>
+
+                <xpath expr="//field[@name='website']"  position="replace">
+                     <field name="customer_name" required="1"/>
+                     <field name="owner_name" required="1"/>
+                    <field name="owner_mobile" required="1"/>
+                     <field name="house_type" />
+                     <field name="area" required="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='function']"  position="replace">
+                   <field name="manager_name" required="1"/>
+                    <field name="mobile" widget="phone" string="项目经理电话"/>
+                </xpath>
+
+                  <xpath expr="//field[@name='phone']"  position="replace">
+                   <field name="phone" invisible="1" />
+                </xpath>
+                 <xpath expr="//field[@name='title']"  position="replace">
+                      <field name="title" invisible="1" />
+                </xpath>
+
+                  <xpath expr="//field[@name='country_id']"  position="replace">
+                       <field name="country_id" invisible="1" />
+                </xpath>
+                  <xpath expr="//field[@name='zip']"  position="replace">
+                     <field name="zip" invisible="1" />
+                </xpath>
+                 <xpath expr="//field[@name='state_id']"  position="replace">
+                      <field name="state_id" invisible="1" />
+                </xpath>
+
+                <xpath expr="//field[@name='city']"  position="replace">
+                     <field name="city" invisible="1" />
+                </xpath>
+
+                 <xpath expr="//field[@name='lang']"  position="replace">
+                     <field name="lang" invisible="1" />
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+      <!-- 销售订单-->
+      <record id="inhert_beifu_order_form" model="ir.ui.view">
+        <field name="name">inhert_beifu_order_form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <data>
+
+                <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+                    <field name="brand"/>
+                    <field name="maint_date" />
+                </xpath>
+
+                <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="replace">
+                    <field name="name" invisible="1" />
+                </xpath>
+                <notebook position="inside">
+                    <page string="项目完整信息">
+                        <field name="project_ids_lins">
+                            <tree>
+                                <!--<field name="sale_line_id" />-->
+                                <field name="work_partner" />
+                                <field name="end_date" />
+                                <field name="finsh_money"/>
+                                <field name="invoice_time" />
+                            </tree>
+                        </field>
+                     </page>
+                </notebook>
+
+            </data>
+        </field>
+    </record>
+
+      <!-- 项目-->
+      <record id="inhert_beifu_edit_form" model="ir.ui.view">
+        <field name="name">inhert_beifu_edit_form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <data>
+                 <notebook position="inside">
+                    <page string="项目阶段" attrs="{'invisible': [('use_tasks', '=', False)]}" name="项目阶段">
+                            <field name="type_ids">
+                                <tree>
+                                    <field name="name" />
+                                     <field name="fold" />
+                                     <field name="description" />
+                                </tree>
+                            </field>
+                    </page>
+                 </notebook>
+            </data>
+        </field>
+    </record>
+
+      <!-- 任务-->
+      <record id="inhert_beifu_task_form" model="ir.ui.view">
+        <field name="name">inhert_beifu_task_form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <data>
+                 <xpath expr="//field[@name='stage_id']" position="after">
+                   <button name="end_obj" type="object" string="定位完成"  attrs="{'invisible': [('stage_id', '!=',6)]}"/>
+                </xpath>
+
+                <xpath expr="//page[@name='description_page']" position="after">
+                    <page string="阶段信息">
+                        <group>
+                            <field name="engin_supervision" attrs="{'invisible': [('stage_id', '&lt;=',5)],'required': [('stage_id', '>=',6)]}"/>
+                            <field name="positi_time" attrs="{'invisible': [('stage_id', '&lt;=',5)] ,'required': [('stage_id', '>=',6)]}"/>
+                            <field name="day"  attrs="{'invisible': [('stage_id', '&lt;=',5)]}"/>
+                            <field name="end_moneny"  attrs="{'invisible': [('stage_id', '&lt;=',11)]}"/>
+                            <field name="invoice_time"  attrs="{'invisible': [('stage_id', '&lt;=',11)]}"/>
+                            <field name="pay_dection" attrs="{'invisible': [('stage_id', '&lt;=',11)]}"/>
+                            <field name="end_date" attrs="{'invisible': [('stage_id', '&lt;=',10)]}"/>
+                            <field name="work_partner" attrs="{'invisible': [('stage_id', '&lt;=',9)]}"/>
+                            <field name="finsh_money" attrs="{'invisible': [('stage_id', '&lt;=',9)]}"/>
+                        </group>
+                    </page>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+      <record id="inhert_beifu_task_kanban" model="ir.ui.view">
+        <field name="name">inhert_beifu_task_kanban</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban"/>
+        <field name="arch" type="xml">
+            <data>
+                <templates position="before">
+                    <field name="end_moneny"/>
+                    <field name="pay_dection"/>
+                </templates>
+                <div class="oe_kanban_bottom_left" position="before">
+                    <div>
+                      <i/>已收尾款：<field name="end_moneny" string="已收尾款"/>
+                       <br/>
+                     <i/>收款情况：<field name="pay_dection" string="收款情况"/>
+                    </div>
+
+                </div>
+            </data>
+        </field>
+    </record>
+
+      <record id="inhert_beifu_task_tree" model="ir.ui.view">
+        <field name="name">inhert_beifu_task_tree</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_tree2"/>
+        <field name="arch" type="xml">
+            <data>
+                <field name="stage_id" position="after">
+                    <field name="end_moneny"/>
+                     <field name="pay_dection"/>
+                </field>
+            </data>
+        </field>
+    </record>
+
+  </data>
+</odoo>

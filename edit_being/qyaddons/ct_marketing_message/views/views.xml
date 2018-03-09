@@ -1,0 +1,111 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="mark_message_tree">
+      <field name="name">mark_message_tree</field>
+      <field name="model">mark.message</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="send_date"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="mark_message_form"   model="ir.ui.view" >
+      <field name="name">mark_message_form</field>
+      <field name="model">mark.message</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+              <button name="send_message" string="发送" type="object" states="draft"/>
+             <field name="state" widget="statusbar" statusbar_visible="draft,send" />
+          </header>
+           <sheet>
+          <group>
+              <group>
+                  <field name="name"/>
+                  <field name="context"/>
+                   <field name="context_rel"/>
+              </group>
+            <group><field name="send_date"/></group>
+          </group>
+
+          <notebook>
+             <page string="发送对象">
+                <group><field name="subject" widget="radio" options="{'horizontal': true}"/></group>
+               <field name="partner_id">
+                 <tree>
+                    <field name="name"/>
+                    <field name="mobile"/>
+                   <field name="phone"/>
+                 </tree>
+               </field>
+            </page>
+          </notebook>
+           </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+    <record model="ir.actions.act_window" id="mark_message_action">
+      <field name="name">短信</field>
+      <field name="res_model">mark.message</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+    <record model="ir.ui.view" id="template_message_tree">
+      <field name="name">template_message_tree</field>
+      <field name="model">template.message</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="template_message_form"   model="ir.ui.view" >
+      <field name="name">template_message_form</field>
+      <field name="model">template.message</field>
+      <field name="arch" type="xml">
+        <form>
+           <sheet>
+              <group>
+                <field name="name"/>
+            </group>
+                <group>
+                    <field name="context"/>
+              </group>
+           </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="template_message_action">
+      <field name="name">短信模板</field>
+      <field name="res_model">template.message</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <menuitem name="短信" id="mark_message"/>
+    <menuitem name="短信" id="comm_function_message" parent="mark_message"/>
+    <menuitem name="短信群发" id="short_message" parent="comm_function_message"
+              action="mark_message_action"/>
+    <menuitem name="短信模板" id="template_message" parent="comm_function_message"
+              action="template_message_action"/>
+  </data>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	<t t-name="pos_menu_link">
+		<a t-att-href="'/web'+(debug?'?debug=1':'')+'#menu_id='+menu['id']+';action='+(menu['action'] and menu['action'].split(',')[1] or '')"
+		   t-att-class="menu['children']?'oe_menu_toggler':'oe_menu_leaf'"
+		   t-att-data-menu="menu['id']"
+           t-att-data-menu-xmlid="menu['xmlid']"
+           t-att-data-action-model="menu['action'] and menu['action'].split(',')[0] or None"
+           t-att-data-action-id="menu['action'] and menu['action'].split(',')[1] or None">
+            <span class="oe_menu_text">
+                <t t-esc="menu['name']"/>
+            </span>
+        </a>
+	</t>
+
+	<t t-name="pos_navbar">
+		<t t-foreach="menu_data" t-as="c_menu">
+			<t t-foreach="c_menu['children']" t-as="t_menu">
+				<t t-foreach="t_menu['children']">
+                	<t t-if="id==active_id">
+                		<t t-foreach="t_menu['children']" t-as="menu">
+	                		<li t-att-class="menu['id']==active_id?'active':''">
+	                			<t t-call="pos_menu_link"/>
+	                		</li>
+                		</t>
+                	</t>
+            	</t>
+			</t>
+        </t>
+	</t>
+
+	<t t-name="dateRange">
+		<div id="dateRange" class="nav navbar-nav navbar-left o_datepicker show">
+			<label>日期范围选择：从 </label><input type="text" class="o_datepicker_input" name="start_date"/><label>-</label><input type="text" class="o_datepicker_input" name="end_date"/><button class="btn btn-primary">查询</button>
+		</div>
+	</t>
+</templates>

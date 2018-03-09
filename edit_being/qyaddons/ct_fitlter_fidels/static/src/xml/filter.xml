@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-extend="SearchView.extended_search.proposition">
+		<t t-jquery="option" t-operation="replace">
+        	<option t-att="{'selected': field === widget.attrs.selected ? 'selected' : null}"
+                            t-att-value="field.name">
+                        <t t-esc="field.string"/>
+            </option>
+    	</t>
+	</t>
+</templates>

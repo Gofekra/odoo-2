@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="HRIndex">
+        <div class="container-fluid messages_margin20 massage_col cchong">
+            <div class="fadeInRight animated active">
+        		<div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <a href="javascript:void(0);">
+                            <div class="ibox float-e-margins messages_col">
+                                <div class="ibox-content"> 
+                                    <span class="total text-center">实习生/试用期/总人数</span>
+                                    <span class="title text-center"><span id="cadet">0</span> /<span id="testMember">0</span> / <span id="allMember">0</span>人</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 ">
+                        <a href="javascript:void(0);">
+                            <div class="ibox float-e-margins messages_col">
+                                <div class="ibox-content">   
+                                    <span class="total text-center">新人人数/在职人数/离职人数</span>
+                                    <span class="title text-center"><span id="newMember">0</span> /<span id="atStatusMember">0</span> / <span id="notStatusMember">0</span>人</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <a href="javascript:void(0);">
+                            <div class="ibox float-e-margins messages_col">
+                                <div class="ibox-content">
+                                    <span class="total text-center">未签合同/已签合同/合同到期</span>
+                                    <span class="title text-center" style="overflow: hidden;   text-overflow: ellipsis;  white-space: nowrap;"><span id="notPact">0</span> /<span id="alreayPact">0</span> / <span id="timeoutPact">0</span>人</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" id="content">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 droptarget" id="echart_hr0">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                              <div class="h5 ibox-tools ibox-top">
+                                    <a class="fullscreen-link">
+                                          <i class="fa fa-expand" dataDom='#echart_hr0' dataResize='.echart_hr0'></i>
+                                    </a>
+                                    <a>
+                                 <i class="fa fa-refresh chartLoad" dataDom='.echart_hr0'></i>
+                            </a>
+                              </div>
+                              <h5>
+                                    <i class="fa fa-pie-chart"></i> 部门统计
+                              </h5>
+                            </div>
+
+                            <div class="ibox-content chart_show echart_hr0">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 droptarget" id="echart_hr1">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                              <div class="h5 ibox-tools ibox-top">
+                                    <a class="fullscreen-link">
+                                          <i class="fa fa-expand" dataDom='#echart_hr1' dataResize='.echart_hr1'></i>
+                                    </a>
+                                    <a>
+                                 <i class="fa fa-refresh chartLoad" dataDom='.echart_hr1'></i>
+                            </a>
+                              </div>
+                              <h5>
+                                    <i class="fa fa-pie-chart"></i> 在职统计
+                              </h5>
+                            </div>
+
+                            <div class="ibox-content chart_show echart_hr1">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 droptarget" id="echart_hr2">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                              <div class="h5 ibox-tools ibox-top">
+                                    <a class="fullscreen-link">
+                                          <i class="fa fa-expand" dataDom='#echart_hr2' dataResize='.echart_hr2'></i>
+                                    </a>
+                                    <a>
+                                 <i class="fa fa-refresh chartLoad" dataDom='.echart_hr2'></i>
+                            </a>
+                              </div>
+                              <h5>
+                                    <i class="fa fa-pie-chart"></i> 性别比例
+                              </h5>
+                            </div>
+
+                            <div class="ibox-content chart_show echart_hr2">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 droptarget" id="echart_hr3">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                              <div class="h5 ibox-tools ibox-top">
+                                    <a class="fullscreen-link">
+                                          <i class="fa fa-expand" dataDom='#echart_hr3' dataResize='.echart_hr3'></i>
+                                    </a>
+                                    <a>
+                                 <i class="fa fa-refresh chartLoad" dataDom='.echart_hr3'></i>
+                            </a>
+                              </div>
+                              <h5>
+                                    <i class="fa fa-bar-chart"></i> 年龄统计
+                              </h5>
+                            </div>
+
+                            <div class="ibox-content chart_show echart_hr3">
+
+                            </div>
+ 
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 droptarget" id="echart_hr4">
+                        <div class="ibox float-e-margins ct_extend">
+                            <div class="ibox-title">
+                              <div class="h5 ibox-tools ibox-top">
+                                    <a class="fullscreen-link">
+                                          <i class="fa fa-expand" dataDom='#echart_hr4' dataResize='.echart_hr4'></i>
+                                    </a>
+                                    <a>
+                                 <i class="fa fa-refresh chartLoad" dataDom='.echart_hr4'></i>
+                            </a>
+                              </div>
+                              <h5>
+                                    <i class="fa fa-bar-chart"></i> 学历统计
+                              </h5>
+                            </div>
+
+                            <div class="ibox-content chart_show echart_hr4">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="echart_hr5" style="display:none">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <div class="h5 ibox-tools ibox-top">
+                                    <a class="fullscreen-link">
+                                        <i class="fa fa-expand"  dataDom='#echart_hr5' dataResize='.echart_hr5'></i>
+                                    </a>
+                                    <a id="loadAtteBtn">
+                                        <i class="fa fa-refresh chartLoad" dataDom='.echart_hr5'></i>
+                                    </a>
+                                </div>
+                                <h5>
+                                    <i class="fa fa-list"></i>
+                                     待办事项
+                                </h5>
+                            </div>
+                            <div class="ibox-content chart_show echart_hr5">
+                                <div class="slimScrollDiv">
+                                    <ul class="todo-list small-list" id="todolist">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs perch droptarget" id='perch'>
+                    <img src="/ct_web_theme/static/description/icon_03.png" draggable="false" />
+                </div>
+                </div>
+            </div>
+    	</div>
+ 	</t>
+</templates>

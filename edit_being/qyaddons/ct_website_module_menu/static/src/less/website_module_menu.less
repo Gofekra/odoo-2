@@ -1,0 +1,106 @@
+.module_display{
+  background-color:#d1e4e8;
+  padding-top: 3px;
+  text-align:center;
+ }
+ul.module_nav{
+  margin-left:-35px;
+}
+ul.module_nav li {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 3px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+ul.module_nav li > a {
+  color:rgb(51, 51, 51);
+  display: inline-block;
+  padding: 5px 14px;
+  line-height: 29px;
+  font: 14px/1.5 'PingFangSC-Thin', 'Hiragino Sans GB', 'Microsoft YaHei Light', 'Microsoft YaHei', Arial, sans-serif;
+}
+
+/*****hover 的时候效果****/
+ul.module_nav li:hover {
+  transition: all .3s linear;
+  background-color: #F38851;
+  border-color: #F38851;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/**hover 离开时候的效果，目的就是想离开的时候，也是有过渡的效果***/
+ul.module_nav li {
+  transition: all .3s linear;
+}
+
+
+/***滚动后 产品介绍二级菜单固定在顶部的样式***/
+#wrapwrap .container-fluid.active {
+  width:100%;
+  transition:all 0.5s linear;
+  position: fixed;
+  top: -90px;
+  z-index: 10000;
+  margin-top: 80px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.125);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 12px 1px 12px;
+}
+
+#wrapwrap.cke_editable.cke_editable_inline.cke_contents_ltr .container-fluid.active {
+  position: static;
+  top: 0px;
+  margin-top: 0px;
+  background: transparent;
+}
+
+#wrapwrap .container-fluid.active ul.module_nav li {
+  border-color: #ccc !important;
+}
+
+#wrapwrap .container-fluid.active ul.module_nav li > a:hover {
+  text-decoration: none;
+  color: #fff !important;
+}
+
+#wrapwrap .container-fluid.active ul.module_nav li > a {
+  padding: 5px 15spx;
+  color: #666;
+  font: 14px/1.5 'PingFangSC-Thin', 'Hiragino Sans GB', 'Microsoft YaHei Light', 'Microsoft YaHei', Arial, sans-serif;
+}
+
+
+#wrapwrap .container-fluid > div > ul > li:hover {
+  text-decoration: none;
+  background-color: #F38851 !important;
+}
+
+#wrapwrap .container-fluid > div > ul > li > a:hover {
+  text-decoration: none;
+  color: #fff !important;
+}
+
+
+ul.module_nav li:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+
+a {
+  text-decoration: none !important;
+}
+
+@media(max-width:768px){
+  ul.module_nav li > a {
+    padding: 3px 8px;  
+    font-size:12px;
+  }
+   ul.module_nav {
+    margin-left: -40px;
+   }
+}

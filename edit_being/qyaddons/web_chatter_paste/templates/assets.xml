@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Onestein
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <data>
+        
+    <template id="assets_backend" inherit_id="web.assets_backend">
+        <xpath expr=".">
+            <script type="text/javascript"
+                    src="/web_chatter_paste/static/src/js/web_chatter_paste.js"/>
+        </xpath>
+    </template>
+
+    <template id="summernote" inherit_id="web_editor.summernote">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/web_chatter_paste/static/src/js/summernote.js"/>
+        </xpath>
+    </template>
+
+    <template id="mail_manager" inherit_id="mail.assets_backend">
+        <xpath expr="//script[@src='/mail/static/src/js/chat_manager.js']" position="replace">
+            <script type="text/javascript" src="/web_chatter_paste/static/src/js/chat_manager.js"/>
+        </xpath>
+    </template>
+
+    </data>
+</odoo>

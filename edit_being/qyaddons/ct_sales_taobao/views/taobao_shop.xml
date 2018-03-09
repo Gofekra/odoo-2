@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- 电商店铺 -->
+        <record model="ir.ui.view" id="oscg_taobao_shop_tree">
+            <field name="name">电商店铺</field>
+            <field name="model">taobao.shop</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="电商店铺">
+                    <field name="name"/>
+                    <field name="appkey"/>
+                    <field name="appsecret"/>
+                    <field name="sessionkey"/>
+                    <field name="stock_type"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="oscg_taobao_shop_form">
+            <field name="name">电商店铺</field>
+            <field name="model">taobao.shop</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="电商店铺">
+                       <sheet>
+                    <h1>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+                    <group string="API">
+                        <group>
+                              <field name="appkey"/>
+                            <field name="appsecret"/>
+                            <field name="apiurl"/>
+                            <field name="sessionkey"/>
+                            <field name="UserId"/>
+                        </group>
+                        <group>
+                            <field name="shop_id"/>
+                            <field name="slaes_type"/>
+                            <field name="stock_type"/>
+                            <field name="cp_code"/>
+                            <field name="run"/>
+                        </group>
+                    </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+
+
+   		<record id="oscg_taobao_shop_act" model="ir.actions.act_window">
+            <field name="name">电商店铺</field>
+            <field name="res_model">taobao.shop</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+        <menuitem id="menu_product_dianpu" parent="menu_oscg_web_shop" name='店鋪'  action="oscg_taobao_shop_act" sequence="0"/>
+    </data>
+</openerp>

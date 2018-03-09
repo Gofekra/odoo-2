@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="project_task_form_dev" model="ir.ui.view">
+            <field name="name">project.task.form.dev</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+
+                <field name="project_id" position="after">
+                    <field name="module_id" options="{'no_create':True}" domain="[('active','=',True)]" />
+                    <field name="technical_name" invisible="1" />
+                    <field name="transferable" invisible="1"/>
+                    <field name="reversible" invisible="1"/>
+                </field>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="transfer_module" type="object" groups="base.group_user"
+                            class="oe_stat_button" icon="fa-level-up"
+                            attrs="{'invisible':[('transferable','!=',True)]}"
+                            help="Transfer the module to the test server; The stage will be upgaded to the specified stage in the configuration">
+                        <span>Transfer module</span>
+                    </button>
+                    <button name="revert_module" type="object" groups="base.group_user"
+                            class="oe_stat_button" icon="fa-level-down"
+                            attrs="{'invisible':[('reversible','!=',True)]}"
+                            help="Revert a module to a previous revision; The user can select the revision and the stage to move the task to. The stage will be upgraded to the stage selected by the user">
+                        <span>Revert module</span>
+                    </button>
+                    <button class="oe_stat_button" type="object" name="action_task_issues" icon="fa-bug">
+                        <field string="Issues" name="issue_count" widget="statinfo" />
+                    </button>
+                    <button class="oe_stat_button" type="object" name="action_run_cmd" icon="fa-bug">
+                        <span>CMD</span>
+                    </button>
+                </xpath>
+
+
+                <field name="user_id" position="after">
+                    <field name="task_user_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                </field>
+
+                <xpath expr="//page[@name='description_page']" position="attributes">
+                    <attribute name="attrs">
+                        {'readonly':[('stage_id','!=',%(ct_project_dev.specification)d)]}
+                    </attribute>
+                    <attribute name="string">
+                        Specifications
+                    </attribute>
+                </xpath>
+
+                <xpath expr="//page[@name='description_page']" position="before">
+                    <!--<page string="Analysis" attrs="{'invisible':[('stage_id','!=',%(ct_project_dev.analysis)d)]}">-->
+                        <!--<field name="analysis_description" type="html"/>-->
+                    <!--</page>-->
+
+                    <page string="Requirement"  attrs="{'readonly':[('stage_id','!=',%(ct_project_dev.analysis)d)]}">
+                        <field name="analysis_description" type="html"/>
+                    </page>
+                </xpath>
+
+                <xpath expr="//page[@name='description_page']" position="after">
+                    <!--<page string="Development" attrs="{'invisible':[('stage_id','!=',%(ct_project_dev.development)d)]}">-->
+                    <page string="Development" attrs="{'readonly':[('stage_id','!=',%(ct_project_dev.development)d)]}">
+                        <field name="development_description" type="html"/>
+                    </page>
+
+                    <!--<page string="Test Requirement" attrs="{'invisible':[('stage_id','!=',%(ct_project_dev.test)d)]}">-->
+                    <page string="Test Requirement"  attrs="{'readonly':[('stage_id','!=',%(ct_project_dev.test)d)]}">
+                        <h2>Unit Test</h2>
+                        <newline/>
+                        <field name="testreq_ids">
+                            <tree editable="bottom" default_order="sequence">
+                                <field name="sequence"/>
+                                <field name="description"/>
+                                <field name="exe_step"/>
+                                <field name="expect_result"/>
+                                <field name="dev_user_id"/>
+                                <field name="dev_finish_date"/>
+                            </tree>
+                        </field>
+                        <h2>Test Case</h2>
+                        <newline/>
+                        <field name="testcase_ids">
+                            <p></p>
+                            <tree editable="bottom" default_order="sequence">
+                                <field name="sequence"/>
+                                <field name="test_step"/>
+                                <field name="test_input"/>
+                                <field name="expect_result"/>
+                                <field name="result"/>
+                                <field name="test_user_id"/>
+                                <field name="test_finish_date"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                    <!--<page string="Deployment" attrs="{'invisible':[('stage_id','!=',%(ct_project_dev.deployment)d)]}">-->
+                    <page string="Deployment" attrs="{'readonly':[('stage_id','!=',%(ct_project_dev.deployment)d)]}">
+                        <field name="deployment_description" type="html"/>
+                    </page>
+
+                    <!--<page name="transfer_details" string="Transfer details" attrs="{'invisible':[('stage_id','!=',%(ct_project_dev.test)d)]}">-->
+                    <page name="transfer_details" string="Transfer details" attrs="{'readonly':[('stage_id','!=',%(ct_project_dev.test)d)]}">
+                        <field name="transfer_ids" nolabel="1">
+                            <tree>
+                                <field name="user_id"/>
+                                <field name="operation_type"/>
+                                <field name="date"/>
+                                <field name="revision"/>
+                                <field name="log_date"/>
+                                <field name="message"/>
+                                <field name="author"/>
+                                <field name="author_user"/>
+                                <field name="tag"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+                <!--<notebook position="inside">
+                    <page string="Cancellation" attrs="{'invisible':[('stage_id','!=',%(ct_project_dev.canceled)d)]}">
+                    <page string="Cancellation">
+                        <field name="cancellation_description" type="html"/>
+                    </page>
+                </notebook>-->
+
+            </field>
+        </record>
+
+
+        <!-- Task kanban -->
+        <record id="project_task_kanban_dev" model="ir.ui.view">
+            <field name="name">ct_project_dev.task.inherited_kanban.dev</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='legend_done']" position="after">
+                    <field name="transferable"/>
+                    <field name="reversible"/>
+                    <field name="technical_name"/>
+                </xpath>
+                <xpath expr="//div[@class='oe_clear']" position="after">
+                    <!--<div class="o_kanban_button">-->
+                        <t t-if="record.transferable.raw_value">
+                            <button icon="fa-level-up" invisible="context.get('from_ui',False)!=True" data-type="object" context="{'name':technical_name}" class="oe_kanban_action btn btn-sm btn-success" data-name="transfer_module">
+                                Transfer
+                            </button>
+                        </t>
+                        <t t-if="record.reversible.raw_value">
+                            <button icon="fa-level-down" invisible="context.get('from_ui',False)!=True" data-type="object" context="{'name':technical_name}" class="oe_kanban_action btn btn-sm btn-danger" data-name="revert_module">
+                                Revert
+                            </button>
+                        </t>
+                    <!--</div>-->
+                </xpath>
+            </field>
+        </record>
+
+        <!-- repositoty form -->
+        <record model="ir.ui.view" id="repository_form_view">
+            <field name="name">ct_project_dev.repository.form_view</field>
+            <field name="model">ct_project_dev.repository</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="url"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- repositoty tree -->
+        <record model="ir.ui.view" id="repository_tree_view">
+            <field name="name">ct_project_dev.repository.form_view</field>
+            <field name="model">ct_project_dev.repository</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="url"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- module form -->
+        <record model="ir.ui.view" id="module_form_view">
+            <field name="name">ct_project_dev.module.form_view</field>
+            <field name="model">ct_project_dev.module</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1><field name="name" placeholder="Module name"/></h1>
+                        <group>
+                            <field name="technical_name"/>
+                            <field name="description"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- module tree -->
+        <record model="ir.ui.view" id="module_tree_view">
+            <field name="name">ct_project_dev.module.form_view</field>
+            <field name="model">ct_project_dev.module</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="technical_name"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- project form -->
+        <record model="ir.ui.view" id="project_form_view">
+            <field name="name">ct_project.project.form_view</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Module transfer Settings"
+                          groups="project.group_project_manager,ct_project_dev.ct_group_project_mamanger">
+                        <h2>SVN repository</h2>
+                        <newline/>
+                        <!-- <field name="svn_path" nolabel="1"/> -->
+                        <field name="repository_id" nolabel="1" widget="selection"/>
+                        -
+                        <field name="repository_url" nolabel="1"/>
+                        <h2>Tester's list</h2>
+                        <newline/>
+                        <field name="svn_user_ids" nolabel="1">
+                            <tree edit="False">
+                                <field name="name"/>
+                                <field name="svn_account"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Modules">
+                        <field name="module_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="technical_name"/>
+                                <field name="description"/>
+                                <field name="active"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Task Stages" attrs="{'invisible': [('use_tasks', '=', False)]}" name="project_stages">
+                        <field name="type_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="fold"/>
+                                <!--<field name="is_initial"/>-->
+                                <field name="description"/>
+                                <field name="user_ids"/>
+                                <field name="related_fields"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Issue Stages" attrs="{'invisible': [('use_issues', '=', False)]}" name="issue_stages">
+                        <field name="issue_stage_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="fold"/>
+                                <field name="description"/>
+                                <field name="user_ids"/>
+                                <field name="related_fields"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+
+        <!-- task form -->
+        <record model="ir.ui.view" id="task_kanban_view">
+            <field name="name">ct_project.project.task.form_kanban_inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="quick_create">
+                        0
+                    </attribute>
+                    <attribute name="on_create"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- stage form -->
+        <record model="ir.ui.view" id="stage_form_view">
+            <field name="name">ct_project.project.task_type.form_view</field>
+            <field name="model">project.task.type</field>
+            <field name="inherit_id" ref="project.task_type_edit"/>
+            <field name="arch" type="xml">
+                <field name="fold" position="after">
+                    <field name="is_initial"/>
+                </field>
+                <field name="project_ids" position="after">
+                    <field name="user_ids" widget="many2many_tags"/>
+                    <field name="related_fields" widget="many2many_tags"/>
+                </field>
+            </field>
+        </record>
+
+
+        <!-- res_users form -->
+        <record model="ir.ui.view" id="view_res_users_form">
+            <field name="name">ct_project.res.users.form_view</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="is_svn_user"/>
+                </field>
+                <notebook position="inside">
+                    <page string="SVN"
+                          groups="ct_project_dev.ct_group_project_mamanger,project.group_project_manager">
+                        <h2>SVN Account parameters</h2>
+                        <newline/>
+                        <group>
+                            <field name="svn_account"/>
+                            <field name="svn_password" password="1"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <!-- res_users preference form -->
+        <record model="ir.ui.view" id="view_res_users_pref_form">
+            <field name="name">ct_project.res.users.preference_form_view</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='preference_change_password']" position="after">
+                    <field name="is_svn_user" invisible="1"/>
+                </xpath>
+                <xpath expr="//group[@name='preferences']" position="after">
+                    <group string="Svn account settings" attrs="{'invisible':[('is_svn_user','=',False)]}">
+                        <field name="svn_account"/>
+                        <field name="svn_password" password="1" />
+                        <button type="object" string="Change svn credentials" class="oe_link" name="preference_change_svn_credentials"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- -->
+        <record id="project.act_project_project_2_project_task_all"
+                model="ir.actions.act_window">
+            <field name="context">{
+                'group_by': 'stage_id',
+                'search_default_project_id': [active_id],
+                'default_project_id':active_id,
+                'from_ui':True}
+            </field>
+        </record>
+
+        <record id="project_issue.act_project_project_2_project_issue_all" model="ir.actions.act_window">
+            <field name="context">{
+                'search_default_project_id': [active_id],
+                'default_project_id': active_id,
+                'from_ui':True}
+            </field>
+        </record>
+
+        <record id="project_issue.project_issue_categ_act0" model="ir.actions.act_window">
+            <field name="context">
+                {'search_default_my_issues': 1, 'from_ui':True}
+            </field>
+        </record>
+
+        <!-- repository form -->
+        <record id="action_repository_config" model="ir.actions.act_window">
+            <field name="name">Project repositories</field>
+            <field name="res_model">ct_project_dev.repository</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- modules action -->
+        <record id="action_modules_config" model="ir.actions.act_window">
+            <field name="name">Modules</field>
+            <field name="res_model">ct_project_dev.module</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- menu -->
+        <menuitem id="menu_repository_config" action="action_repository_config"
+                  parent="project.menu_project_config" string="Repositories"
+                  groups="ct_project_dev.ct_group_project_mamanger,project.group_project_manager"/>
+
+        <menuitem id="menu_module_config" action="action_modules_config"
+                  parent="project.menu_project_config" string="Modules"
+                  groups="ct_project_dev.ct_group_project_mamanger,project.group_project_manager"/>
+
+    </data>
+</odoo>

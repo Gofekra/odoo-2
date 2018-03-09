@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--商品零售流水-->
+        <record model="ir.ui.view" id="pos_sale_report_tree_view">
+            <field name="name">pos_sale_report_tree_view</field>
+            <field name="model">pos.sale.report</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0">
+                    <field name="date_order"/>
+                    <field name="product_id"/>
+                    <field name="qty"/>
+                    <field name="price_unit"/>
+                    <field name="amount_unit" sum="Amount unit"/>
+                    <field name="discount"/>
+                    <field name="discount_unit" sum="Discount unit"/>
+                    <field name="rece_unit" sum="Rece unit"/>
+                    <field name="pos_categ_id"/>
+                    <field name="partner_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pos_sale_report_view_pivot" model="ir.ui.view">
+            <field name="name">pos_sale_report_view_pivot</field>
+            <field name="model">pos.sale.report</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="product_id" type="row"/>
+                    <field name="date_order" type="col"/>
+                    <field name="qty" type="measure"/>
+                    <field name="price_unit" type="measure"/>
+                    <field name="amount_unit" type="measure"/>
+                    <field name="discount" type="measure"/>
+                    <field name="discount_unit" type="measure"/>
+                    <field name="rece_unit" type="measure"/>
+                    <field name="pos_categ_id" type="measure"/>
+                    <field name="partner_id" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="pos_sale_report_view_graph" model="ir.ui.view">
+            <field name="name">pos_sale_report_view_graph</field>
+            <field name="model">pos.sale.report</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="product_id" type="row"/>
+                    <field name="date_order" type="col"/>
+                    <field name="partner_id" type="col"/>
+                    <field name="qty" type="measure"/>
+                    <field name="discount" type="measure"/>
+                    <field name="pos_categ_id" type="measure"/>
+                    <field name="price_unit" type="measure"/>
+                    <field name="amount_unit" type="measure"/>
+                    <field name="discount_unit" type="measure"/>
+                    <field name="rece_unit" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="pos_sale_report_search_view" model="ir.ui.view">
+            <field name="name">pos_sale_report_search_view</field>
+            <field name="model">pos.sale.report</field>
+            <field name="arch" type="xml">
+                <search string="Search Purchase Order Line" create="false">
+                    <field name="product_id"/>
+                    <filter string="今天" domain="[('date_order','&lt;=',datetime.datetime.now().strftime('%Y-%m-%d 23:59:59')),
+                              ('date_order','&gt;=',datetime.datetime.now().strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="昨天" domain="[('date_order','&lt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 23:59:59')),
+                              ('date_order','&gt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="本周"
+                            domain="[('date_order','&gt;=',(datetime.date.today()+datetime.timedelta(-(datetime.date.today().weekday()))).strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="本月" domain="[('date_order','&lt;',(datetime.date.today() + relativedelta(months=1)).strftime('%Y-%m-01 00:00:00')),
+                      ('date_order','&gt;=',time.strftime('%Y-%m-01 00:00:00')) ]"/>
+
+                </search>
+            </field>
+        </record>
+
+        <act_window id="action_pos_sale_report"
+                    name="零售流水"
+                    res_model="pos.sale.report"
+                    view_mode="tree,pivot,graph,search"/>
+
+        <menuitem name="零售流水" id="menu_pos_sale_report" parent="point_of_sale.menu_point_rep"
+                  action="action_pos_sale_report" sequence="1"/>
+
+
+        <!--商品零售汇总-->
+        <record model="ir.ui.view" id="pos_sale_summary_tree_view">
+            <field name="name">pos_sale_summary_tree_view</field>
+            <field name="model">pos.sale.report</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0">
+                    <field name="qty"/>
+                    <field name="amount_unit" sum="Amount unit"/>
+                    <field name="discount_unit" sum="Discount unit"/>
+                    <field name="rece_unit" sum="Rece unit"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_pos_sale_summary" model="ir.actions.act_window">
+            <field name="name">零售汇总</field>
+            <field name="res_model">pos.sale.report</field>
+            <field name="view_mode">tree,pivot,graph</field>
+            <field name="search_view_id" ref="pos_sale_report_search_view"/>
+            <field name="view_ids" eval="[
+                (5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('pos_sale_summary_tree_view')}),
+            ]"/>
+            <field name="context">{'group_by': 'product_id'}</field>
+        </record>
+
+        <menuitem name="零售汇总" id="menu_pos_sale_summary" parent="point_of_sale.menu_point_rep"
+                  action="action_pos_sale_summary" sequence="2"/>
+
+        <!--收款流水-->
+        <record model="ir.ui.view" id="pos_receivables_report_tree_view">
+            <field name="car_id">pos_receivables_report_tree_view</field>
+            <field name="model">pos.receivables.report</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0">
+                    <field name="date_order"/>
+                    <field name="name"/>
+                    <field name="journal_id"/>
+                    <field name="pay_amount" sum="Pay amount"/>
+                    <field name="return_amount" sum="Return amount"/>
+                    <field name="profit_amount" sum="Profit amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pos_receivables_report_view_pivot" model="ir.ui.view">
+            <field name="name">pos_receivables_report_view_pivot</field>
+            <field name="model">pos.receivables.report</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="journal_id" type="row"/>
+                    <field name="pay_amount" type="measure"/>
+                    <field name="return_amount" type="measure"/>
+                    <field name="profit_amount" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="pos_receivables_report_view_graph" model="ir.ui.view">
+            <field name="name">pos_receivables_report_view_graph</field>
+            <field name="model">pos.receivables.report</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="name" type="row"/>
+                    <field name="profit_amount" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="pos_receivables_report_search_view" model="ir.ui.view">
+            <field name="name">pos_receivables_report_search_view</field>
+            <field name="model">pos.receivables.report</field>
+            <field name="arch" type="xml">
+                <search string="Search Purchase Order Line" create="false">
+                    <field name="journal_id"/>
+                    <filter string="今天" domain="[('date_order','&lt;=',datetime.datetime.now().strftime('%Y-%m-%d 23:59:59')),
+                              ('date_order','&gt;=',datetime.datetime.now().strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="昨天" domain="[('date_order','&lt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 23:59:59')),
+                              ('date_order','&gt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="本周"
+                            domain="[('date_order','&gt;=',(datetime.date.today()+datetime.timedelta(-(datetime.date.today().weekday()))).strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="本月" domain="[('date_order','&lt;',(datetime.date.today() + relativedelta(months=1)).strftime('%Y-%m-01 00:00:00')),
+                      ('date_order','&gt;=',time.strftime('%Y-%m-01 00:00:00')) ]"/>
+
+                </search>
+            </field>
+        </record>
+
+        <act_window id="action_pos_receivables_report"
+                    name="收款流水"
+                    res_model="pos.receivables.report"
+                    view_mode="tree,pivot,graph"/>
+
+        <menuitem name="收款流水" id="menu_pos_receivables_report" parent="point_of_sale.menu_point_rep"
+                  action="action_pos_receivables_report" sequence="2"/>
+
+        <!--收款流水汇总-->
+        <record model="ir.ui.view" id="pos_receivables_summary_tree_view">
+            <field name="name">pos_receivables_summary_tree_view</field>
+            <field name="model">pos.receivables.report</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0">
+                    <field name="pay_amount" sum="Pay amount"/>
+                    <field name="return_amount" sum="Return amount"/>
+                    <field name="profit_amount" sum="Profit_amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_pos_receivables_summary" model="ir.actions.act_window">
+            <field name="name">收款汇总</field>
+            <field name="res_model">pos.receivables.report</field>
+            <field name="view_mode">tree,pivot,graph</field>
+            <field name="search_view_id" ref="pos_receivables_report_search_view"/>
+            <field name="view_id" ref="pos_receivables_summary_tree_view"/>
+            <field name="context">{'group_by': 'journal_id'}</field>
+        </record>
+
+        <menuitem name="收款汇总" id="menu_pos_receivables_summary" parent="point_of_sale.menu_point_rep"
+                  action="action_pos_receivables_summary" sequence="2"/>
+
+
+        <!--商品排行榜-->
+
+        <record model="ir.ui.view" id="pos_produce_rank_tree_view">
+            <field name="car_id">pos_produce_rank_tree_view</field>
+            <field name="model">pos.produce.rank</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0">
+                    <field name="product_id" invisible="1"/>
+                    <field name="authentic_qty" sum="Authentic qty"/>
+                    <field name="authentic_amount" sum="Authentic amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pos_produce_rank_view_pivot" model="ir.ui.view">
+            <field name="name">pos_produce_rank_view_pivot</field>
+            <field name="model">pos.produce.rank</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="product_id" type="row"/>
+                    <field name="authentic_qty" type="measure"/>
+                    <field name="authentic_amount" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="pos_produce_rank_view_graph" model="ir.ui.view">
+            <field name="name">pos_produce_rank_view_graph</field>
+            <field name="model">pos.produce.rank</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="product_id" type="row"/>
+                    <field name="authentic_qty" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="pos_produce_rank_search_view" model="ir.ui.view">
+            <field name="name">pos_produce_rank_search_view</field>
+            <field name="model">pos.produce.rank</field>
+            <field name="arch" type="xml">
+                <search string="Search Purchase Order Line" create="false">
+                    <field name="product_id"/>
+                    <filter string="今天" domain="[('date_order','&lt;=',datetime.datetime.now().strftime('%Y-%m-%d 23:59:59')),
+                              ('date_order','&gt;=',datetime.datetime.now().strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="昨天" domain="[('date_order','&lt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 23:59:59')),
+                              ('date_order','&gt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="本周"
+                            domain="[('date_order','&gt;=',(datetime.date.today()+datetime.timedelta(-(datetime.date.today().weekday()))).strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="本月" domain="[('date_order','&lt;',(datetime.date.today() + relativedelta(months=1)).strftime('%Y-%m-01 00:00:00')),
+                      ('date_order','&gt;=',time.strftime('%Y-%m-01 00:00:00')) ]"/>
+
+                </search>
+            </field>
+        </record>
+
+        <record id="action_pos_produce_rank" model="ir.actions.act_window">
+            <field name="name">商品排行</field>
+            <field name="res_model">pos.produce.rank</field>
+            <field name="view_mode">tree,pivot,graph,search</field>
+            <!--<field name="view_id" ref="pos_produce_rank_tree_view"/>-->
+            <field name="view_ids" eval="[
+                (5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('pos_produce_rank_tree_view')}),
+            ]"/>
+            <field name="context">{'group_by': 'product_id'}</field>
+        </record>
+
+        <menuitem name="商品排行" id="menu_pos_produce_rank" parent="point_of_sale.menu_point_rep"
+                  action="action_pos_produce_rank" sequence="4"/>
+
+        <!--赠品流水-->
+        <record model="ir.ui.view" id="pos_loyalty_program_tree_view">
+            <field name="name">pos_loyalty_program_tree_view</field>
+            <field name="model">pos.loyalty.program</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0">
+                    <field name="date_order"/>
+                    <field name="product_id"/>
+                    <field name="qty"/>
+                    <field name="reward_type"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="pos_loyalty_program_view_pivot" model="ir.ui.view">
+            <field name="name">pos_loyalty_program_view_pivot</field>
+            <field name="model">pos.loyalty.program</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="product_id" type="row"/>
+                    <field name="date_order" type="col"/>
+                    <field name="qty" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="pos_loyalty_program_view_graph" model="ir.ui.view">
+            <field name="name">pos_loyalty_program_view_graph</field>
+            <field name="model">pos.loyalty.program</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="product_id" type="row"/>
+                    <field name="date_order" type="col"/>
+                    <field name="qty" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="pos_loyalty_program_search_view" model="ir.ui.view">
+            <field name="name">pos_loyalty_program_search_view</field>
+            <field name="model">pos.loyalty.program</field>
+            <field name="arch" type="xml">
+                <search string="Search Purchase Order Line" create="false">
+                    <field name="product_id"/>
+                    <filter string="今天" domain="[('date_order','&lt;=',datetime.datetime.now().strftime('%Y-%m-%d 23:59:59')),
+                              ('date_order','&gt;=',datetime.datetime.now().strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="昨天" domain="[('date_order','&lt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 23:59:59')),
+                              ('date_order','&gt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="本周"
+                            domain="[('date_order','&gt;=',(datetime.date.today()+datetime.timedelta(-(datetime.date.today().weekday()))).strftime('%Y-%m-%d 00:00:00'))]"/>
+                    <filter string="本月" domain="[('date_order','&lt;',(datetime.date.today() + relativedelta(months=1)).strftime('%Y-%m-01 00:00:00')),
+                      ('date_order','&gt;=',time.strftime('%Y-%m-01 00:00:00')) ]"/>
+
+                </search>
+            </field>
+        </record>
+
+        <act_window id="action_pos_loyalty_program"
+                    name="赠品流水"
+                    res_model="pos.loyalty.program"
+                    view_mode="tree,pivot,graph,search"/>
+
+        <menuitem name="赠品流水" id="menu_pos_loyalty_program" parent="point_of_sale.menu_point_rep"
+                  action="action_pos_loyalty_program" sequence="5"/>
+
+        <!--赠品汇总-->
+        <record model="ir.ui.view" id="pos_loyalty_summary_tree_view">
+            <field name="name">pos_loyalty_summary_tree_view</field>
+            <field name="model">pos.loyalty.program</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0">
+                    <field name="qty"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_pos_loyalty_summary" model="ir.actions.act_window">
+            <field name="name">赠品汇总</field>
+            <field name="res_model">pos.loyalty.program</field>
+            <field name="view_mode">tree,pivot,graph</field>
+            <field name="search_view_id" ref="pos_loyalty_program_search_view"/>
+            <field name="view_id" ref="pos_loyalty_summary_tree_view"/>
+            <field name="context">{'group_by': 'product_id'}</field>
+        </record>
+
+        <menuitem name="赠品汇总" id="menu_pos_loyalty_summary" parent="point_of_sale.menu_point_rep"
+                  action="action_pos_loyalty_summary" sequence="5"/>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ct_project_team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-21 02:14+0000\n"
+"PO-Revision-Date: 2017-08-21 02:14+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ct_project_team
+#: model:ir.ui.view,arch_db:ct_project_team.project_team_form_view
+msgid "Company"
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.ui.view,arch_db:ct_project_team.project_team_form_view
+msgid "More Info"
+msgstr ""
+
+#. module: ct_project_team
+#: selection:crm.team,type_team:0
+#: model:ir.model,name:ct_project_team.model_project_project
+msgid "Project"
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.model.fields,field_description:ct_project_team.field_crm_team_team_members
+#: model:ir.model.fields,field_description:ct_project_team.field_project_project_members
+msgid "Project Members"
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.model.fields,field_description:ct_project_team.field_project_project_team_id
+#: model:ir.ui.view,arch_db:ct_project_team.project_team_form_view
+#: model:ir.ui.view,arch_db:ct_project_team.project_team_tree_view
+msgid "Project Team"
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.ui.view,arch_db:ct_project_team.project_team_form_view
+msgid "Project team"
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.model.fields,help:ct_project_team.field_project_project_members
+msgid "Project's\n"
+"                               members are users who can have an access to\n"
+"                               the tasks related to this project."
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.model.fields,help:ct_project_team.field_crm_team_team_members
+msgid "Project's members are users who\n"
+"                                     can have an access to the tasks related\n"
+"                                     to this project."
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.actions.act_window,name:ct_project_team.project_team_action_tree
+#: model:ir.ui.menu,name:ct_project_team.project_team_menu
+msgid "Projects Team"
+msgstr ""
+
+#. module: ct_project_team
+#: selection:crm.team,type_team:0
+msgid "Sale"
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.model,name:ct_project_team.model_crm_team
+msgid "Sales Team"
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.ui.view,arch_db:ct_project_team.project_project_inherit_form_view
+msgid "Team"
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.ui.view,arch_db:ct_project_team.project_team_form_view
+msgid "Team Members"
+msgstr ""
+
+#. module: ct_project_team
+#: model:ir.model.fields,field_description:ct_project_team.field_crm_team_type_team
+msgid "Type"
+msgstr ""
+

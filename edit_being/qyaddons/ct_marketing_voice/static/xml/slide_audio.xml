@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="slide_audio" xml:space="preserve">
+    <t t-name="slide_audio">
+        <div>
+          <div class="voice_audio" id="voice_audio">
+              <div class="sound-trigger sound-trigger--type-default-2 sound-trigger--type-hover">
+                <p class="sound-trigger__speach">移入播放语音</p>
+                <div class="sound-trigger__inner">
+                   <i class="fa fa-volume-up fa-lg"></i>
+                </div>
+             </div>
+          </div>
+        </div>
+    </t>
+
+</templates>

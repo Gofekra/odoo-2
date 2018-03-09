@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="wx_user_manage_search" model="ir.ui.view">
+            <field name="name">wx_user_manage_search</field>
+            <field name="model">wx.user</field>
+            <field name="arch" type="xml">
+                <search string="用户">
+                    <field name="nickname" string="昵称"/>
+                    <field name="remark" string="备注"/>
+                    <field name="country" string="国家"/>
+                    <field name="province" string="省/市"/>
+                    <field name="city" string="城市"/>
+                    <field name="tag_ids" string="标签" filter_domain="[('tag_ids','ilike', self)]"/>
+                    <group expand="0" string="分组">
+                        <filter string="性别" context="{'group_by' : 'sex'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="wx_user_manage_form" model="ir.ui.view">
+            <field name="name">wx_user_manage_form</field>
+            <field name="model">wx.user</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group string="基本信息">                            
+                                <field name="nickname"/>
+                                <field name="headimg"/>
+                                <field name="remark"/>
+                                <field name="tag_ids" widget="many2many_tags"/>
+                                <field name="sex"/>
+                                <field name="subscribe"/>
+                                <field name="subscribe_time"/>
+                            </group>
+                            <group string='地址'>
+                                <field name="country"/>
+                                <field name="province"/>
+                                <field name="city"/>
+                            </group>    
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="wx_user_manage_tree" model="ir.ui.view">
+            <field name="name">wx_user_manage_tree</field>
+            <field name="model">wx.user</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="用户">
+                    <field name="nickname"/>
+                    <field name="remark"/> 
+                    <field name="sex"/>
+                    <field name="subscribe"/>
+                    <field name="subscribe_time"/>               
+                </tree>
+            </field>
+        </record>
+        <record id="wx_user_manage_action" model="ir.actions.act_window">
+            <field name="name">用户管理</field>
+            <field name="res_model">wx.user</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+                    <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('wx_user_manage_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('wx_user_manage_form')})]"/>
+        </record>
+
+
+        <menuitem action="wx_user_manage_action" id="wx_user_amnage_menuitem" name="用户管理"
+                  parent="manage_1200" sequence="30"/>
+
+
+        <record id="wx_user_manage_get" model="ir.ui.view">
+            <field name="name">wx_user_manage_get</field>
+            <field name="model">wx.user</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+               <form string="Invoice Sales Order">
+                    <p class="oe_grey">
+                       本功能适用于初次微信配置之后使用，当微信正常使用时，新关注的用户会自动同步到该平台。
+                    </p>
+                    <footer>
+                        <button name="search_wx_user" string="确认" type="object" class="btn-primary"/>
+                        <button string="取消" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="wx_user_manage_get_action" model="ir.actions.act_window">
+            <field name="name">微信用户同步</field>
+            <field name="res_model">wx.user</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+                        <field name="view_ids" eval="[(5,0,0),
+                          (0,0,{'view_mode':'form', 'view_id': ref('wx_user_manage_get')})]"/>
+
+        </record>
+
+        <menuitem action="wx_user_manage_get_action" id="wx_user_amnage_get_menuitem" name="微信用户同步"
+          parent="setting_1300" sequence="20"/>
+
+
+
+    </data>
+</openerp>

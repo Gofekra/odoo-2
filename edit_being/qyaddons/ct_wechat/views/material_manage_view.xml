@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- 文字 -->
+        <record id="wx_text_tree" model="ir.ui.view">
+            <field name="name">wx_text_tree</field>
+            <field name="model">wx.text</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="文字" editable="top">
+                    <field name="name"/>
+                    <field name="text_content"/>
+                </tree>
+            </field>
+        </record>
+        <record id="wx_text_action" model="ir.actions.act_window">
+            <field name="name">文字</field>
+            <field name="res_model">wx.text</field>
+            <field name="view_mode">tree</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="wx_text_tree"/>
+        </record>    
+        <menuitem action="wx_text_action" id="text_1211" name="文字" parent="material_manage_1210" sequence="5"/>
+
+        <!-- 图文 -->
+
+        <record id="wx_image_text_form" model="ir.ui.view">
+            <field name="name">wx_image_text</field>
+            <field name="model">wx.imagetext</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="author"/>
+                            <field name="digest"/>
+                            <field name="content"/>
+                            <field name="image_id"/>
+                             <field name="show_cover_pic" required="1"/>
+                            <field name="content_source_url"/>
+                            <field name="media_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="wx_image_text_tree" model="ir.ui.view">
+            <field name="name">wx_image_text_tree</field>
+            <field name="model">wx.imagetext</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="图文">
+                      <field name="name"/>
+                        <field name="author"/>
+                        <field name="digest"/>
+                        <field name="show_cover_pic"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="wx_image_text_action" model="ir.actions.act_window">
+            <field name="name">图文</field>
+            <field name="res_model">wx.imagetext</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem action="wx_image_text_action" id="wx_imagetext" name="单图文" parent="material_manage_1210" sequence="15"/>
+
+
+        <!-- 多图文 -->
+
+        <record id="wx_many_image_text_form" model="ir.ui.view">
+            <field name="name">wx_many_image_text_form</field>
+            <field name="model">wx.many.imagetext</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="many_image_text"/>
+                            <field name="media_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="wx_many_image_text_tree" model="ir.ui.view">
+            <field name="name">wx_many_image_text_tree</field>
+            <field name="model">wx.many.imagetext</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="多图文">
+                    <field name="name"/>
+                    <field name="many_image_text"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="wx_many_image_text_action" model="ir.actions.act_window">
+            <field name="name">多图文消息</field>
+            <field name="res_model">wx.many.imagetext</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+
+        <menuitem action="wx_many_image_text_action" id="wx_image_text_1212" name="多图文"
+                  parent="material_manage_1210" sequence="20"/>
+
+        <!-- 图片 -->
+        <record id="wx_image_form" model="ir.ui.view">
+            <field name="name">wx_image_tree</field>
+            <field name="model">wx.image</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="图片">  
+                    <group>
+                        <field name="name"/>
+                        <field name="image" widget='image' class='oe_avatar'/>
+                        <field name="media_id"/>
+                        <field name="url"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="wx_image_tree" model="ir.ui.view">
+            <field name="name">wx_image_tree</field>
+            <field name="model">wx.image</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="图片">
+                    <field name="name"/>
+                    <field name="image"/>
+                </tree>
+            </field>
+        </record>
+         <record id="wx_image_action" model="ir.actions.act_window">
+            <field name="name">图片</field>
+            <field name="res_model">wx.image</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem action="wx_image_action" id="wx_image_1213" name="图片"
+                  parent="material_manage_1210" sequence="10"/>
+    </data>
+</openerp>

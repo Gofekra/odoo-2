@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--created by:chianggq@163.com 2017-02-07 10:42:51-->
+<odoo>
+    <data>
+    <!--
+         <template id="assets_backend" name="ct_project_uf assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/ct_project_uf/static/src/css/my.css"/>
+                <script type="text/JavaScript" src="/ct_project_uf/static/src/js/myjs.js"></script>
+            </xpath>
+        </template>
+
+        <record id="action_mybtn" model="ir.actions.client">
+            <field name="name">action_mybtn</field>
+            <field name="tag">mytest</field>
+        </record>
+
+        <record id="action_myurl" model="ir.actions.act_url">
+            <field name="name">action_myurl</field>
+            <field name="target">self</field>
+            <field name="url">http://www.sina.com</field>
+        </record>
+
+        <record id="view_form_uf_work_hour" model="ir.ui.view">
+            <field name="name">UfWorkHour Form</field>
+            <field name="model">uf.work.hour</field>
+            <field name="arch" type="xml">
+                <form string="UfWorkHour">
+                    <header>
+                        <button name="do_toggle_done" type="object" string="Toggle Done" class="oe_highlight"/>
+                        <button id="mybtntestjs" name="call_js" type="object" string="js call"  class="oe_highlight" />
+                        <button name="do_clear_done" type="object" string="Clear All Done"/>
+                        <button name="do_print" type="object" string="Print" class="oe_highlight"/>
+                        <button name="do_preview" type="object" string="Preview" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left"><field name="name"/></group>
+                            <group name="group_right">
+                                <field name="amount"/>
+                                <field name="active" readonly="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="view_tree_uf_work_hour" model="ir.ui.view">
+            <field name="name">UfWorkHour Tree</field>
+            <field name="model">uf.work.hour</field>
+            <field name="arch" type="xml">
+                <tree create="true">
+                  <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_filter_uf_work_hour" model="ir.ui.view">
+            <field name="name">UfWorkHour Filter</field>
+            <field name="model">uf.work.hour</field>
+            <field name="arch" type="xml">
+              <search>
+                  <field name="name"/>
+                  <filter string="Not Done"
+                    domain="[('amount','=',0)]"/>
+              </search>
+            </field>
+        </record>
+    -->
+        <!-- Action to open uf_work_hour list -->
+        <act_window id="action_uf_work_hour"
+                    name="UfWorkHour"
+                    res_model="uf.work.hour"
+                    view_mode="tree,form" />
+
+        <!-- Menu item to open uf_work_hour -->
+        <!--<menuitem id='menu_ct_project_uf' name='CtProjectUf' sequence="10" groups="group_ct_project_uf_user"/>
+        <menuitem id="menu_ct_project_uf_grp1" name="CtProjectUf" parent="menu_ct_project_uf"  sequence="10" />
+        -->
+        <!--<menuitem id="menu_ct_project_uf_uf_work_hour"-->
+                  <!--name="UfWorkHour"-->
+                  <!--parent="menu_ct_project_uf_grp1"-->
+                  <!--sequence="20"-->
+                  <!--action="action_uf_work_hour" />-->
+    </data>
+</odoo>

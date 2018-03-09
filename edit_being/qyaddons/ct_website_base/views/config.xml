@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="ct_website_config" name="Cotong Website Less"
+                  inherit_id="website.assets_frontend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/css"
+                      href="/ct_website_base/static/src/less/animate.min.css"/> 
+                      
+                <link rel="stylesheet" type="text/css"
+                      href="/ct_website_base/static/src/less/hover-min.css"/>
+
+                <link rel="stylesheet" type="text/css"
+                      href="/ct_website_base/static/src/less/font_helvetica.less"/>
+                <link rel="stylesheet" type="text/less"
+                      href="/ct_website_base/static/src/less/common.less"/>
+
+                <link href="/ct_website_base/static/src/less/img_text.less"
+                      rel="stylesheet" type="text/less"/>
+
+                <link href="/ct_website_base/static/src/less/colors_cotong.less"
+                      rel="stylesheet" type="text/less"/>
+
+                <script type="text/javascript" src="/ct_website_base/static/src/js/cotong_editor.js"/>
+                 <script type="text/javascript" src="/ct_website_base/static/src/js/header_navbar.js"/>
+            </xpath>
+
+        </template>
+
+        <template id="ct_website_editor" name="Cotong Website Modify editor" inherit_id="website.assets_editor">
+            <xpath expr="//script[@src='/website/static/src/js/website.editor.js']" position="after">
+              <script type="text/javascript" src="/ct_website_base/static/src/js/editor.js"/> 
+              
+            </xpath>
+        </template>
+      
+        <template id="ct_website_navbar" name="Cotong Website Modify the" inherit_id="web_editor.assets_editor">
+            <xpath expr="//script[@src='/web_editor/static/src/js/snippets.editor.js']" position="after">
+              <script type="text/javascript" src="/ct_website_base/static/src/js/navbar.js"/> 
+              <script type="text/javascript" src="/ct_website_base/static/src/js/website.editor.js"/> 
+            </xpath>
+        </template>
+        
+        <template id="ct_website_share" name="Cotong Website Share" inherit_id="website.footer_default">
+            <xpath expr="//h2" position="replace">
+              <h2>
+              <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32" style="overflow:hidden">
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script>
+  var jiathis_config = {};
+  $("#footer [class^='jiathis']").click(function(){
+    jiathis_config = {
+      url:window.location.href+(odoo.uid?("#uid-"+odoo.uid:"")),
+      title:document.title,
+      summary:$("meta[name=description]").attr("content"),
+      data_track_clickback:true,
+      shortUrl:true
+    };
+  })
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+</h2>
+<!-- JiaThis Button END -->
+            </xpath>
+        </template>
+    </data>
+</odoo>

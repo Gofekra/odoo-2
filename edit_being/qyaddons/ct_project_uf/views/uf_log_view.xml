@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--created by:chianggq@163.com 2017-02-07 10:42:51-->
+<odoo>
+  <data>
+    <record id="view_form_uf_log" model="ir.ui.view">
+      <field name="name">UfLog Form</field>
+      <field name="model">uf.log</field>
+      <field name="arch" type="xml">
+        <form string="UfLog">
+          <header>
+            <!--<button name="do_toggle_done" type="object" string="审核" class="oe_highlight"/>-->
+            <field name="hasprint" invisible="1"/>
+            <button name="do_copy" type="object" string="生成盖章日志单" class="oe_highlight"
+                    attrs="{'invisible': [('hasprint', '=', True)]}"/>
+            <button name="do_show" type="object" string="查看盖章日志单" class="oe_highlight"
+                    attrs="{'invisible': [('hasprint', '=', False)]}"/>
+            <button name="do_expense" type="object" string="费用查看" class="oe_highlight"/>
+          </header>
+          <sheet>
+            <group string="实施工作日志">
+              <group>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="task_id"/>
+                <field name="taxiamount"/>
+                <button name="do_wizard" type="object" string="工作向导" class="oe_highlight"/>
+              </group>
+              <group>
+                <field name="user_id"/>
+                <field name="confirm_date"/>
+                <field name="product_id"/>
+                <field name="route_des"/>
+                <field name="amount"/>
+              </group>
+            </group>
+            <field name="timesheet_ids">
+              <tree string="Task Log" editable="bottom">
+                <field name="task_id"/>
+                <field name="name"/>
+                <!--<field name="date"/>-->
+                <field name="time_start"/>
+                <field name="time_end"/>
+                <!--<field name="hours"/>-->
+                <field name="unit_amount"/>
+                <field name="user_id"
+                       context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'project.group_project_user']}"/>
+                <!--<field name="is_done"/>-->
+              </tree>
+            </field>
+            <field name="note" placeholder="备注"/>
+          </sheet>
+        </form>
+
+      </field>
+    </record>
+
+    <record id="view_tree_uf_log" model="ir.ui.view">
+      <field name="name">UfLog Tree</field>
+      <field name="model">uf.log</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="project_id"/>
+          <field name="task_id"/>
+          <field name="user_id"/>
+          <!-- <field name="company_id"/>-->
+          <field name="confirm_date"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_filter_uf_log" model="ir.ui.view">
+      <field name="name">UfLog Filter</field>
+      <field name="model">uf.log</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="confirm_date" filter_domain="[('confirm_date','=',time.strftime('%Y-%m-%d'))]" string="今日日志"/>
+          <filter name="todaylog" string="今日日志"
+                  domain="[('confirm_date','=',time.strftime('%Y-%m-%d'))]"/>
+          <filter name="hasprint" string="已打印"
+                  domain="[('hasprint','=',True)]"/>
+          <group expand="0" string="Group By">
+            <filter string="日期" domain="[]" context="{'group_by':'confirm_date'}"/>
+            <filter string="人员" domain="[]" context="{'group_by':'user_id'}"/>
+            <filter string="项目" domain="[]" context="{'group_by':'project_id'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <!-- Action to open uf_log list -->
+    <!--target="inline"-->
+    <act_window id="action_uf_log"
+                name="工作日志"
+                res_model="uf.log"
+                view_mode="tree,form"/>
+
+    <!-- Menu item to open uf_log -->
+    <!--<menuitem id='menu_ct_project_uf' name='CtProjectUf' sequence="10"/>-->
+    <menuitem id="menu_ct_project_uf_grp1" name="实施文档" parent="project.menu_main_pm" sequence="2"
+               groups="base.group_no_one"/>
+
+    <menuitem id="menu_cotong_project_uf_uf_log"
+              name="工作日志"
+              parent="menu_ct_project_uf_grp1"
+              sequence="10"
+              action="action_uf_log"/>
+
+  </data>
+</odoo>

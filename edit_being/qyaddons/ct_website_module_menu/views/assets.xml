@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+
+        <template id="assets_product_menu" name="Cotong Website Product Interact Less"
+                  inherit_id="website.assets_frontend">
+            <xpath expr="." position="inside">
+
+                <link href="/ct_website_module_menu/static/src/less/website_module_menu.less" rel="stylesheet"
+                      type="text/less"/>
+
+                <link href="/ct_website_module_menu/static/src/less/module_intro.less" rel="stylesheet"
+                      type="text/less"/>
+
+                <script src="/ct_website_module_menu/static/src/js/website_module_menu.js"/>
+
+            </xpath>
+        </template>
+
+      <template id="snippet_content_menu" inherit_id="website.snippets" name="Add into bar">
+        <xpath expr="//div[@id='o_scroll']" position="inside">
+          <div id="content_menu" class="o_panel">
+            <div class="o_panel_header">
+                <i class="fa fa-indent"/>功能说明
+            </div>
+            <div class="o_panel_body">
+                <t t-snippet="ct_website_module_menu.module_intro"
+                   t-thumbnail="/ct_website_module_menu/static/src/img/module_intro.png"/>
+            </div>
+
+          </div>
+        </xpath>
+      </template>
+
+
+        <!--<template id="module_menu" name="module_menu" inherit_id="website.assets_frontend">-->
+            <!--<xpath expr="script[last()]" position="after">-->
+
+            <!--</xpath>-->
+        <!--</template>-->
+
+
+
+        <!--<template id='snippet_content' inherit_id="website.snippets" name="add content">-->
+            <!--<xpath expr="//div[@id='snippet_structure']" postion="inside">-->
+                <!--<t t-snippet="ct_website_module_menu.module_intro"-->
+                   <!--t-thumbnail="/ct_website_module_menu/static/src/img/module_intro.png"/>-->
+            <!--</xpath>-->
+        <!--</template>-->
+    </data>
+</openerp>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--created by:chianggq@163.com 2017-02-07 10:42:51-->
+<openerp>
+  <data>
+    <template id="uf_log_tpl">
+      <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="o">
+          <div class="page">
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <t t-esc="o.name"/>
+              </div>
+            </div>
+          </div>
+        </t>
+      </t>
+    </template>
+  </data>
+</openerp>

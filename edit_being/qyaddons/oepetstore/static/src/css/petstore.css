@@ -1,0 +1,74 @@
+/*############################################################*/
+/*.oe_petstore_homepage {*/
+    /*display: table;*/
+/*}*/
+
+/*.oe_petstore_homepage_left {*/
+    /*display: table-cell;*/
+    /*width : 300px;*/
+/*}*/
+
+/*.oe_petstore_homepage_right {*/
+    /*display: table-cell;*/
+    /*width : 300px;*/
+/*}*/
+
+/*.oe_petstore_motd {*/
+    /*margin-top: 0px;*/
+    /*padding: 5px;*/
+    /*font: 楷体;*/
+    /*border-radius: 3px;*/
+    /*background-color: #00a0d1;*/
+/*}*/
+
+/*.oe_petstore_pettoyslist {*/
+    /*padding: 5px;*/
+/*}*/
+
+/*.oe_petstore_pettoy {*/
+    /*margin: 5px;*/
+    /*padding: 5px;*/
+    /*border-radius: 3px;*/
+    /*background-color: #F0EEEE;*/
+/*}*/
+
+
+/*.oe_color_div {*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*margin: 10px;*/
+/*}*/
+/*############################################################*/
+
+
+.oe_petstore_homepage .oe_petstore_motd {
+    display: table;
+}
+
+.oe_petstore_homepage_left {
+    display: table-cell;
+}
+
+.oe_petstore_homepage_right {
+    display: table-cell;
+}
+
+/*.oe_petstore_motd {*/
+    /*margin-top: 5px;*/
+    /*padding: 5px;*/
+    /*border-radius: 3px;*/
+    /*background-color: #00aa9a;*/
+/*}*/
+
+.oe_petstore_pettoyslist {
+    float: left;
+    padding: 5px;
+}
+
+.oe_petstore_pettoy {
+    float: right;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #F0EEEE;
+}

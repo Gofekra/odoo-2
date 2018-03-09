@@ -1,0 +1,29 @@
+<odoo>
+  <data>
+   <record id="view_project_issue_from" model="ir.ui.view">
+            <field name="name">view_project_issue_from</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
+            <field name="arch" type="xml">
+                  <field name="tag_ids" position="after">
+                    <field name='feedback_submitter'/>
+                     <field name='feedback_url' widget="url"/>
+                </field>
+
+                <field name="stage_id" position="before">
+                     <button name="send_info" type="object"  string="发送解答"/>
+                </field>
+
+                <xpath expr='//notebook' position='inside'>
+                    <page string="疑问解答">
+                            <field name="result_info"/>
+                    </page>
+                </xpath>
+
+            </field>
+
+
+
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="im_livechat.FeedBack">
+        <div class="o_livechat_rating">
+            <div class="o_livechat_rating_feedback_text">
+                您的问题是否已得到解决 ?
+            </div>
+            <div class="o_livechat_rating_choices">
+                <img t-att-src="widget.server_origin + '/rating/static/src/img/rating_10.png'" alt="Good" data-value="10"/>
+                <img t-att-src="widget.server_origin + '/rating/static/src/img/rating_5.png'" alt="OK" data-value="5"/>
+                <img t-att-src="widget.server_origin + '/rating/static/src/img/rating_1.png'" alt="Bad" data-value="1" />
+                <div class="o_livechat_no_feedback text-muted">
+                    <em> 我不想参与点评！</em>
+                </div>
+            </div>
+            <div class="o_livechat_rating_reason">
+                <textarea id="reason" placeholder="Explain your note"></textarea>
+                <div class="o_livechat_rating_reason_button">
+                    <input type="button" class="o_rating_submit_button" value="Send" />
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <!--<t t-extend="im_livechat.FeedBack">-->
+        <!--<t t-jquery="div.o_livechat_rating" t-operation="replace">-->
+
+            <!--<div class="o_livechat_rating">-->
+                <!--<div class="o_livechat_rating_feedback_text">-->
+                   <!--你的问题是否已得到解决 ?-->
+                <!--</div>-->
+                <!--<div class="o_livechat_rating_choices">-->
+                    <!--<img t-att-src="widget.server_origin + '/rating/static/src/img/rating_10.png'" alt="Good" data-value="10"/>-->
+                    <!--<img t-att-src="widget.server_origin + '/rating/static/src/img/rating_5.png'" alt="OK" data-value="5"/>-->
+                    <!--<img t-att-src="widget.server_origin + '/rating/static/src/img/rating_1.png'" alt="Bad" data-value="1" />-->
+                    <!--<div class="o_livechat_no_feedback text-muted">-->
+                        <!--<em> 我不想参与此话题！</em>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="o_livechat_rating_reason">-->
+                    <!--<textarea id="reason" placeholder="Explain your note"></textarea>-->
+                    <!--<div class="o_livechat_rating_reason_button">-->
+                        <!--<input type="button" class="o_rating_submit_button" value="Send" />-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</t>-->
+    <!--</t>-->
+
+
+
+</templates>

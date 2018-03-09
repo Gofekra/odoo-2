@@ -1,0 +1,407 @@
+/*公共样式*/
+.o_web_client{
+      button.btn.btn-primary{
+        background-color: @theme-color-public !important;
+        &:hover{
+            background-color:lighten(@theme-text-hover,10%) !important;
+        }
+    }
+    button.btn.btn-default{
+        color:@theme-color-public;
+        &:hover{
+            color:darken(@theme-text-hover,10%) !important;
+        }
+    }
+}
+a{
+  color: @theme-color-public;
+}
+a:visited{
+  color: @theme-color-public;
+}
+a:hover, a:focus, a:active{
+  color: @theme-text-hover;
+}
+li.open>a{
+  background-color: transparent;
+}
+.faicon(@site){
+  content: url("/ct_dxb_home/static/src/@{theme-icon-folder}@{site}");
+}
+.back-image(@site){
+  background-image:url("/ct_dxb_home/static/src/@{theme-icon-folder}@{site}");
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus, .bootstrap-table .btn-default:hover, .bootstrap-table .btn-default:focus{
+  color: @theme-color-public;
+}
+.o_kanban_view .oe_module_vignette .oe_module_desc > button.btn-default:hover, .o_form_view .oe_avatar + .oe_title > div > button.btn-default:hover{
+  color: @theme-text-hover;
+}
+.o_kanban_view .o_kanban_record .o_kanban_card_content .btn.btn-primary{
+  background-color: @theme-color-public;
+}
+.o_kanban_view .o_kanban_record .o_kanban_card_content .o_kanban_primary_right > .row > .col-xs-3{
+  color:  @theme-color-public;
+}
+.o_progressbar .o_progress .o_progressbar_complete{
+  background-color: @theme-color-public;
+}
+.o_kanban_view .o_kanban_card_manage_pane .o_kanban_card_manage_title span{
+  border-color: @theme-color-public !important;
+}
+.o_kanban_view .o_kanban_card_manage_pane .o_kanban_card_manage_section a:hover, .o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped a:hover, .o_kanban_view .o_kanban_card_manage_pane .o_kanban_card_settings .text-right a:hover{
+  color: @theme-color-public !important;
+}
+.o_web_client .o_content .oe_import .oe_import_box .input-group-btn .btn-primary{
+  background-color: @theme-text-hover;
+}
+.o_web_client .o_content .oe_import .oe_import_box .input-group .input-group-btn .btn-default:hover{
+  color: @theme-text-hover;
+}
+.o_kanban_view .o_kanban_record .oe_kanban_details .o_kanban_button button.btn{
+  color: @theme-color-public;
+}
+.o_form_view .o_tz_warning{
+  color: @theme-attendance-color;
+}
+.o_form_view > div > .btn.oe_inline, .o_form_view > .o_group.o_inner_group div[name="email"] .btn.oe_inline{
+  color: @theme-color-public;
+}
+.o_web_client .o_content .o_form_nosheet table.o_group td.o_td_label + td .oe_link .text-success, .o_web_client .o_content .o_form_nosheet table.o_group td.o_td_label + td .oe_link span{
+  color: @theme-color-public;
+}
+.o_web_client .o_content .o_form_nosheet table.o_group td.o_td_label + td .oe_link .text-success:hover, .o_web_client .o_content .o_form_nosheet table.o_group td.o_td_label + td .oe_link span:hover{
+  color: @theme-text-hover;
+}
+.o_kanban_view .oe_module_vignette .oe_module_desc > button.btn-primary, .o_form_view .oe_avatar + .oe_title > div > button.btn-primary{
+  background-color: @theme-text-hover;
+}
+.o_form_view .o_notebook > div.nav-tabs .table-striped > tbody > tr >td:nth-child(2){
+  color: @theme-text-hover;
+}
+.o_search_options .o_filters_menu li.selected > a, .o_search_options .o_group_by_menu li.selected > a, .o_search_options .o_favorites_menu li.selected > a, .o_control_panel .o_cp_left .o_cp_buttons .btn-group.open .dropdown-menu li.selected > a{
+  color: @theme-text-hover;
+}
+.o_search_options .o_favorites_menu li.selected > a:before{
+  color: @theme-text-hover;
+}
+.o_form_view .o_x2m_control_panel .o_cp_buttons .btn-primary, .o_form_view div[attrs] > .btn.btn-primary{
+  background-color: @theme-color-public;
+}
+/*顶部导航*/
+.topMenu{
+  background-color: @theme-back-navbar;
+}
+.o_main_navbar .o_menu_sections > li > a{
+  color: @theme-top-menu;
+}
+.o_main_navbar > ul > li > a:hover{
+  color: @theme-top-menu-hover;
+}
+.o_main_navbar{
+  background-color: @theme-back-navbar !important;
+}
+.o_main_navbar > ul > li > a:hover,.o_main_navbar > a:hover, .o_main_navbar > button:hover, .o_main_navbar > a:focus, .o_main_navbar > button:focus{
+  background-color:  @theme-back-act;
+}
+.o_main_navbar .o_menu_sections > li .dropdown-menu > li > a:hover, .o_main_navbar .o_menu_sections > li .dropdown-menu > li > a:focus{
+  color:@theme-text-hover;
+}
+.o_main_navbar .o_menu_sections > li.act > a{
+  background-color: @theme-back-act;
+  border-bottom-color:@theme-color-public;
+  color: @theme-top-menu-hover;
+}
+.o_main_navbar .o_menu_sections{
+  background-color: @theme-back-navbar !important;
+}
+.o_main_navbar li.open>a{
+  background-color: @theme-back-act;
+}
+.o_main_navbar .o_menu_sections > li .dropdown-menu > li.dropdown-header > span{
+  border-left-color: @theme-color-public;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button:hover, .o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_filter_button.o_selected{
+  color: @theme-color-public !important;
+}
+.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_top .o_new_message{
+  color: @theme-color-public !important;
+}
+
+/*右下角弹窗*/
+.o_chat_window .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle){
+  background-color: @theme-color-public !important;
+}
+/*顶部标题栏*/
+.o_control_panel{
+  border-bottom-color:@theme-back-apps; 
+}
+.o_control_panel .o_cp_left .o_cp_buttons button.btn-primary{
+  background-color: @theme-text-hover; 
+}
+.o_control_panel .o_cp_left .o_cp_buttons button.btn-primary{
+  &:not([disabled="disabled"]):hover{
+
+  }
+  background-color: @theme-button-hover;
+}
+.o_control_panel .o_cp_left .o_cp_buttons button.btn-default{
+  color: @theme-color-public;
+}
+.o_control_panel .o_cp_left .o_cp_buttons button.btn-default:hover{
+  color: @theme-text-hover;
+}
+.o_search_options .o_filters_menu li > a:hover{
+  color: @theme-text-hover;
+}
+.dropdown-menu > li.o_closed_menu > a{
+  color: @theme-text-hover !important;
+}
+.o_search_options .o_closed_menu a:before{
+  border-right-color: @theme-text-hover;
+}
+.o_apply_filter, .o_search_options .o_favorites_menu .o_save_name .btn-primary, .o_search_options .o_group_by_menu .o_select_group, .o_control_panel .o_cp_right .dropdown-menu > li.o_add_to_dashboard .btn-primary{
+  background-color: @theme-color-public;
+  border-color: @theme-color-public;
+}
+.o_control_panel .breadcrumb > li{
+  color: @theme-back-apps;
+}
+.o_searchview .o_searchview_facet .o_searchview_facet_label{
+  background-color: @theme-color-public;
+}
+.o_searchview .o_searchview_facet{
+  border-color: @theme-color-public;
+}
+.o_form_view .o_form_statusbar > .o_statusbar_buttons > .btn.btn-primary:not(.o_form_invisible), .o_form_view:not(.oe_form_configuration ) .o_form_statusbar > .o_statusbar_buttons > .btn.btn-primary{
+  background-color: @theme-text-hover;
+}
+.o_form_view .o_form_statusbar > .o_statusbar_buttons > .btn.btn-primary:not(.o_form_invisible):hover{
+  background-color: @theme-text-hover;
+}
+.o_form_view .o_form_statusbar > .o_statusbar_buttons > .btn:hover{
+  color: @theme-text-hover;
+}
+.o_web_client .o_content .o_form_nosheet .o_form_statusbar ~ table.o_group .o_horizontal_separator, .o_web_client .o_content .o_form_nosheet > #main > table.o_group .o_horizontal_separator, .o_web_client .o_content .o_form_nosheet .o_form_statusbar + div.o_group .o_horizontal_separator, .o_web_client .o_content .o_form_nosheet .o_horizontal_separator{
+  border-left-color: @theme-color-public;
+}
+.o_add_condition{
+  color: @theme-color-public;
+}
+.o_control_panel .o_cp_right .o_search_options .btn-group.open .o_add_filter_menu .btn-default:hover, .o_control_panel .o_cp_right .o_search_options .btn-group.open .o_add_filter_menu .btn-default:focus, .o_control_panel .o_cp_right .o_search_options .btn-group.open .o_add_filter_menu .btn-default:active{
+  color: @theme-color-public;
+}
+.fa-plus-circle:before{
+  color: @theme-color-public;
+}
+
+.o_searchview.active .fa-search-plus:before,
+.o_searchview:active .fa-search-plus:before,
+.o_searchview.active .fa-search-minus:before,
+.o_searchview:active .fa-search-minus:before
+{
+  .faicon("search_hover.png");
+}
+.btn-icon.fa-list-ul:active:before, .btn-icon.fa-list-ul.active:before{
+  .faicon("list2.png");
+}
+.btn-icon.fa-th-large:active:before, .btn-icon.fa-th-large.active:before{
+  .faicon("kanban.png");
+}
+.btn-icon.fa-table:active:before, .btn-icon.fa-table.active:before{
+  .faicon("toushi1.png");
+}
+.btn-icon.fa-bar-chart:active:before, .btn-icon.fa-bar-chart.active:before{
+  .faicon("zhuzhaung2.png");
+}
+.btn-icon.fa-calendar:active:before, .btn-icon.fa-calendar.active:before{
+  .faicon("calendar2.png");
+}
+/*中间视图部分*/
+// .o_form_view .o_form_sheet table.o_group.o_inner_group > tbody > tr> td > .o_form_input.o_form_required{
+//   border-color: @theme-color-public;
+// }
+.o_form_view.o_form_readonly .o_form_uri:hover:first-line{
+  color: @theme-text-hover;
+}
+.o_form_view.o_form_readonly .o_form_uri:first-line{
+  color: @theme-color-public;
+}
+.o_form_view .oe_button_box .btn.oe_stat_button > .o_stat_info .o_stat_value, .o_form_view .oe_button_box .btn.oe_stat_button > .o_stat_info > .o_value{
+  color: @theme-text-hover;
+}
+.o_control_panel .o_cp_left .o_cp_sidebar .o_hidden_input_file .o_form_binary_form span{
+  color: @theme-text-hover;
+}
+.o_chatter_topbar .btn-link{
+  color: @theme-icon-color;
+}
+body .text-danger{
+  color: @theme-danger-color;
+}
+.oe_hr_attendance_status.oe_hr_attendance_status_red{
+  color: @theme-attendance-color;
+}
+.ui-autocomplete .ui-menu-item.o_m2o_dropdown_option > a, .ui-autocomplete .ui-menu-item.ui-state-focus.o_m2o_dropdown_option > a{
+  color: @theme-color-public !important;
+}
+.o_kanban_view .o_kanban_record .oe_kanban_details .oe_kanban_partner_links .badge{
+  border-color: @theme-color-public;
+  color: @theme-color-public;
+}
+.o_form_view .o_group.o_inner_group>tbody .btn-link{
+  color: @theme-color-public;
+}
+.o_form_view .o_notebook > div.nav-tabs .o_group.oe_subtotal_footer > tbody > tr .oe_subtotal_footer_separator label, .o_form_view .o_notebook > div.nav-tabs .o_group.oe_subtotal_footer > tbody > tr .oe_subtotal_footer_separator, .o_form_view .o_form_sheet > .o_group.oe_subtotal_footer .oe_subtotal_footer_separator .o_form_label, .o_form_view .o_form_sheet > .o_group.oe_subtotal_footer .oe_subtotal_footer_separator{
+  color: @theme-text-hover;
+}
+.datepicker .table-condensed > thead{
+  color: @theme-text-hover;
+}
+.datepicker .table-condensed > thead > tr > th.picker-switch:hover{
+  color: @theme-text-hover;
+}
+.datepicker .table-condensed > tbody > tr > td.active, .datepicker .table-condensed > tbody > tr > td .active{
+  background-color: @theme-color-public;
+  color: #FFF;
+}
+.datepicker .table-condensed > tbody > tr > td.today:before{
+  border-bottom-color: @theme-color-public;
+}
+.datepicker .table-condensed > thead > tr > th.prev:hover, .datepicker .table-condensed > thead > tr > th.prev:focus, .datepicker .table-condensed > thead > tr > th.next:hover, .datepicker .table-condensed > thead > tr > th.next:focus{
+  color: @theme-text-hover;
+}
+.modal .modal-content .modal-footer .btn-primary:hover{
+  background-color: @theme-attendance-color;
+}
+.o_kanban_quick_create .o_kanban_add{
+  background-color: @theme-color-public;
+}
+.o_kanban_view .o_kanban_record .o_kanban_image + .oe_kanban_details > div:nth-child(2){
+  color: @theme-color-public;
+}
+.o_pivot.o_enable_linking .o_pivot_cell_value:hover{
+  color: @theme-color-public;
+}
+
+div.o_checkbox > input:checked + span{
+  .back-image("Selected.png") !important;
+}
+.fa-external-link:before{
+  .faicon("open.png");
+}
+.o_form_view .o_notebook > ul.nav-tabs > li.active > a, .o_form_view .o_notebook > ul.nav-tabs > li.active > a:hover, .o_form_view .o_notebook > ul.nav-tabs > li.active > a:focus, .o_form_view .o_notebook > ul.nav-tabs > li.active > a:active{
+  color: @theme-back-apps;
+  border-bottom-color: @theme-back-apps;
+}
+/*底部视图部分*/
+.o_form_view .oe_chatter .o_chatter_topbar .o_chatter_button_new_message{
+  background-color: @theme-color-public;
+}
+.o_chatter .o_chat_composer .o_composer .o_composer_buttons>.o_composer_button_send{
+  background-color: @theme-color-public;
+}
+.o_form_view .o_group + .o_notebook > div.nav-tabs > .tab-pane .oe_link{
+  color: @theme-color-public;
+}
+
+/*弹窗视图部分*/
+.modal .modal-content .modal-footer .btn-primary{
+  background-color: @theme-color-public;
+}
+.modal .modal-content .modal-footer .btn-default:hover{
+  color: @theme-color-public;
+}
+.modal .modal-content .modal-footer .btn-default:hover{
+  color: @theme-color-public;
+}
+.modal .modal-content .modal-footer .btn-default{
+  color: @theme-color-public;
+}
+
+/*修改滚动条的样式*/ 
+.slimScrollDiv::-webkit-scrollbar-thumb,.chart_show::-webkit-scrollbar-thumb,.chart_show_all::-webkit-scrollbar-thumb{
+   background:@theme-color-public;
+}
+.o_mail_chat .o_mail_chat_content .o_mail_thread::-webkit-scrollbar-thumb,.o_mail_chat .o_mail_chat_sidebar::-webkit-scrollbar-thumb,.o_mail_chat .o_composer .o_composer_input > textarea::-webkit-scrollbar-thumb,.o_mail_navbar_item .o_mail_navbar_dropdown .o_mail_navbar_dropdown_channels::-webkit-scrollbar-thumb,.o_chat_window .o_mail_thread::-webkit-scrollbar-thumb{
+   background:@theme-color-public;
+}
+/*底部固定菜单*/
+.active > .o_app .o_caption,.o_application_switcher .o_application_switcher_scrollable .o_apps .o_app img:hover + .o_caption,.con#AppSwitcher-swiper .o_app img:hover + .o_caption{
+  color: @theme-back-apps!important;
+}
+#AppSwitcher-swiper{
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23@{theme-swiper-button}'%2F%3E%3C%2Fsvg%3E");
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23@{theme-swiper-button}'%2F%3E%3C%2Fsvg%3E")
+  }
+}
+/*首页常用入口*/
+#echart3 .ibox-content ul li a:hover{
+  color: @theme-color-public;
+}
+/*首页例行工作*/
+#echart2 .nav-tabs li.active > a, #echart2 .nav-tabs li.active > a:hover, #echart2 .nav-tabs li.active a:focus{
+  color: @theme-color-public;
+}
+.home .ibox .routine .tab-pane h4 b{
+  color: @theme-color-public;
+}
+/*订单规则*/
+.o_kanban_view >.o_kanban_record .fa-times:before {
+  .faicon("dels.png");
+}
+/*项目仪表板*/
+.o_kanban_view.o_kanban_dashboard.o_project_kanban .o_project_kanban_main .o_kanban_card_content .o_primary+div .fa-envelope:before{
+  .faicon("mail.png");
+}
+/*模块首页图标*/
+.fa-refresh:hover:before {
+  .faicon("refresh_hover.png");
+}
+.fa-expand:hover:before {
+  .faicon("expand_hover.png");
+}
+.fa-compress:hover:before{
+  .faicon("compress_hover.png");
+}
+/*模块首页样式*/
+.cchong.container-fluid #Purchasing button.active{
+  border-color: @theme-color-public;
+  background-color: @theme-color-public;
+}
+.ibox-content .table thead tr th{
+  color: @theme-back-apps;
+}
+.sale_bar{
+  background-color: @theme-color-public;
+}
+.cchong .more-text:hover{
+  color: @theme-text-hover;
+}
+.messages_margin20>div>div>div>a{
+  background:@theme-text-hover !important; 
+}
+/*讨论模块*/
+.o_mail_chat .o_mail_chat_sidebar .o_mail_chat_channel_item.o_active{
+  background-color: @theme-back-navbar !important;
+}
+.o_mail_chat .o_mail_chat_sidebar .o_mail_sidebar_title .o_mail_open_channels{
+  color:  @theme-back-navbar;
+}
+/*web_studio*/
+.o_web_client.o_in_studio .o_main_navbar .o_web_studio_navbar_item{
+  background-color: @theme-back-act;
+}
+/*列表视图*/
+.o_list_view.table tfoot{
+  background-color: @theme-back-navbar;
+}
+.o_view_manager_content .oe_view_nocontent{
+  background-color: @theme-back-navbar;
+}
+.o_view_manager_content .oe_view_nocontent .oe_view_nocontent_create:before{
+  border-bottom: 25px solid @theme-back-navbar;
+}

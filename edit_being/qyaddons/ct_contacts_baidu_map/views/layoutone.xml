@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <!-- 公司地图 -->
+        <template id="baidu_map_company_description" inherit_id="website.company_description" customize_show="False"
+                  name="Baidu Map Company Description">
+            <xpath expr="//a[@t-att-href='res_company.google_map_link()']" position="replace">
+                <div id="company_address_map" style="height:300px">
+                     <script t-att-src="'http://api.map.baidu.com/api?v=2.0&amp;ak='+res_company.segments_count"/>
+                    <script type="text/javascript">
+                        var city_name='<t t-esc="res_company.city"/>';
+                        var area_road='<t t-esc="res_company.street2"/>';
+                        var street='<t t-esc="res_company.street"/>';
+                        var company_name = '<t t-esc="res_company.name"/>';
+                        var company_tel = '<t t-esc="res_company.phone"/>';
+                        var company_msg = city_name+area_road+street;
+                        var map = new BMap.Map("company_address_map");
+                        if(company_msg){
+                        map.centerAndZoom(city_name+area_road+street, 14);
+                        map.enableScrollWheelZoom(); 
+                        map.enableContinuousZoom(); 
+                        map.addControl(new BMap.NavigationControl()); 
+                        map.addControl(new BMap.OverviewMapControl()); 
+                        map.addControl(new BMap.OverviewMapControl({ isOpen: false, anchor: BMAP_ANCHOR_BOTTOM_RIGHT
+                        })); 
+                        var localSearch = new BMap.LocalSearch(map);
+                        localSearch.enableAutoViewport(); 
+                        localSearch.setSearchCompleteCallback(function (searchResult) {
+                        var poi = searchResult.getPoi(0);
+                        map.centerAndZoom(poi.point, 14);
+                        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));
+                        map.addOverlay(marker);
+                        var company_telphone = '<a href="tel:' + company_tel + '">' + company_tel + '</a>';
+                        var infoWindow = new BMap.InfoWindow(
+                        company_name+'<br/>'+"地址："+company_msg+'<br/>'+"电话："+company_telphone);
+                        marker.addEventListener("click", function () { this.openInfoWindow(infoWindow,company_name); });
+                        });
+                        localSearch.search(city_name+area_road+street);
+                        }else{
+                        document.getElementById("company_address_map").style.border="1px solid #ddd";
+                        document.getElementById("company_address_map").style.padding="20px";
+                        document.getElementById("company_address_map").style.color="red";
+                        document.getElementById("company_address_map").innerHTML='对不起，尚未定位到您的公司，请核实您公司的地点';
+                        }
+                    </script>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</openerp>

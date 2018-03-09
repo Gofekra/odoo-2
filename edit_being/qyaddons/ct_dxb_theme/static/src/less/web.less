@@ -1,0 +1,1383 @@
+@color:#008dd6;
+@btn-primary:#f17400;
+@btn-default:#eee;
+.o_searchview{
+	height: 30px;
+}
+.btn_border {
+	border:none;
+    outline: none;
+    height: 34px;
+    font-size: 14px;
+    line-height: 30px;
+    padding:0px 20px;
+    border-radius: 5px;
+}
+.border_none{
+	border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-radius: 0;
+}
+.all_h1{
+	margin: 0px 0 20px 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: normal;
+    & > .o_form_input{
+        border:none;
+        border-radius: 0;
+        border-bottom: 2px solid #e60012;
+	    padding: 5px 0;
+	    background-color: transparent;
+	    &.oe_inline{
+            width:100% !important;
+	    }
+    }
+}
+.o_form_boolean_all{
+	margin: 0 5px 0 0;
+    & > input{
+        width: 15px;
+	    height: 15px;
+	    -webkit-appearance: none;
+	    border: 1px solid #CED2DB;
+    }
+    & > input[type=checkbox]:checked::before{
+	    width: 12px;
+	    height: 12px;
+	    line-height: 1em;
+	    left: 1px;
+	    top: 2px;
+	    float: left;
+	    position: relative;
+	    content: "";
+	    display: block;
+	    background: url(/ct_dxb_theme/static/src/img/Selected.png) center center no-repeat;
+	}
+    
+}
+.navbar{
+	.navbar-nav.navbar-left{
+		position: absolute;
+		top:-100000px;
+	}
+	.navbar-nav.navbar-left.show{
+		position: static;
+		top:0;
+	}
+}
+.o_control_panel{
+	.breadcrumb{
+		width: 100%;
+		>li:first-child:last-child{
+			display: none;
+		}
+	}
+}
+.o_web_client{
+	 > .o_main{
+	 	 .o_sub_menu{
+	 	 	 .o_sub_menu_content{
+	 	 	 	.oe_secondary_submenu{
+					display: none;
+				}
+	 	 	 }
+	 	 }
+	 }
+}
+.o_form_view{
+	.o_form_field{
+			&.o_form_field_many2one{
+				.o_external_button{
+					background-color: transparent !important;
+				}	
+		}
+	} 
+}
+
+/*公共部分样式*/
+body .text-danger{
+	color: #4c4c4c !important;
+}
+body .text-info {
+    color:@btn-primary !important;
+}
+.o_web_client{
+    background-color: #f5f5f5;
+    font-size:14px;
+    color: #333;
+    font-family: "Microsoft YaHei";
+    button.btn.btn-primary{
+        background-color: @btn-primary !important;
+        margin-right:10px;
+        .btn_border;
+        &:hover{
+            background-color:lighten(@btn-primary,10%) !important;
+        }
+    }
+    button.btn.btn-default{
+        background-color: @btn-default !important;
+        color:@btn-primary;
+        .btn_border;
+        &:hover{
+            color:darken(@btn-primary,10%) !important;
+        }
+    }
+    .oe_title{
+        width: 460px;
+        & > .o_form_label {
+            color:#999;
+            font-weight: normal;
+        }
+
+        & > h1{
+            .all_h1;
+            input:-ms-input-placeholder{
+			    color: #ccc;
+			}
+			input::-webkit-input-placeholder{
+			    color: #ccc;
+			}
+        }
+        & > h2{
+            .all_h1;
+        }
+        & > h3{
+            & > .o_form_input{
+                .border_none;
+                padding: 5px 0;
+            }
+        }
+    }
+    .o_group.o_inner_group{
+        color:#666;
+        &.o_group_col_6{
+            width:48%;
+            &:nth-child(1){
+                margin-right: 25px;
+            }
+        }
+        & > tbody > tr {
+		    .o_form_field_boolean {
+		        .o_form_boolean_all;
+		    }
+		    .oe_form_many2many_checkboxes{
+		        .o_checkbox{
+		            .o_form_boolean_all;
+		        } 
+		    }
+		    .o_form_field_many2one {
+		        & > .o_external_button{
+                    background-color: transparent !important;
+                    color: #666 !important;
+                    &:hover{
+                        color:@btn-primary !important;
+                    }
+		        }
+		    }
+		    .o_form_field_many2manytags {
+		        .border_none;
+		    }
+		    .o_form_field_monetary{
+		        .border_none;
+		        padding:0;
+		        margin-bottom: 0px;
+		    }
+		    & > td{
+		        button.btn.btn-sm{
+		            font-size:14px;
+		            padding:0 5px;
+		            color:@btn-primary;
+		            outline: none;
+		            &:active{
+		                border:none;
+		            }
+		        }
+		        input[type="text"], input[type="password"], input[type="number"], select{
+		            .border_none;
+		            background-color: transparent;
+		        } 
+		    }
+
+		}
+        .o_td_label{
+            border-right:none;
+            min-width: 130px !important;
+            & > .o_form_label{
+           		color:#333;
+           		font-weight: normal;
+           		font-size: 14px;
+           		&.o_form_label_false{
+           		    color:#999;
+           		}
+            }
+            
+        }
+        .o_form_uri.o_form_required,.o_form_uri:first-line{
+            color:@btn-primary !important;
+        }   
+    }
+    .o_horizontal_separator{
+        color: #333;
+	    font-size: 14px;
+	    font-weight: bold;
+	    margin:16px 0 0 0;
+    }
+    .ui-autocomplete{
+        & > .ui-menu-item {
+            &.ui-state-focus{
+			    background-color: #eee;
+			    & >  a{
+			        color: #333333;
+			    }
+		    }
+		    &.o_m2o_dropdown_option{
+		        padding-left: 0px;
+		        & > a{
+		            color:@btn-primary;
+		        }
+		    }
+		}
+
+    }
+    .o_dropdown{
+	    & > .o_dropdown_toggler_btn {
+	        border:none;
+	        outline: none;
+	        color:#666;
+	        &:hover{
+	            background-color:transparent;
+	            color:#333;
+	        }
+	        &:active{
+	            outline: none;
+	            background-color:transparent;
+	            box-shadow:none;
+	        }
+	        &:focus{
+	            background-color:transparent;
+	            box-shadow:none;
+	        }
+	    }
+	}
+    /*弹出框*/
+    .modal{
+        & > .modal-dialog > .modal-content{
+            & > .modal-header{
+                .modal-title{
+                    color: #333;
+   	 				font-weight: normal;
+                }
+            }
+            & > .modal-footer{
+                text-align: right;
+                .btn + .btn {
+    				margin-left: 0px;
+    			}
+            }
+            & > .modal-body{
+                &.o_act_window{
+                    .o_modal_header{
+                        .o_searchview {
+						    border-radius: 25px;
+						    margin-top: 0px;
+						    &.active{
+		    	                .fa-search-minus:before,.fa-search-plus:before{
+		    	                    content: url(/ct_dxb_theme/static/src/img/search_hover.png);
+		    	                }
+		    	            }
+		    	            .fa-search-minus:before,.fa-search-plus:before{
+							    content: url(/ct_dxb_theme/static/src/img/search_icon.png);
+							    display: inline-block;
+							    vertical-align: middle;
+							    opacity: .6;
+							}
+						}
+						& + div{
+	                        padding: 10px 16px;
+	                    }
+                    } 
+                    .table-responsive > .o_list_view {
+                        border:1px solid #ddd;
+                        text-align: center;
+                        font-size:13px;
+                        & > thead {
+                            background-color: transparent;
+                            border-bottom:none;
+                            color:#333;
+                            & > tr > th {
+							    border-bottom: none;
+						        text-align: center;
+							}
+                        }
+                        & > tbody{
+                            & > tr:nth-of-type(odd) {
+							    background-color: transparent;
+							}
+							& > tr > td{
+                                border-right: 1px solid #ddd;
+                                &.o_list_number{
+                                    text-align: center;
+                                    height:40px;
+                                }
+                                &.o_form_field_x2many_list_row_add{
+							        a{
+							            color:@btn-primary;
+							        }
+							    }
+                            } 
+
+                        }
+                        & > tbody.ui-sortable{
+                            & > tr > td{
+                                border-right: 1px solid #ddd;
+                            }         
+                        }
+                        & > tfoot{
+                            background-color: #ccc;
+                            border-top: none;
+                            & > tr > td{
+                                border-right: 1px solid #ddd;
+                            }
+                        }
+                    }
+                    .o_form_view.o_form_editable{
+                        header{
+			                background-color:#fff;
+			                border-color:#e5e5e5;
+			                background-image:none;
+			                & > .btn{
+							    padding: 3px 10px;
+							    margin: 3px 10px 3px 0;
+							    background-color: #eee;
+							    color: #666;
+							    outline: none;
+							    border:none;
+							    &:hover{
+							        color:@btn-primary;
+							    }
+			                }
+			                & > .oe_form_field_status {
+		                    	padding: 2px 18px 0 0;
+		                    	.prompt{
+		                    		font-size: 14px;
+		    						font-weight: bold;
+		                    	}
+			                    & > li{
+			                        background-color: transparent; 
+		    						background-image:none;
+		    						font-weight: normal;
+								    font-size: 12px;
+								    & > .label{
+								        text-shadow:none;
+							            padding: 8px;
+							            border-radius:0;
+		                                color: #999;
+		                                padding-left: 20px;
+								    }
+								    & > .arrow{
+								        & > span{
+								            box-shadow:none;
+								            background-color: transparent;
+								            background:none;
+								            box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.2), inset -1px 1px 0px rgba(0, 0, 0, 0.2);
+								        }
+								    }
+		    						&.oe_active{
+		    						    background-image:none;
+		    						    background-color: transparent; 
+		    						    & > .label{
+		    						        text-shadow:none;
+		    						        color:#333;
+		    						    } 
+		    						}
+			                    }
+			                }
+			            }
+			            h1 {
+			                font-size:20px;
+			                .o_form_input.o_form_required{
+	                            background-color: transparent;
+	                            .border_none;
+                            }
+			            }
+			            h1.oe_title{
+			                font-size: 20px;
+			            }
+			            .o_form_field_one2many.o_view_manager_content{
+			                margin-top:16px;
+			            }
+			            .o_form_field_radio{
+			                .o_radio_item {
+							    margin-right: 20px;
+							}
+			                & + hr{
+						        display: none;
+						    }
+						}
+						div.o_group{
+						    .o_form_invisible{
+							    & + table{
+							        .o_form_textarea {
+							            height:50px;
+							        }
+							    }
+							}
+						}
+                    }
+                }
+                .o_form_view {
+                    & > h1{
+                        margin: 10px 0 20px 0;
+					    font-size: 20px;
+					    color: #333;
+                    }
+                    & > button.btn.btn-sm{
+                        display: block;
+                        color:@btn-primary;
+                        padding: 10px 0;
+                        font-size:14px;
+                        outline: none;
+                    }
+                }
+                .o_group{
+                    table:nth-child(2){
+                        margin-left: 135px;
+                    }
+                }
+                .o_group.o_inner_group{
+                    margin:0px;
+                    &.o_group_col_3{
+                        width:40%;
+                    }
+                    & > tbody > tr > td.o_td_label:not(:nth-child(1)){
+                        padding-left:30px;
+                    }
+                    .o_td_label + td {
+                        padding: 2px 0px 2px 8px;
+                    }
+                    .o_form_input.o_form_required{
+                        background-color: transparent;
+				    	border-color: #e60012;
+				    	border-width: 2px;
+				    	.border_none;
+                    }
+                    .o_form_field_many2one.o_form_required{
+			            & > .o_form_input_dropdown > .o_form_input.ui-autocomplete-input{
+	                        border-color: #e60012;
+	    					border-width: 2px;
+	    					background-color: transparent;
+	    					line-height: normal;
+			            }
+			        }
+                }
+            }
+        }
+    }
+}
+/*pos页面左边样式*/
+.o_web_client{
+	.o_main{
+		.o_sub_menu{
+		    -webkit-flex: 0 0 120px;
+	        flex: 0 0 120px;
+	        
+	        & > .o_sub_menu_logo{
+	            height: 50px;
+	            width:120px;
+	            overflow: hidden;
+	            background-color: @color;
+	         
+	            & > span{
+	                display: none !important;
+	            }
+	            & > img{
+	                height:100%;
+	                margin: 0; 
+	                margin-left: -33px;
+	            }
+	        }
+		    & > .o_sub_menu_content{
+		        padding-top:16px;
+			    background: #333;
+		        & > .oe_secondary_menu{
+		            overflow: hidden;
+		            & > .oe_secondary_menu_section:first-child{
+		               display: none;
+		            }
+		            & > .oe_secondary_menu_section {
+		                margin-left: 0px; 
+		                &:hover{
+							background: #111;
+		                }
+		                &.active{
+		                    border-left: 4px solid @btn-primary;
+		                    background: #111;
+		                    a{
+		                       padding-left:12px;;
+		                    }
+		                }
+		                
+		                & > a{
+	                    	display: block;
+						    padding: 12px 0;
+						    padding-left:16px;
+						    & > .oe_menu_text{
+						        margin-left: 10.73px;
+							    display: inline-block;
+							    font-size: 14px;
+							    color: #dedcdd;
+							    vertical-align: middle;
+							    text-indent: 0;
+							    font-weight: normal;
+						    }
+						    & > .oc_menu_pubicon {
+						        display: inline-block;
+							    width: 16px;
+							    height: 16px;
+							    vertical-align: middle;
+							    background: url(/ct_dxb_theme/static/src/img/menu_left_icon.png) no-repeat;
+						    }						    
+						}
+						&.menus_1 .oc_menu_pubicon{
+	                        /*首页*/
+					        background-position: -7px -25px;
+					    }
+					    &.menus_2 .oc_menu_pubicon{
+					        /*订单*/
+					        background-position: -7px -66px;
+					    }
+					    &.menus_3 .oc_menu_pubicon{
+					        /*商品*/
+					        background-position: -7px -107px;
+					    }
+					    &.menus_4 .oc_menu_pubicon{
+	                        /*联系人*/
+	                        background-position: -7px -148px;
+					    }
+					    &.menus_5 .oc_menu_pubicon{
+	                        /*忠诚计划*/
+	                    	background-position: -7px -189px;
+					    }
+					    &.menus_6 .oc_menu_pubicon{
+	                        /*报表*/
+	                        background-position: -7px -230px;
+					    }
+					    &.menus_7 .oc_menu_pubicon{
+					        /*设置*/
+					        background-position: -7px -271px;
+					    }
+		            }
+		        }
+		    }
+		    & > .o_sub_menu_footer{
+		        display: none;
+		    }
+		}
+	}
+}
+/*pos中间样式  pos*/
+.o_main_content{ 
+	& >.o_content{
+		background-color: transparent;
+		.o_form_readonly:not(.o_form_nosheet){
+			background-color: transparent !important;
+		}
+	 	& > .o_view_manager_content{
+	 		.o_form_view header{
+	 			& > .btn{
+					margin-top: 7px !important;
+				}
+				& > .oe_form_field_status{
+					& > li.oe_active > .label{
+						color:@btn-primary !important;
+					}
+				}
+	 		}
+	 	}
+	}
+    /*pos样式*/
+	// .o_kanban_view {
+	//     & > .o_kanban_record{
+	//         box-shadow: 0px 1px 8px 0px #ccc !important;
+ //    		border-radius: 5px;
+ //    		& > .oe_kanban_title{
+ //    		    & > strong{
+ //    		        font-weight: normal;
+ //    		    }
+ //    		    .oe_kanban_text_total{
+ //    		        color:#e60012;
+ //    		        padding-left: 5px;
+ //    		    }
+ //    		    & > div{
+ //    		    	margin-top:5px;
+ //    		        color:#666;
+ //    		        &:nth-child(3){
+ //    		            color:#333;
+ //    		        }
+ //    		    }
+ //    		}
+ //    		& > .o_kanban_card_header{
+ //    		    background-color: #fff !important;
+	// 		    padding: 10px 0;
+	// 		    border-bottom: 1px solid #eee;
+	// 		    border-top-left-radius: 5px;
+	// 		    border-top-right-radius: 5px;
+	// 		    & > .o_kanban_card_header_title{
+	// 		        & > .o_primary{
+	// 		            color:#333 !important;
+	// 		            font-weight: normal !important;
+	// 		        }
+	// 		        & > .o_secondary{
+	// 		            color:#666;
+	// 		        }
+	// 		    }
+	// 		    & > .o_kanban_manage_button_section{
+	// 		        & > .o_kanban_manage_toggle_button{
+	// 		            color:#999;
+	// 		            font-size: 14px;
+	// 		            &:hover{
+	// 		                color:@btn-primary;
+	// 		            }
+	// 		        }
+	// 		    }
+ //    		}
+ //    		& > .o_kanban_card_content{
+ //    		    .o_kanban_primary_left{
+ //    		        float: right; 
+ //    		        text-align: right;
+ //    		        & > .btn-primary{
+ //    		            margin-right:10px;
+ //    		        }
+ //    		    }
+ //    		    .o_kanban_primary{
+ //    		        font-size: 13px;
+ //    		        & > div:nth-child(1){
+ //    		            color:#666;
+ //    		        }
+ //    		        & > div:nth-child(2){
+ //    		            color:#999;
+ //    		        }
+ //    		    }
+ //    		    .o_kanban_primary:not(:first-child){
+ //    		        & > div:nth-child(2){
+ //    		            color:@color;
+ //    		        }
+ //    		    }
+ //    		}
+	//     }
+	// }
+	/*右边底部菜单样式*/
+	& > .navbar {
+	    height:50px;
+	    background-color: #fff;
+    	border-color: #ddd;
+    	& > .navbar-collapse{
+    	    border-top:none;
+    	    & > .navbar-nav{
+    	        & > li{
+	                & > a{
+	                    color: #666;
+	                    padding: 14px 20px;
+	                    margin:0px;
+	                    line-height: 20px;
+	    				font-size: 14px; 
+	    				position: relative;
+	    				background-color: transparent;  
+	    				&:before{
+	    				    content: "";
+							display: inline-block;
+							position: absolute;
+							bottom:0;
+							left:50%;
+							transform: translateX(-50%);
+							width:24px;
+							height:6px;
+	    				}				   
+    				    &:hover{
+    				        background-color: transparent;
+    				        COLOR:#333;
+    				        &:before{
+    				        	background-color: @btn-default;
+    				        }
+    				    }
+    				    &:active{
+    				        background-color: transparent;
+    				    }
+    				    &:focus{
+    				        background-color: transparent;
+    				    }
+	                }
+	                &.active{
+	                    a{
+                            color: #333;
+                            font-weight: bold;
+                            &:before{ 
+								background-color: @btn-primary;
+                            }
+	                    }
+
+	                }
+	            }
+	            & > .o_searchview{
+	                margin-top: 10px;
+	            }
+    	    }
+    	    & > .o_cp_searchview {
+    	        .o_searchview{
+    	            padding: 1px 25px 3px 16px;
+    	            border-radius: 15px;
+    	            & > .o_searchview_input{
+    	                width: 190px;
+    	            }
+    	            &.active{
+    	                .fa-search-minus:before,.fa-search-plus:before{
+    	                    content: url(/ct_dxb_theme/static/src/img/search_hover.png);
+    	                }
+    	            }
+    	            .fa-search-minus:before,.fa-search-plus:before{
+					    content: url(/ct_dxb_theme/static/src/img/search_icon.png);
+					    display: inline-block;
+					    vertical-align: middle;
+					    opacity: .6;
+					}
+    	        }
+    	        .o_searchview_facet{
+    	            background: #eee;
+    	            border-color: @btn-primary;
+    	            outline: none;
+    	            & > .o_searchview_facet_label{
+    	                background-color:@btn-primary;
+    	            }
+    	        }
+    	    }
+    	}
+	}
+	& > .o_control_panel{
+	    background-color: #fff;
+	    border-bottom: 1px solid @color;
+	    & > .breadcrumb{
+	        background-color: #fff;
+	        font-size: 14px;
+	        & > li {
+	            & + li:before {
+				    content: url(/ct_dxb_theme/static/src/img/jiange.png);
+				    display: inline-block;
+				    vertical-align: text-top;
+				}
+	            a{
+	           		color:#999;
+	            }
+	        }
+	        & > li.active{
+	            color:@color;
+	        }
+	    }
+	    .o_list_buttons{
+	        & > .btn {
+	            font-size:14px;
+	        }
+	    }
+        .o_dropdown{
+            &.open{
+                & > .o_dropdown_toggler_btn{
+                    background-color: transparent !important;
+                	box-shadow:none;
+                	&:hover{
+                	    background-color:transparent;
+                	}
+                	&:active{
+                	    background-color:transparent;
+                	    box-shadow:none;
+                	}
+                	&:focus{
+                	    background-color:transparent;
+                	    box-shadow:none;
+                	}
+                }
+                & > .dropdown-menu{
+                    padding-top: 10px;
+                    border-radius: 0px; 
+                    border: 1px solid #ccc;
+                    margin: 5px 0 0;
+                    &.o_group_by_menu,&.o_favorites_menu{
+                        &:before{
+                            bottom: 84%;
+                        }
+                    }
+                    &:before {
+					    content: "";
+					    display: inline-block;
+					    position: absolute;
+					    width: 15px;
+			            height: 15px;
+			            box-sizing: border-box;
+			            overflow: hidden;
+			            border-width: 1px 1px 0 0;
+			            border-color: #ccc;
+			            border-style: solid;
+			            background: linear-gradient(225deg, #fff 50%, transparent 50%);
+					    transform: rotate(-45deg);
+					    left: 20px;
+					    top:-8px;
+					}
+                    & > li{
+                        & > a{
+                            padding: 5px 20px;
+                        }
+                        &:hover{
+                            a{
+                                color:@btn-primary;
+                            }
+                        }
+                        &.o_save_name,&.o_add_to_dashboard{
+                            margin: 15px 25px;
+                        }
+                        &.selected > a,&.o_closed_menu > a{
+                            color:@btn-primary;
+                            &:before {
+							    left: 80%;
+							    color: @btn-primary;
+						    }
+						}
+						.o_searchview_extended_prop_op {
+						    margin: 0 0 15px 0;
+						}
+						&.o_open_menu a:before {
+						    left: 82%;
+						    margin-top: 0;
+						}
+						select{
+						    padding:0;
+						}
+                        input[type="text"], input[type="password"], input[type="number"],select{
+                            .border_none;
+                            box-shadow:none;
+                    	}
+                    	.o_add_group,&.o_add_filter_menu{
+						    margin: 15px 25px;
+						}
+                	    .btn{
+                	        line-height: normal;
+						    padding: 5px 10px;
+						    border-radius: 5px;
+						    outline: none;
+						    height: 30px;
+						    &.btn-default{
+						        background-color: transparent !important;
+						    }
+                	    }	
+                    }
+                }
+            }  
+        }   
+      
+	    & > .o_cp_left{
+	        & > .o_cp_buttons{
+	            .btn-default{
+	                margin-right:10px;
+	            }
+	            button.btn-primary[disabled]{
+	               background-color: #ddd !important;
+    				color: #aaa;
+	            }
+	            button.btn-default[disabled="disabled"] {
+				    background-color: transparent !important;
+				    color: #aaa;
+				}
+	        }
+	        .o_list_buttons{
+	            .btn{
+	                margin-right: 10px; 
+	            }
+	        }
+	        .btn-group button.btn{
+			    font-size: 12px;			   
+	        }
+	        .btn-group button.btn-primary{
+	            margin-right: 10px;
+	        }
+	        .btn-group button.btn-default{
+                background-color: #e5e5e5;
+                border-radius: 3px;
+			    outline: none;
+			    border:none;
+		        margin-right: 10px;
+	        }
+	    }
+	    & > .o_cp_right{
+            .btn{
+                border: none;
+				outline: none;
+		    	border-radius: 0;
+		    	&.active {
+                    box-shadow:none;
+		    	}
+		    	&:hover{
+		    	    background-color: transparent;
+		    	}
+            } 
+            & > .o_cp_switch_buttons{
+                & > .btn{
+                    background-color: transparent;
+                    outline: none;
+                    &:hover{
+                        background-color: #e5e5e5;
+                    }
+                    &.o_cp_switch_list.active:before{
+                        content: url(/ct_dxb_theme/static/src/img/list2.png);
+                    } 
+                    &.o_cp_switch_pivot.active:before{
+                        content: url(/ct_dxb_theme/static/src/img/toushi1.png);
+                    }
+                    &.o_cp_switch_graph.active:before{
+                        content: url(/ct_dxb_theme/static/src/img/zhuzhaung2.png);
+                    }
+                    &.o_cp_switch_kanban.active:before{
+                        content: url(/ct_dxb_theme/static/src/img/kanban.png);
+                    }
+                }
+                /*列表*/
+                & > .fa-list-ul:before {
+                    content: url(/ct_dxb_theme/static/src/img/list1.png);
+					display: inline-block;
+					vertical-align: text-top;
+					opacity: .6;
+                }
+                /*透视表*/
+                & > .fa-table:before{
+                    content: url(/ct_dxb_theme/static/src/img/toushi2.png);
+					display: inline-block;
+					vertical-align: text-top;
+					opacity: .6;
+                }
+                /*图表*/
+                & > .fa-bar-chart:before{
+                    content: url(/ct_dxb_theme/static/src/img/zhuzhuang1.png);
+					display: inline-block;
+					vertical-align: text-top;
+					opacity: .6;
+                }
+                /*看板*/
+                & > .fa-th-large:before{
+                    content: url(/ct_dxb_theme/static/src/img/kanban2.png);
+					display: inline-block;
+					vertical-align: text-top;
+					opacity: .6;
+                }
+            }
+	    }
+	}
+	& > .o_content{
+	    .oe_import{
+            background-color: #f5f5f5;
+            .oe_import_box {
+			    background-color: transparent;
+			    font-size: 14px;
+			    border: none;
+			    a{
+			       color:@btn-primary;
+			    }
+			    .input-group{
+				    & > .form-control {
+					    border-radius: 5px;
+					    border-top-style: none;
+					    border-right-style: none;
+					    border-left-style: none;
+					}
+					& > .input-group-btn{
+					    & > .btn-primary{
+					    	margin: 0 20px;
+					    	background-color: #f17400;
+					    	border-radius: 5px;
+				    	    border: none;
+			    	        outline: none;
+					    }
+					    & > .btn-default[disabled="disabled"] {
+						    background-color: transparent !important;
+						    color: #aaa;
+						    border-radius: 5px;
+						}
+					}
+				}
+			}
+	    }
+	    
+	    /*table表格样式*/
+	    .table-responsive{
+	        text-align: center;
+	        margin-top: 8px;
+	        padding:0 16px;
+	        & > .o_list_view.o_list_view_grouped{
+	            & > thead > tr > th:first-child{
+	                border-right: none;
+	            }
+	            & > tbody > tr > th:first-child{
+	                border-right: none;
+	            }
+	             & > tbody > tr > td:first-child{
+	                border-right: none;
+	            }
+	            .o_list_record_selector {
+	                padding:0px;
+	                width:0;
+	                & > div.o_checkbox{
+	                    display: none;
+	                }
+	            }
+	            & > thead > tr > .o_column_sortable{
+	                padding: 0px 16px;
+	                height:40px;
+	            }
+	            & > tbody > tr > td{
+                    padding: 10px 16px;
+                }
+	        }
+	        & > .o_list_view{
+	            border: 1px solid #dfdfdf;
+	            font-size: 13px;
+	            & > thead {
+	                background-color: transparent;
+	                & > tr > th{
+		                border-bottom: none;
+		                border-left:none;
+		                text-align: center;
+	                }
+	                & > tr > th:not(:last-child){
+	                    border-right:1px solid #dfdfdf;
+	                }
+	            }
+	            .o_list_record_selector {
+				    width: 1px;
+				    padding: 0px 16px;
+				    height:40px;
+				    border-right: 1px solid #dfdfdf;
+				}
+				& > tfoot{
+				    background-color: #ccc;
+			        border-top: none;
+					border-bottom: none;
+					color:#333;
+					& > tr > td{
+					    border-right: 1px solid #dfdfdf;
+					    &.o_list_number {
+					    	text-align: center;
+					    	height:40px;
+					    }
+					}
+				}
+				& > tbody > tr {
+					&:nth-of-type(even){
+						background-color: transparent;
+					}
+				    &.o_group_header{
+				        background-color:transparent !important;
+    					background-image: none;
+    					& > .o_group_name{
+    					    border-right:1px solid #dfdfdf;
+    					    padding: 0px 16px;
+    					    height:40px;
+    					    .fa{
+    					        display: none;
+    					    }
+    					}
+				    }
+				    & > td:not(:last-child){
+				        border-right:1px solid #dfdfdf;
+				    }
+				    & > .o_list_number{
+				        text-align: center;
+				        height:40px;
+				    }
+				    & > .o_form_field_x2many_list_row_add{
+				        a{
+				            color:@btn-primary;
+				        }
+				    }
+				}
+				& > tbody > tr:nth-of-type(odd){
+                    background-color: transparent;
+				}
+	        }
+	    }
+	    /*商品、订单详情页面样式*/
+	    & > .o_view_manager_content{
+	        .oe_view_nocontent{
+	            font-size: 14px;
+	        }
+	        .o_form_view{
+	            header{
+	                background-color:#fff;
+	                background-image:none;
+	                margin:0px;
+	                border-bottom:none;
+	                & > .btn{
+					    padding: 3px 10px;
+					    margin: 3px 10px 3px 0;
+					    background-color: #eee;
+					    color:#666;
+					    outline: none;
+					    border:none;
+					    &:hover{
+					        color:@btn-primary;
+					    }
+	                }
+	                & > button:nth-child(2){
+	                    display:none;
+	                }
+	                & > .oe_form_field_status {
+                    	padding: 2px 18px 0 0;
+	                    & > li{
+	                        background-color: transparent; 
+    						background-image:none;
+    						font-weight: normal;
+						    font-size: 12px;
+						    & > .label{
+						        text-shadow:none;
+					            padding: 7px;
+					            border-radius:0;
+                                color: #999;
+                                padding-left: 20px;
+						    }
+						    & > .arrow{
+						        & > span{
+						            box-shadow:none;
+						            background-color: transparent;
+						            background:none;
+						            box-shadow: -1px 0px 0px rgba(255, 255, 255, 0.2), inset -1px 1px 0px rgba(0, 0, 0, 0.2);
+						        }
+						    }
+    						&.oe_active{
+    						    background-image:none;
+    						    background-color: transparent; 
+    						    & > .label{
+    						        text-shadow:none;
+    						        color:#333;
+    						    }
+    						    & > .arrow{
+    						        & > span{
+
+    						        }
+    						    }
+    						}
+	                    }
+	                }
+	            }
+	        }
+	        .o_form_view{
+                background-color: transparent;
+	            
+	            & > .o_form_field.o_chatter {
+                    display:none;
+	                & > .o_mail_thread > .o_thread_message {
+                        .o_mail_note {
+						    background-color: #eee;
+						    border-radius: 6px;
+						    padding: 10px 15px;
+						    font-size: 12px;
+						}
+	                }
+	            } 
+	        }
+            
+            .o_horizontal_separator + p{
+                color:#666;
+                margin:0;
+            }
+	        .o_form_sheet_bg {
+	            background: none;
+	            border-bottom: none;
+	            .o_form_sheet{ 	              
+		            border-radius: 5px;
+		            box-shadow:none;
+		            border:none;
+		            & > h1{
+		                 width:400px;
+		                .all_h1;
+		            }
+		            & > .oe_button_box{
+		                width: auto;
+			            float: none;
+		                background-color: #e5e5e5;
+		                margin: -24px -16px 16px -16px;
+		                border-top-left-radius: 5px;
+    					border-top-right-radius: 5px;
+		                & > .oe_stat_button{
+                            margin: 0px;
+                            border-color: transparent;
+    						background: transparent;
+    						outline: none;
+    						color:#666;
+    						text-align: center;
+    						&:last-child{
+    						    display: none;
+    						}
+    						&:avtive{
+    						    border-color: transparent;
+    						    background: transparent;
+    						}
+    						&:focus{
+    						    border-color: transparent;
+    							background: transparent;
+    						}
+    						&:hover{
+    						    background-color: #d5d5d5;
+    						}
+    						& > .o_stat_info {
+    						    & > .o_not_hover {
+    						        color: #666;
+    						    }
+    						    & > .o_hover {
+    						        color:@btn-primary;
+    						    }
+    						}
+    						/*存档*/
+    						& > .fa-archive:before{
+    						    content: url(/ct_dxb_theme/static/src/img/effective.png);
+								display: inline-block;
+								vertical-align: middle;
+    						}
+    						/*可追溯性*/
+    						& > .fa-arrows-v:before{
+    						    content: url(/ct_dxb_theme/static/src/img/ascend.png);
+								display: inline-block;
+								vertical-align: middle;
+    						}
+		                }
+			        }
+			        & > .oe_title{
+			            & > div[name="options"] {
+			                margin-bottom: 20px;
+			                & > div{
+							    margin-bottom: 10px;
+							    & > .o_form_field_boolean {
+								    .o_form_boolean_all;
+								}
+								& > .o_form_label {
+								    color: #333;
+								    font-weight: normal;
+								}
+							}
+						}
+			        }
+			        /*积分内页*/
+			        & > .oe_title + .o_group.o_inner_group{
+                        margin: 0;
+			        }
+			        & > .o_notebook {
+			            & > ul.nav-tabs{
+						    border-bottom: none;
+						    background-color: #e5e5e5;
+						    padding-left: 20px;
+						    margin-right: -16px;
+    						margin-left: -16px;
+                            & > li > a{
+                                border:none;
+                                color:#666;
+                            }
+						    & > li.active > a, & > li.active > a:hover, & > li.active > a:focus{
+						        background-color: transparent; 
+    							border-bottom: 2px solid @color;
+    							color:@color;
+						    }
+						    & > li > a:hover{
+						        background-color: transparent;
+						    }   
+			            }
+			            & > .tab-content.nav-tabs{
+                            border-bottom:none;
+                            .table-responsive{
+                                margin-top: 16px;
+    							padding: 0;
+                            }
+                            & > .tab-pane{
+                                & > textarea{
+                                    margin-top: 16px;
+                                }
+                            }
+			            }
+			            .o_group.o_inner_group.oe_subtotal_footer{
+                            .oe_subtotal_footer_separator {
+                                border:none;
+                                font-size: 16px;
+                                font-weight: bold;
+                                color:@btn-primary;
+                                & > .o_form_label{
+                                   font-size: 14px;
+                                   font-weight: bold;
+                                   color:@btn-primary;
+                                }
+                            }
+			            } 
+					}
+			        & > .oe_avatar{
+			            float: right;
+			            & > img{
+			                border: 1px solid #ccc;
+			                max-width: 90px;
+    						max-height: 90px;
+    						box-shadow:none;
+			            }
+			        }
+			        & > .oe_title{
+			                padding-left: 0px;
+			        }
+			    }   
+	        }  
+	        /*商品详情页面*/
+	        .o_kanban_view.o_kanban_ungrouped:not(.o_pos_kanban){
+	            .o_kanban_record{
+				    padding: 20px;
+				    margin: 10px;
+				    & > .o_kanban_tags_section{
+				        .o_kanban_tags{
+				            position: absolute;
+						    right: 40px;
+						    top: -1px;
+                            & > span{
+                                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 77%, 0 100%);
+							    -moz-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 77%, 0 100%);
+							    -ms-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 77%, 0 100%);
+							    -o-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 77%, 0 100%);
+							    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 77%, 0 100%);
+							    &.o_tag_color_7 {
+							        background-color: #00C2E0;
+							    }
+                            }
+				            & > .o_tag{
+					            width: 12px;
+							    height: 20px;
+							    opacity: 1;
+						    }
+				        }
+				    }
+				    & > .o_kanban_image{
+				        & > img{
+				            border: 1px solid #ddd;
+				        }
+				    }
+				    & > .oe_kanban_details{
+				        padding-left: 84px;
+    					color: #333;
+    					& > strong{
+    					    font-weight: normal;
+						    font-size: 14px;
+						    color: #333;
+    					}
+    					& > ul > li{
+    					    padding: 2px 0 3px 0;
+    					    color:#999;
+    					    &:nth-child(1){
+    					        color: #e60012;
+    					    }
+    					    &.o_text_overflow{
+                                color:#666;
+    					    }
+    					}
+				    }
+	            }
+	        }
+	    }
+	}
+}

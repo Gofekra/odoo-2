@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_product_interact" name="Cotong Website Product Interact Less"
+                  inherit_id="ct_website_base.ct_website_config">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/less"
+                      href="/ct_website_interact/static/src/less/product_interact.less"/> 
+            </xpath>
+        </template>
+
+      <template id="cotong_product_interact" inherit_id="website.snippets" name="Add into bar" priority="7">
+        <xpath expr="//div[@id='o_scroll']" position="inside">
+          <div id="cotong_interation" class="o_panel">
+            <div class="o_panel_header">
+                <i class="fa fa-indent"/>互动
+            </div>
+            <div class="o_panel_body">
+                <t t-snippet="ct_website_interact.snippet_share_link_other"
+                    t-thumbnail="/ct_website_interact/static/src/img/thumb/snippet_share_link.png"/>
+
+                <t t-snippet="ct_website_interact.snippet_contact_us"
+                  t-thumbnail="/ct_website_interact/static/src/img/thumb/sin_contact_us.png"/>
+            </div>
+
+          </div>
+        </xpath>
+      </template>
+
+    </data>
+</odoo>

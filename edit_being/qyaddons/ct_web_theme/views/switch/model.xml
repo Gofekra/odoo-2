@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- select theme style -->
+	    <template id="ct_theme_default" name="option_theme_default" inherit_id="web.assets_backend" active="True" customize_show="False" priority='998'>
+	        <xpath expr="." position="inside">
+	            <link href="/ct_web_theme/static/src/theme/default/less/theme.less"
+	                  rel="stylesheet" type="text/less" />
+              	<script type="text/javascript" src="/ct_web_theme/static/src/theme/default/js/theme_app_path.js"></script>
+	        </xpath>
+    	</template>
+
+    	<template id="ct_theme_blue" name="option_theme_blue" inherit_id="web.assets_backend" active="False" customize_show="False" priority='998'>
+	        <xpath expr="." position="inside">
+	            <link href="/ct_web_theme/static/src/theme/blue/less/theme.less"
+	                  rel="stylesheet" type="text/less" />
+              	<script type="text/javascript" src="/ct_web_theme/static/src/theme/blue/js/theme_app_path.js"></script>
+	        </xpath>
+    	</template>
+
+    	<template id="ct_theme_palm" name="ct_theme_palm" inherit_id="web.assets_backend" active="False" customize_show="False" priority='998'>
+	        <xpath expr="." position="inside">
+	            <link href="/ct_web_theme/static/src/theme/palm/less/theme.less"
+	                  rel="stylesheet" type="text/less" />
+              	<script type="text/javascript" src="/ct_web_theme/static/src/theme/palm/js/theme_app_path.js"></script>
+	        </xpath>
+    	</template>
+
+    	<template id="ct_theme_deepblue" name="ct_theme_deepblue" inherit_id="web.assets_backend" active="False" customize_show="False" priority='998'>
+	        <xpath expr="." position="inside">
+	            <link href="/ct_web_theme/static/src/theme/deepblue/less/theme.less"
+	                  rel="stylesheet" type="text/less" />
+              	<script type="text/javascript" src="/ct_web_theme/static/src/theme/deepblue/js/theme_app_path.js"></script>
+	        </xpath>
+    	</template>
+
+    	<template id="ct_theme_style" name="option_theme_style" inherit_id="web.assets_backend" priority='999'>
+	        <xpath expr="." position="inside">
+	            <link href="/ct_web_theme/static/src/theme/theme_style.less"
+	                  rel="stylesheet" type="text/less" />
+	        </xpath>
+    	</template>
+    </data>
+</odoo>

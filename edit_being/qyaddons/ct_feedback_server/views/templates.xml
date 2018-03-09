@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <template id="assets_backend" name="feedback assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/ct_feedback_server/static/src/js/ct_kanban_view.js"/>
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>

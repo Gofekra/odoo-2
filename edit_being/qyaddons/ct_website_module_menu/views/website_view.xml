@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="sales" name="销售管理">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+
+
+        <template id="crm" name="客户管理">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="pos" name="零售管理">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="wms" name="仓库管理">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="pur" name="采购管理">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="mfg" name="生产管理">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="pm" name="项目管理">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="fin" name="财务管理">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="hr" name="人力资源">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="web" name="企业建站">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="ec" name="电子商务">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="sns" name="社交网络">
+            <t t-call="website.layout">
+                <div id="wrap" class="js_module o_website_module">
+                    <div class="module_display">
+                        <t t-call="ct_website_module_menu.nav">
+
+                        </t>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+        <template id="nav">
+            <div class="container-fluid" id="container-fluid">
+                <div class="container">
+                    <ul class="module_nav">
+                        <li>
+                            <a id="sales_m" href="/module">销售管理</a>
+                        </li>
+                        <li>
+                            <a id="crm_m" href="/module/crm">客户管理</a>
+                        </li>
+                        <li>
+                            <a id="pos_m" href="/module/pos">零售管理</a>
+                        </li>
+                        <li>
+                            <a id="wms_m" href="/module/wms">仓库管理</a>
+                        </li>
+                        <li>
+                            <a id="pur_m" href="/module/pur">采购管理</a>
+                        </li>
+                        <li>
+                            <a id="mfg_m" href="/module/mfg">生产管理</a>
+                        </li>
+                        <li>
+                            <a id="pm_m" href="/module/pm">项目管理</a>
+                        </li>
+                        <li>
+                            <a id="fin_m" href="/module/fin">财务管理</a>
+                        </li>
+                        <li>
+                            <a id="hr_m" href="/module/hr">人力资源</a>
+                        </li>
+                        <li>
+                            <a id="website_m" href="/module/web">企业建站</a>
+                        </li>
+                        <li>
+                            <a id="ec_m" href="/module/ec">电子商务</a>
+                        </li>
+                        <li>
+                            <a id="sns_m" href="/module/sns">社交网络</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </template>
+    </data>
+</openerp>

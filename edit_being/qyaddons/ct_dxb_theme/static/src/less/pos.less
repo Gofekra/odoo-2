@@ -1,0 +1,146 @@
+@charset 'utf-8';
+#home{
+	height:500px
+}
+.Theme-pos{
+	font-family: "Microsoft YaHei";
+
+	.pos_header{
+		margin-top: 20px;
+		.ibox{
+			cursor: pointer;
+			.ibox-content{
+				overflow: hidden;
+				.total{
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.content{
+		.ibox{
+			.echarts-tooltip{
+				z-index: 999999;
+			}
+			.ibox-title{
+				padding: 0;
+				h5{
+					font-weight: blod;
+					margin: 0;
+					line-height: 59px;
+					padding-left:20px;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.o_datepicker{
+    padding:11px 20px;
+	label{
+		color:#666;
+		margin-bottom: 0;
+    	font-weight: normal;
+	}
+	.o_datepicker_input{
+		width: 120px;
+		display: inline-block;
+		margin:0 10px;
+	}
+	button.btn.btn-primary{
+	   height: 28px;
+	   line-height: 28px;
+    	padding: 0px 10px;
+	}
+}
+.datepicker .table-condensed > thead{
+    background-color: transparent;
+    color: @btn-primary;   
+}
+.datepicker .table-condensed > thead th{
+  font-weight: normal; 
+  font-size: 14px;
+}
+.datepicker .table-condensed > thead > tr > th.prev,
+.datepicker .table-condensed > thead > tr > th.next
+{
+color: #999;
+font-size: 24px;
+padding: 0 0 5px 0;
+}
+.datepicker .table-condensed > thead > tr > th.prev:hover,
+.datepicker .table-condensed > thead > tr > th.prev:focus,
+.datepicker .table-condensed > thead > tr > th.next:hover,
+.datepicker .table-condensed > thead > tr > th.next:focus
+{
+  background-color: transparent;
+  color: @btn-primary;
+}
+
+.datepicker .table-condensed > thead > tr > th.picker-switch:hover{
+  background-color: transparent;
+  color: #a40000;
+}
+.datepicker .table-condensed > thead > tr:last-child{
+background-color: #e5e5e5;
+font-size: 14px;
+color: #666;
+}
+.datepicker .table-condensed > tbody > tr{
+  font-size: 12px;
+  color: #666;
+}
+.bootstrap-datetimepicker-widget td.old, 
+.bootstrap-datetimepicker-widget td.new{
+color: #999;
+}
+
+.datepicker .table-condensed > tbody > tr > .cw{
+  font-size: 11px;
+    color: #999;
+}
+.datepicker .table-condensed > tbody > tr > td.today:before{
+  border-bottom-color:#e60012;
+}
+.datepicker .table-condensed > tbody > tr > td.active, 
+.datepicker .table-condensed > tbody > tr > td.active:hover,
+.datepicker .table-condensed > tbody > tr > td.active:focus,
+.datepicker .table-condensed > tbody > tr > td:active:focus
+.datepicker .table-condensed > tbody > tr > td:active
+{
+    background-color: @btn-primary;
+    border-color: @btn-primary;
+}
+.datepicker .table-condensed > tbody > tr > td:hover
+{
+  border-radius: 20px;
+}
+ /*首页样式*/
+.container-fluid.Theme-pos{
+    .ibox{
+        box-shadow: 0px 1px 8px 0px #ccc !important;
+        border-radius: 5px;
+        & > .ibox-content{
+            .title{
+                font-size: 14px;
+				color: #333;
+            }
+            .total{
+                font-size: 14px;
+                color:@color;
+            }
+        }
+        &.refund{
+            .total{
+                color:@btn-primary;
+            }
+        }
+        & > .ibox-title{
+            h5{
+                font-weight: normal;
+    			font-size: 14px;
+    			padding-left: 0px;
+            }
+        }
+    }
+}

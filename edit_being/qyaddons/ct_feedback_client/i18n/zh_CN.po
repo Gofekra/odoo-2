@@ -1,0 +1,148 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ct_feedback_client
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-26 01:46+0800\n"
+"PO-Revision-Date: 2017-06-26 01:49+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.2\n"
+"Last-Translator: Henry Su <henry.su@mail.com>\n"
+"Language: zh_CN\n"
+
+#. module: ct_feedback_client
+#: selection:ct_feedback_client.question,state:0
+msgid "Being Handled"
+msgstr "处理中"
+
+#. module: ct_feedback_client
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_submit_wizard_create_uid
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_user_config_wizard_create_uid
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_question_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ct_feedback_client
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_submit_wizard_create_date
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_user_config_wizard_create_date
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_question_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ct_feedback_client
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_submit_wizard_display_name
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_user_config_wizard_display_name
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_question_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ct_feedback_client
+#: model:res.groups,name:ct_feedback_client.group_feedback_client_user
+msgid "Feedback Agent User(Client Side)"
+msgstr "反馈代理用户（客户端）"
+
+#. module: ct_feedback_client
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_submit_wizard_id
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_user_config_wizard_id
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_question_id
+msgid "ID"
+msgstr "标识"
+
+#. module: ct_feedback_client
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_submit_wizard___last_update
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_user_config_wizard___last_update
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_question___last_update
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: ct_feedback_client
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_submit_wizard_write_uid
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_user_config_wizard_write_uid
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_question_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: ct_feedback_client
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_submit_wizard_write_date
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_feedback_user_config_wizard_write_date
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_question_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ct_feedback_client
+#: selection:ct_feedback_client.question,state:0
+msgid "Solved"
+msgstr "已解决"
+
+#. module: ct_feedback_client
+#: model:ir.model.fields,field_description:ct_feedback_client.field_ct_feedback_client_question_state
+msgid "Status"
+msgstr "状态"
+
+#. module: ct_feedback_client
+#: selection:ct_feedback_client.question,state:0
+msgid "Submitted"
+msgstr "已提交"
+
+#. module: ct_feedback_client
+#: model:ir.model,name:ct_feedback_client.model_res_users
+msgid "Users"
+msgstr "用户"
+
+#. module: ct_feedback_client
+#: model:ir.model,name:ct_feedback_client.model_ct_feedback_client_feedback_submit_wizard
+msgid "ct_feedback_client.feedback.submit.wizard"
+msgstr "ct_feedback_client.feedback.submit.wizard"
+
+#. module: ct_feedback_client
+#: model:ir.model,name:ct_feedback_client.model_ct_feedback_client_feedback_user_config_wizard
+msgid "ct_feedback_client.feedback_user_config.wizard"
+msgstr "ct_feedback_client.feedback_user_config.wizard"
+
+#. module: ct_feedback_client
+#: model:ir.model,name:ct_feedback_client.model_ct_feedback_client_question
+msgid "ct_feedback_client.question"
+msgstr "ct_feedback_client.question"
+
+#. module: ct_feedback_client
+#. openerp-web
+#: code:addons/ct_feedback_client/static/src/xml/res_config_view.xml:6
+#: code:addons/ct_feedback_client/static/src/xml/res_config_view.xml:47
+#, python-format
+msgid "feedback.config.settings"
+msgstr "feedback.config.settings"
+
+#. module: ct_feedback_client
+#. openerp-web
+#: code:addons/ct_feedback_client/static/src/xml/res_config_view.xml:49
+#, python-format
+msgid "form"
+msgstr "窗体"
+
+#. module: ct_feedback_client
+#. openerp-web
+#: code:addons/ct_feedback_client/static/src/xml/res_config_view.xml:50
+#, python-format
+msgid "inline"
+msgstr "内嵌"
+
+#. module: ct_feedback_client
+#. openerp-web
+#: code:addons/ct_feedback_client/static/src/xml/res_config_view.xml:46
+#, python-format
+msgid "ir.actions.act_window"
+msgstr "ir.actions.act_window"
+
+#. module: ct_feedback_client
+#. openerp-web
+#: code:addons/ct_feedback_client/static/src/xml/res_config_view.xml:11
+#, python-format
+msgid "or"
+msgstr "或"

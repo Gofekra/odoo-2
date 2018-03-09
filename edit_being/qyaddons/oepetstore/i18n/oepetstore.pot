@@ -1,0 +1,138 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* oepetstore
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-21 03:48+0000\n"
+"PO-Revision-Date: 2017-07-21 03:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oepetstore
+#: model:product.product,name:oepetstore.product_product_10
+#: model:product.template,name:oepetstore.product_product_10_product_template
+msgid "Alligator"
+msgstr ""
+
+#. module: oepetstore
+#: model:product.product,name:oepetstore.product_product_14
+#: model:product.template,name:oepetstore.product_product_14_product_template
+msgid "Ball"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_oepetstore_message_of_the_day_color
+msgid "Color"
+msgstr ""
+
+#. module: oepetstore
+#: model:product.product,name:oepetstore.product_product_15
+#: model:product.template,name:oepetstore.product_product_15_product_template
+msgid "Crazy Circle"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_oepetstore_message_of_the_day_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_oepetstore_message_of_the_day_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_oepetstore_message_of_the_day_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: oepetstore
+#: model:product.product,name:oepetstore.product_product_13
+#: model:product.template,name:oepetstore.product_product_13_product_template
+msgid "Fish"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.ui.menu,name:oepetstore.home_page_petstore_menu
+msgid "Home Page"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_oepetstore_message_of_the_day_id
+msgid "ID"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_oepetstore_message_of_the_day___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_oepetstore_message_of_the_day_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_oepetstore_message_of_the_day_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_product_product_max_quantity
+msgid "Maximum Quantity"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model.fields,field_description:oepetstore.field_oepetstore_message_of_the_day_message
+msgid "Message"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.actions.act_window,name:oepetstore.message_of_the_day_action
+#: model:ir.ui.menu,name:oepetstore.message_day
+#: model:ir.ui.view,arch_db:oepetstore.message_of_the_day_form
+#: model:ir.ui.view,arch_db:oepetstore.message_of_the_day_tree
+msgid "Message of the day"
+msgstr ""
+
+#. module: oepetstore
+#: model:product.product,name:oepetstore.product_product_9
+#: model:product.template,name:oepetstore.product_product_9_product_template
+msgid "Mice"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.ui.menu,name:oepetstore.main_petstore_menu
+#: model:ir.ui.menu,name:oepetstore.petstore_menu
+msgid "Pet Store"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.actions.client,name:oepetstore.action_home_page
+msgid "Pet Store Home"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.actions.act_window,name:oepetstore.pet_toys_action
+#: model:ir.ui.menu,name:oepetstore.pet_toys_action_menu
+#: model:product.category,name:oepetstore.product_category_pet
+msgid "Pet Toys"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model,name:oepetstore.model_product_product
+msgid "Product"
+msgstr ""
+
+#. module: oepetstore
+#: model:ir.model,name:oepetstore.model_oepetstore_message_of_the_day
+msgid "oepetstore.message_of_the_day"
+msgstr ""
+

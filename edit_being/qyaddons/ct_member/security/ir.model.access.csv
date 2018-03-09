@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_routine_task,routine_task,model_routine_task,base.group_user,1,1,1,1
+access_res_routine_task_line,routine_task_line,model_routine_task_line,base.group_user,1,1,1,1
+access_res_routine_stage,routine_stage,model_routine_stage,base.group_user,1,1,1,1
+access_res_routine_tag,routine_tag,model_routine_tag,base.group_user,1,1,1,1
+

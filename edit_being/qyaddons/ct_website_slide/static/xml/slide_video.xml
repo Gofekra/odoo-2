@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="slide_video" xml:space="preserve">
+    <t t-name="slide_video">
+        <div id="slide_video">
+             <div class="m">
+                 <t t-if="video">
+                    <video id="my-video" class="video-js" controls="auto" width="640" height="264" data-setup="{}">
+                        <source t-att-src="video.url" type="video/mp4"/>
+                    </video>
+                 </t>
+             </div>
+        </div>
+    </t>
+</templates>

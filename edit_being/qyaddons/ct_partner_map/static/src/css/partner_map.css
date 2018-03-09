@@ -1,0 +1,23 @@
+#baidumap {
+    width: 100% !important;
+    height: 500px !important;
+    overflow: hidden !important;
+}
+
+#bmap {
+    height: 100%;
+}
+
+.oe_view_manager_view_bmap {
+    display: none !important;
+}
+.tab-pane.active>#baidumap{
+    display: block !important;
+}
+.openerp .oe_view_manager .oe_view_manager_switch .oe_vm_switch_bmap:after {
+    content: "0";
+}
+
+#oe_supplier_map {
+    width: 100% !important;
+}

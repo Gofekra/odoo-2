@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+<!-- 		<template id="assets_backend" name="pos_assets" inherit_id="web.assets_backend">
+        	<xpath expr="." position="inside">
+        		<link rel="stylesheet" href="/ct_dxb_weixin/static/src/less/weixin_tip.less"/>
+        	</xpath>
+    	</template>
+
+    	<template id="inherit_webclient_bootstrap" inherit_id="web.webclient_bootstrap">
+    		<xpath expr="//nav[@id='oe_main_menu_navbar']" position="before">
+    			<div class="weixin-tip">
+					<p>
+						<img src="/ct_dxb_weixin/static/src/img/live_weixin.png" alt="微信打开"/>
+					</p>
+				</div>
+					<script type="text/javascript">
+				        $(window).on("load",function(){
+					        var winHeight = $(window).height();
+							function is_weixin() {
+							    var ua = navigator.userAgent.toLowerCase();
+							    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+							        return true;
+							    } else {
+							        return false;
+							    }
+							}
+							if(is_weixin()){
+					            $(".weixin-tip").show();
+							}
+				        })
+					</script>
+    		</xpath>
+    	</template> -->
+	</data>
+</odoo>

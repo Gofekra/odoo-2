@@ -1,0 +1,40 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record id="stock_logistics_config" model="ir.ui.view">
+            <field name="name">wx_config</field>
+            <field name="model">stock.logistics</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Configure" class="oe_form_configuration">
+                    <header>
+                        <button string="应用" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="取消" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <separator string="物流配置"/>
+                    <group>
+                        <field name="key" class="oe_inline"/>
+                        <field name="customer" class="oe_inline"/>
+                        <field name="secret" class="oe_inline"/>
+
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    <record model="ir.actions.act_window" id="stock_logistics_action_window">
+      <field name="name">物流配置</field>
+      <field name="res_model">stock.logistics</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+    </record>
+
+    <menuitem name="物流配置" id="logistics_menu_2" parent="stock.menu_stock_config_settings" sequence="0"
+              action="stock_logistics_action_window"/>
+
+
+
+  </data>
+</odoo>

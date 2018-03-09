@@ -1,0 +1,145 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* quotation_handler
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-12 15:23+0000\n"
+"PO-Revision-Date: 2017-08-13 14:29+0800\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.8.8\n"
+
+#. module: quotation_handler
+#: model:ir.model.fields,field_description:quotation_handler.field_sale_order_revised_order_count
+msgid "# of Revised Orders"
+msgstr "# 订单"
+
+#. module: quotation_handler
+#: model:ir.model.fields,help:quotation_handler.field_sale_config_settings_so_expiration_date_start
+msgid "Allows you to set Expiration Date Start from."
+msgstr "允许设置报价开始日期"
+
+#. module: quotation_handler
+#: model:ir.model.fields,help:quotation_handler.field_sale_config_settings_so_expiration_date
+msgid "Allows you to set Expiration Date."
+msgstr "允许设置报价到期日期"
+
+#. module: quotation_handler
+#: model:ir.ui.view,arch_db:quotation_handler.view_order_form_revised
+msgid "Cancel"
+msgstr "取消"
+
+#. module: quotation_handler
+#: selection:sale.config.settings,so_expiration_date:0
+msgid "Created as company rule"
+msgstr "自定义规则"
+
+#. module: quotation_handler
+#: model:ir.ui.view,arch_db:quotation_handler.view_sales_config_revised_quotation
+msgid "Days"
+msgstr "天"
+
+#. module: quotation_handler
+#: selection:sale.config.settings,so_expiration_date:0
+msgid "Default 14 days"
+msgstr "默认14天"
+
+#. module: quotation_handler
+#: model:ir.model,name:quotation_handler.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "邮件撰写向导"
+
+#. module: quotation_handler
+#: model:ir.model.fields,field_description:quotation_handler.field_sale_config_settings_so_expiration_date
+#: model:ir.ui.view,arch_db:quotation_handler.view_sales_config_revised_quotation
+msgid "Expiration Date"
+msgstr "到期日期"
+
+#. module: quotation_handler
+#: model:ir.ui.view,arch_db:quotation_handler.view_sales_config_revised_quotation
+msgid "Expiration Date Calculated From"
+msgstr "计算到期日期"
+
+#. module: quotation_handler
+#: model:ir.model.fields,field_description:quotation_handler.field_sale_config_settings_so_expiration_date_start
+msgid "Expiration Date Start from"
+msgstr "开始日期"
+
+#. module: quotation_handler
+#: selection:sale.config.settings,so_expiration_date:0
+msgid "No Default Expiration Date"
+msgstr "无默认到期日期"
+
+#. module: quotation_handler
+#: model:ir.model.fields,field_description:quotation_handler.field_sale_config_settings_so_expiration_date_no
+msgid "No.of Days"
+msgstr "天数"
+
+#. module: quotation_handler
+#: model:ir.model.fields,field_description:quotation_handler.field_sale_order_org_name
+msgid "Origin"
+msgstr "来源"
+
+#. module: quotation_handler
+#: model:ir.model.fields,field_description:quotation_handler.field_sale_order_parent_so_id
+msgid "Parent SO"
+msgstr "上级订单"
+
+#. module: quotation_handler
+#: model:ir.ui.view,arch_db:quotation_handler.view_order_form_revised
+msgid "Print"
+msgstr "打印"
+
+#. module: quotation_handler
+#: selection:sale.config.settings,so_expiration_date_start:0
+msgid "Quotation Creation Date"
+msgstr "报价日期"
+
+#. module: quotation_handler
+#: selection:sale.config.settings,so_expiration_date_start:0
+msgid "Quotation Sent Date"
+msgstr "发送报价日期"
+
+#. module: quotation_handler
+#: model:ir.ui.view,arch_db:quotation_handler.view_order_form_revised
+msgid "Revise the Quotation"
+msgstr "修改报价"
+
+#. module: quotation_handler
+#: model:ir.actions.act_window,name:quotation_handler.act_sale_order_2_revised
+#: model:ir.ui.view,arch_db:quotation_handler.view_order_form_revised
+msgid "Revised Quotation Orders"
+msgstr "修改报价单"
+
+#. module: quotation_handler
+#: model:ir.actions.act_window,help:quotation_handler.act_sale_order_2_revised
+msgid "Revised order against this Quotation Order."
+msgstr "此报价的订单"
+
+#. module: quotation_handler
+#: model:ir.model.fields,field_description:quotation_handler.field_sale_order_revision_number
+msgid "Revision"
+msgstr "修改"
+
+#. module: quotation_handler
+#: model:ir.model,name:quotation_handler.model_sale_order
+msgid "Sales Order"
+msgstr "销售订单"
+
+#. module: quotation_handler
+#: model:ir.ui.view,arch_db:quotation_handler.view_order_form_revised
+msgid "Send by Email"
+msgstr "以邮件发送"
+
+#. module: quotation_handler
+#: model:ir.model,name:quotation_handler.model_sale_config_settings
+msgid "sale.config.settings"
+msgstr "sale.config.settings"

@@ -1,0 +1,103 @@
+/*平板*/
+@media (min-width: @screen-sm-min){ 
+/*看板视图左边间隙较大*/
+.o_kanban_view .o_kanban_record{
+	margin-left: 6px !important;
+	margin-right: 6px !important;
+}
+/*移动端销售首页绩效板块无法显示；*/
+.o_sales_dashboard .hidden-xs{
+	margin-top: 0;
+}
+.o_form_view .o_form_statusbar{
+	padding:0px 16px;
+}
+
+/*更换左上角返回上级的绿色图标*/
+.o_control_panel .breadcrumb > li.o_back_button:before{
+	content: "";
+}
+.o_control_panel .breadcrumb > li.o_back_button:not(:first-child):before{
+    content: url(/ct_web_theme/static/src/img/jiange.png);
+    padding: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.o_control_panel .breadcrumb > li{
+	vertical-align: top;
+}
+/*搜索下拉菜单*/
+.o_web_client.o_touch_device .btn-sm, .o_web_client.o_touch_device .btn-xs{
+    padding: 7px 14px;
+}
+/*搜索栏*/
+.o_searchview{
+	border-radius: 25px;
+	margin-top: 0px;
+}
+
+/*底部菜单图标最大大小*/
+.o_application_switcher .o_application_switcher_scrollable .o_apps .o_app .o_app_icon,.con#AppSwitcher-swiper .o_app .o_app_icon{
+	max-width: 50px !important;
+}
+#AppSwitcher-swiper .no-slide .o_app_icon,.o_application_switcher .o_application_switcher_scrollable .o_apps .o_app div.o_app_icon{
+    max-width: 45px !important;
+}
+.o_application_switcher .o_application_switcher_scrollable .o_apps .o_app div.o_app_icon i.fa,.con#AppSwitcher-swiper .o_app div.o_app_icon > i.fa{
+    font-size: 24px;
+}
+
+.o_application_switcher .o_application_switcher_scrollable .o_apps:after,.con#AppSwitcher-swiper:after{
+	height:90px;
+}
+.o_application_switcher .o_application_switcher_scrollable .o_apps .o_app .o_caption{
+	margin-top: 8px;
+}
+.con#AppSwitcher-swiper .o_caption{
+	margin-top: 8px;
+}
+#AppSwitcher-swiper{
+	padding-bottom: 5px;
+}
+
+.o_form_view .o_group .o_form_field{
+	width:100%;
+}
+
+.o_control_panel .o_cp_left .o_cp_buttons .o_calendar_buttons .btn-group-sm{
+	margin-left: 20px;
+}
+
+/*销售订单*/
+.o_kanban_view.o_kanban_view.o_salesteam_kanban_list{
+	padding:0 !important;
+}
+.o_form_view .o_group.o_inner_group > tbody > tr > td.o_td_label + td > .o_form_field{
+	width: 90%;
+}
+.o_main_navbar .o_menu_sections > li .dropdown-menu > li.dropdown-header > span{
+	color: #666;
+}
+.o_web_client .o_content .o_view_manager_content .o_form_nosheet table.o_group > tbody > tr > td.o_td_label{
+	min-width: 200px;
+}
+.o_web_client .o_content .o_view_manager_content .o_form_nosheet table.o_group > tbody > tr > td:last-child{
+	text-align:inherit;
+}
+.o_form_view.o_form_editable .o_row > .o_form_field, .o_form_view.o_form_editable .o_row > div{
+	width: auto !important;
+}
+.oe_import .oe_import_box{
+	padding:16px;
+}
+.oe_import .oe_import_box>div[class^='col-']{
+	padding-left: 16px;
+	padding-right: 16px; 
+}
+.oe_import .oe_import_box>div[class^='col-']>.input-group{
+	display: table;
+}
+.oe_import .oe_import_box>div[class^='col-']>.input-group>.oe_import_file_show{
+	margin-bottom:0;
+}
+}

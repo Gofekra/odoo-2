@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <!-- Task Stages -->
+        <record id="analysis" model="project.task.type">
+            <field name="name">Analysis</field>
+            <field name="sequence">100</field>
+            <field name="is_initial">True</field>
+            <field name="related_fields" search="[('model_id.model','=','project.task'),('name','=','analysis_description')]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="specification" model="project.task.type">
+            <field name="name">Specification</field>
+            <field name="sequence">110</field>
+            <field name="is_initial">False</field>
+            <field name="doublon_allowed">False</field>
+            <field name="related_fields" search="[('model_id.model','=','project.task'),('name','=','description')]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--<record id="prototyping" model="project.task.type">
+            <field name="name">Prototyping</field>
+            <field name="sequence">120</field>
+            <field name="is_initial">False</field>
+            <field name="doublon_allowed">False</field>
+            <field name="related_fields" search="[('model_id.model','=','project.task'),('name','=','prototyping_description')]" />
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>-->
+        <record id="development" model="project.task.type">
+            <field name="name">Development</field>
+            <field name="sequence">130</field>
+            <field name="is_initial">False</field>
+            <field name="doublon_allowed">False</field>
+            <field name="related_fields" search="[('model_id.model','=','project.task'),('name','=','development_description')]" />
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="test" model="project.task.type">
+            <field name="name">Test</field>
+            <field name="sequence">140</field>
+            <field name="is_initial">False</field>
+            <field name="doublon_allowed">False</field>
+            <field name="parent_stage" ref="development"/>
+            <field name="related_fields" search="[('model_id.model','=','project.task'),('name','in',['transfer_ids','testreq_ids','testcase_ids'])]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="deployment" model="project.task.type">
+            <field name="name">Deployment</field>
+            <field name="sequence">150</field>
+            <field name="is_initial">False</field>
+            <field name="doublon_allowed">False</field>
+            <field name="related_fields" search="[('model_id.model','=','project.task'),('name','=','deployment_description')]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="done" model="project.task.type">
+            <field name="name">Done</field>
+            <field name="sequence">160</field>
+            <field name="is_initial">False</field>
+            <field name="fold">True</field>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="canceled" model="project.task.type">
+            <field name="name">Canceled</field>
+            <field name="sequence">170</field>
+            <field name="is_initial">False</field>
+            <field name="fold">True</field>
+            <field name="related_fields" search="[('model_id.model','=','project.task'),('name','=','cancellation_description')]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <!-- Project Template -->
+        <record id="ct_project_template" model="project.project">
+            <!-- <field name="date_start" eval="time.strftime('%Y-%m-01 10:00:00')" /> -->
+            <field name="name">Cotong Project Template</field>
+            <field name="color">3</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="alias_model">project.task</field>
+            <field name="type_ids"
+                   eval="[(4, ref('analysis')), (4, ref('specification')),
+                   (4, ref('development')),(4, ref('test')),
+                   (4, ref('deployment')), (4, ref('done')), (4, ref('canceled'))]"/>
+            <!--<field mame="issue_stage_ids" eval="[(4, ref('issue_reopen_stage')),
+                   (4, ref('issue_fixing_stage')),
+                   (4, ref('issue_verifiying_stage')),
+                   (4, ref('issue_closed_stage')),
+                   (4, ref('issue_canceled_stage'))]"/>-->
+        </record>
+
+        <!-- Issue Stages -->
+        <record id="issue_reopen_stage" model="project.issue.stage">
+            <field name="name">Re-Open</field>
+            <field name="sequence">100</field>
+            <field name="project_ids"
+                   eval="[(4, ref('ct_project_template'))]"/>
+            <field name="doublon_allowed">False</field>
+            <field name="related_fields" search="[('model_id.model','=','project.issue'),('name','=','reopen_description')]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="issue_fixing_stage" model="project.issue.stage">
+            <field name="name">Fixing</field>
+            <field name="sequence">110</field>
+            <field name="project_ids"
+                   eval="[(4, ref('ct_project_template'))]"/>
+            <field name="doublon_allowed">False</field>
+            <field name="related_fields" search="[('model_id.model','=','project.issue'),('name','=','fixing_description')]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="issue_verifying_stage" model="project.issue.stage">
+            <field name="name">Verifying</field>
+            <field name="sequence">120</field>
+            <field name="project_ids"
+                   eval="[(4, ref('ct_project_template'))]"/>
+            <field name="doublon_allowed">False</field>
+            <field name="parent_stage" ref="issue_fixing_stage"/>
+            <field name="related_fields" search="[('model_id.model','=','project.issue'),('name','=','verification_description')]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="issue_closed_stage" model="project.issue.stage">
+            <field name="name">Closed</field>
+            <field name="sequence">130</field>
+            <field name="project_ids"
+                   eval="[(4, ref('ct_project_template'))]"/>
+            <field name="related_fields" search="[('model_id.model','=','project.issue'),('name','=','closing_description')]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="issue_canceled_stage" model="project.issue.stage">
+            <field name="name">Canceled</field>
+            <field name="sequence">140</field>
+            <field name="project_ids"
+                   eval="[(4, ref('ct_project_template'))]"/>
+            <field name="related_fields" search="[('model_id.model','=','project.issue'),('name','=','cancellation_description')]"/>
+            <field name="user_ids" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <!-- Repositories -->
+        <record id="qiyun" model="ct_project_dev.repository">
+            <field name="name">QitongYun</field>
+            <field name="url">svn://repo.qitong.work/80serp</field>
+        </record>
+
+        <record id="yongyou" model="ct_project_dev.repository">
+            <field name="name">Yonyou</field>
+            <field name="url">svn://repo.qitong.work/yonyou</field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequences for lunch invoice number -->
+        <!--<record id="seq_type_uf_log" model="ir.sequence.type">-->
+            <!--<field name="name">Uf Log No</field>-->
+            <!--<field name="code">uf.log</field>-->
+        <!--</record>-->
+
+        <record id="seq_uf_log" model="ir.sequence">
+            <field name="name">Uf Log No</field>
+            <field name="code">uf.log</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">LS</field>
+            <field name="number_next">1000</field>
+            <field name="padding">4</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,286 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ct_calendar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-21 17:12+0800\n"
+"PO-Revision-Date: 2017-06-21 17:13+0800\n"
+"Last-Translator: Henry Su <henry.su@mail.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 2.0.2\n"
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_config_settings
+msgid "Apply"
+msgstr "应用"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_ct_is_attendee
+msgid "Attendee"
+msgstr "出席者"
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_calendar_attendee
+msgid "Attendee information"
+msgstr "出席者信息"
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_config_settings
+msgid "Cancel"
+msgstr "取消"
+
+#. module: ct_calendar
+#: selection:calendar.event,stage:0
+msgid "Canceled"
+msgstr "已取消"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_contact_id
+msgid "Contact"
+msgstr "联系人"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_contact_mobile
+msgid "Contact Mobile"
+msgstr "联系人手机"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_contact_phone
+msgid "Contact Phone"
+msgstr "联系人电话"
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+msgid "Contact infos"
+msgstr "联系人信息"
+
+#. module: ct_calendar
+#: model:res.groups,name:ct_calendar.group_meeting_root
+msgid "Cotong meeting administrator"
+msgstr "日程管理员"
+
+#. module: ct_calendar
+#: model:ir.actions.act_window,name:ct_calendar.followers_config_action
+msgid "Cotong meeting settings"
+msgstr "日程设置"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_create_uid
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_create_date
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_ct_visible_to_user
+msgid "Ct visible to user"
+msgstr "对用户可见"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_customer_id
+#: model:ir.model.fields,field_description:ct_calendar.field_hr_expense_customer_id
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+#: model:ir.ui.view,arch_db:ct_calendar.view_expense_search
+msgid "Customer"
+msgstr "客户"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_customer_name
+msgid "Customer name"
+msgstr "客户名称"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_display_name
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_calendar_event
+msgid "Event"
+msgstr "活动"
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_hr_expense
+msgid "Expense"
+msgstr "费用"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_expense_ids
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+msgid "Expenses"
+msgstr "费用"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_id
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_id
+msgid "ID"
+msgstr "标识"
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_calendar_event_is_responsible
+msgid "If the current user is responsible of the meeting"
+msgstr "如果当前用户负责此日程"
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_calendar_event_is_own
+msgid "If the meeting was created by the current user"
+msgstr "如果日程是由当前用户创建"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_res_partner_is_employee
+msgid "Is employee"
+msgstr "是一个员工"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_is_own
+msgid "Is own"
+msgstr "是自己"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_is_responsible
+msgid "Is responsible"
+msgstr "是负责人"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings___last_update
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_write_uid
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_write_date
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_hr_expense_meeting_id
+msgid "Meeting"
+msgstr "会议"
+
+#. module: ct_calendar
+#: model:ir.ui.menu,name:ct_calendar.menu_meeting_rights_configuration
+msgid "Meeting Rights configuration"
+msgstr "权限配置"
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+msgid "Mobile"
+msgstr "手机"
+
+#. module: ct_calendar
+#: selection:calendar.event,stage:0
+msgid "Normal"
+msgstr "正常"
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_config_settings
+msgid "PMO Groups Management"
+msgstr "PMO组管理"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_user_ids
+msgid "PMO group members"
+msgstr "PMO组成员"
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_res_partner
+msgid "Partner"
+msgstr "业务伙伴"
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+msgid "Phone"
+msgstr "电话"
+
+#. module: ct_calendar
+#: selection:calendar.event,stage:0
+msgid "Postponed"
+msgstr "延期"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_project_id
+msgid "Project"
+msgstr "项目"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_res_partner_same_company
+msgid "Same company"
+msgstr "相同公司"
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_stage
+msgid "Stage"
+msgstr "阶段"
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_calendar_event_ct_is_attendee
+msgid "True if the current user is an attendee of that meeting"
+msgstr "当前用户参与该会议/行动时为真"
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_res_partner_is_employee
+msgid "True if the partner is an employee"
+msgstr "业务伙伴为员工时为真"
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_res_partner_same_company
+msgid "True if the partner is in the same company as the current user"
+msgstr "业务伙伴和当前用户同属一家公司时为真"
+
+#. module: ct_calendar
+#: code:addons/ct_calendar/models/models.py:149
+#: code:addons/ct_calendar/models/models.py:173
+#, python-format
+msgid ""
+"You are not allowed to perform this action. Contact your Administrator if "
+"you think there is an error."
+msgstr "您不允许执行这个操作。如果有问题请联系您的管理员。"
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_ct_calendar_config_settings
+msgid "ct_calendar.config.settings"
+msgstr "ct_calendar.config.settings"
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_ct_calendar_event_clean_wizard
+msgid "ct_calendar.event_clean.wizard"
+msgstr "ct_calendar.event_clean.wizard"
+
+#~ msgid "Follower groups"
+#~ msgstr "关注人群组"
+
+#~ msgid "Followers Groups Management"
+#~ msgstr "关注人群组管理"
+
+#~ msgid "Is follower"
+#~ msgstr "是关注人"
+
+#~ msgid "Only the attendees can edit the meeting."
+#~ msgstr "只有参与者可以编辑该会议/行动。"
+
+#~ msgid "Only the responsible can delete the meeting."
+#~ msgstr "只有负责人可以删除该会议/行动。"
+
+#~ msgid "True if the current user is a follower of that meeting"
+#~ msgstr "当前用户关注该会议/行动时为真。"

@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_test_case_project_user,test.case,model_test_case,project.group_project_user,1,1,1,1
+access_test_case_project_manager,test.case,model_test_case,project.group_project_manager,1,1,1,1
+access_test_requirement_project_user,test.requirement,model_test_requirement,project.group_project_user,1,1,1,1
+access_test_requirement_project_manager,test.requirement,model_test_requirement,project.group_project_manager,1,1,1,1
+access_project_task_project_manager,project.task.pm,project.model_project_task,project.group_project_manager,1,1,1,1
+access_project_task_user,project.task.user,project.model_project_task,project.group_project_user,1,1,0,0
+access_project_issue_stage_user,project.issue.stage.user,model_project_issue_stage,base.group_user,1,0,0,0
+access_project_issue_stage_project_user,project.issue.stage.project.user,model_project_issue_stage,project.group_project_user,1,0,0,0
+access_project_issue_stage_manager,project.task.issue manager,model_project_issue_stage,project.group_project_manager,1,1,1,1
+access_project_transfer_user,ct_project_dev.transfer user,model_ct_project_dev_transfer,project.group_project_user,1,1,1,0
+access_project_transfer_manager,ct_project_dev.transfer manager,model_ct_project_dev_transfer,project.group_project_manager,1,1,1,1
+access_ct_project_dev_repository_user,access_ct_project_dev_repository_user,model_ct_project_dev_repository,project.group_project_user,1,0,0,0
+access_ct_project_dev_repository_manager,access_ct_project_dev_repository_manager,model_ct_project_dev_repository,project.group_project_manager,1,1,1,1
+access_ct_project_dev_module_user,access_ct_project_dev_module user,model_ct_project_dev_module,project.group_project_user,1,1,1,1
+access_ct_project_dev_module_manager,access_ct_project_dev_module manager,model_ct_project_dev_module,project.group_project_manager,1,0,0,0
+

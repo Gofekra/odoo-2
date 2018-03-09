@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!-- 新建用户组hideme -->
+    <record id="hideme" model="res.groups">
+        <field name="category_id" ref="base.module_category_hidden" />
+        <field name="name">hide me</field>
+    </record>
+
+    <!-- 指定只有hidme用户组才能看到消息菜单 -->
+    <record id="point_of_sale.menu_report_pos_order_all" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('hideme')])]"/>
+    </record>
+
+    <record id="point_of_sale.menu_report_order_details" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('hideme')])]"/>
+    </record>
+
+
+    <record id="point_of_sale.menu_pos_global_settings" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('hideme')])]"/>
+    </record>
+
+    <record id="point_of_sale.menu_pos_config_pos" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('hideme')])]"/>
+    </record>
+
+    <record id="stock.menu_stock_general_settings" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('hideme')])]"/>
+    </record>
+
+
+
+     <!--整合所有菜单 -->
+         <menuitem id="point_of_sale.menu_point_ofsale" name="订单"  parent="point_of_sale.menu_point_root"
+              sequence="10" action="point_of_sale.action_pos_pos_form"/>
+
+    <menuitem id="point_of_sale.menu_pos_products" name="商品"  parent="point_of_sale.menu_point_root"
+              sequence="20" action="point_of_sale.product_product_action"/>
+
+     <menuitem id="contacts.menu_contacts" string="会员"  name="会员"  parent="point_of_sale.menu_point_root"
+              sequence="22" action="contacts.action_contacts"/>
+
+     <menuitem id="pos_loyalty.menu_loyalty_program" string="积分" name="积分"
+               parent="point_of_sale.menu_point_root"
+              sequence="25" action="pos_loyalty.action_loyalty_program_form"/>
+
+
+     <menuitem id="base.menu_action_res_company_form" string="门店信息" name="门店信息"
+               parent="point_of_sale.menu_point_config_product"
+              sequence="21" action="base.action_res_company_form"/>
+
+
+
+     <menuitem id="stock.menu_stock_general_settings" string="单位配置"
+               parent="point_of_sale.menu_point_config_product"
+              sequence="22" action="stock.action_stock_config_settings"/>
+
+     <menuitem id="stock.menu_stock_uom_categ_form_action" string="计量单位类别"
+               parent="point_of_sale.menu_point_config_product"
+              sequence="23" action="product.product_uom_categ_form_action"/>
+
+          <menuitem id="stock.menu_stock_unit_measure_stock" string="计量单位"
+               parent="point_of_sale.menu_point_config_product"
+              sequence="24" action="product.product_uom_form_action"/>
+
+
+
+          <menuitem id="base.menu_action_res_users" string="用户"
+               parent="point_of_sale.menu_point_config_product"
+              sequence="25" action="base.action_res_users"/>
+
+
+          <menuitem id="menu_action_pos" string="POS" name="POS"
+          parent="point_of_sale.menu_point_root" sequence="1" />
+
+          <menuitem id="point_of_sale.menu_pos_dashboard" string="首页"
+               parent="menu_action_pos"
+              sequence="1" action="point_of_sale.action_pos_config_kanban"/>
+
+          <menuitem id="point_of_sale.menu_pos_session_all" string="会话"
+               parent="menu_action_pos" sequence="2" action="point_of_sale.action_pos_session"/>
+
+
+
+    <!-- pos订单增加销售类型，取消开票按钮-->
+     <record id="pos_order_inhert_view" model="ir.ui.view">
+             <field name="name">pos_order_inhert_view</field>
+             <field name="model">pos.order</field>
+             <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+             <field name="arch" type="xml">
+                 <field name="partner_id" position='after'>
+                        <field name="slae_type" readonly="1"/>
+                 </field>
+
+                 <button name="action_pos_order_invoice" position="attributes">
+                     <attribute name="invisible">1</attribute>
+                 </button>
+
+                    <xpath expr="//field[@name='lines']/tree//field[@name='price_unit']" position="after">
+                       <field name="product_uom" />
+                   </xpath>
+
+                    <xpath expr="//field[@name='lines']/tree//field[@name='price_subtotal_incl']" position="after">
+                       <field name="refund_qty" readonly="1"/>
+                   </xpath>
+
+             </field>
+         </record>
+
+         <record id="pos_order_inhert_tree" model="ir.ui.view">
+             <field name="name">pos_order_inhert_tree</field>
+             <field name="model">pos.order</field>
+             <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+             <field name="arch" type="xml">
+                 <field name="state" position='before'>
+                        <field name="slae_type"/>
+                 </field>
+             </field>
+         </record>
+
+
+
+
+
+        <!-- 增加默认过滤条件 -->
+         <record id="point_of_sale.view_pos_order_filter" model="ir.ui.view">
+             <field name="name">pos.order.list.select</field>
+             <field name="model">pos.order</field>
+             <field name="arch" type="xml">
+                 <search string="Search Sales Order">
+                     <field name="name"/>
+                    <field name="date_order"/>
+                     <field name="user_id"/>
+                    <field name="partner_id"/>
+                    <field name="session_id"/>
+                     <field name="pos_reference"/>
+
+                     <filter string="零售" domain="[('slae_type','=','in')]"/>
+                     <filter string="退货" domain="[('slae_type','=','out')]"/>
+                     <filter string="今天" domain="[('date_order','&lt;=',datetime.datetime.now().strftime('%Y-%m-%d 23:59:59')),
+                              ('date_order','&gt;=',datetime.datetime.now().strftime('%Y-%m-%d 00:00:00'))]"  />
+                     <filter string="昨天" domain="[('date_order','&lt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 23:59:59')), ('date_order','&gt;=',(datetime.date.today() + relativedelta(days=-1)).strftime('%Y-%m-%d 00:00:00'))]"/>
+                      <filter string="本周"  domain="[('date_order','&gt;=',(datetime.date.today()+datetime.timedelta(-(datetime.date.today().weekday()))).strftime('%Y-%m-%d 00:00:00'))]"/>
+                      <filter string="本月" domain="[('date_order','&lt;',(datetime.date.today() + relativedelta(months=1)).strftime('%Y-%m-01 00:00:00')),('date_order','&gt;=',time.strftime('%Y-%m-01 00:00:00')) ]"/>
+
+                      <group   expand="0" string="Group By">
+                          <filter string="销售类型" domain="[]" context="{'group_by':'slae_type'}"/>
+                      </group>
+                 </search>
+             </field>
+         </record>
+
+
+        <record id="pos_order_contact_tree" model="ir.ui.view">
+             <field name="name">pos_order_contact_tree</field>
+             <field name="model">res.partner</field>
+             <field name="inherit_id" ref="base.view_partner_tree"/>
+             <field name="arch" type="xml">
+                 <field name="email" position='replace'>
+                        <field name="street"/>
+                        <field name="street2"/>
+                 </field>
+             </field>
+         </record>
+
+
+
+        <!-- 修改会话界面功能-->
+        <record model="ir.ui.view" id="view_pos_config_kanban_inhert">
+            <field name="name">view_pos_config_kanban_inhert</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_config_kanban"/>
+            <field name="arch" type="xml">
+                <field name="currency_id" position="after">
+                      <field name="start_at"/>
+                      <field name="today_amount"/>
+                      <field name="today_qty"/>
+                </field>
+
+                <div class="col-xs-6 o_kanban_primary_left" position="before">
+                    <t t-if="record.current_session_state.raw_value === 'opened'">
+                          <div t-if="record.start_at.value" class="o_kanban_primary">
+                                <div class="col-xs-6">
+                                    <span>上次登录日期</span>
+                                </div>
+                                <div class="col-xs-6">
+                                    <span><t t-esc="record.start_at.value"/></span>
+                                </div>
+                            </div>
+
+                          <div t-if="record.today_amount.value" class="o_kanban_primary">
+                                <div class="col-xs-6">
+                                    <span>今日销售额</span>
+                                </div>
+                                <div class="col-xs-6">
+                                    <span>￥<t t-esc="record.today_amount.value"/>元</span>
+                                </div>
+                            </div>
+
+
+                          <div t-if="record.today_qty.value" class="o_kanban_primary">
+                                <div class="col-xs-6">
+                                    <span>今日订单数量</span>
+                                </div>
+                                <div class="col-xs-6">
+                                    <span><t t-esc="record.today_qty.value"/></span>
+                                </div>
+                            </div>
+                    </t>
+                </div>
+                
+                <div class="col-xs-6 o_kanban_primary_left" position="attributes">
+                    <attribute name="class">col-xs-12 col-md-6 o_kanban_primary_left</attribute>
+                </div>
+
+                <div class="col-xs-6 o_kanban_primary_right" position="attributes">
+                    <attribute name="t-if">
+                        record.current_session_state.raw_value === 'opening_control'
+                    </attribute>
+                </div>
+
+                <div class="o_kanban_manage_button_section" position="replace">
+                    <div  class="o_kanban_manage_button_section">
+                        <a type="edit" class="o_kanban_manage_toggle_button">Settings</a>
+                    </div>
+                </div>
+
+            </field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

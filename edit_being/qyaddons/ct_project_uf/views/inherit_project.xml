@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<odoo>
+  <data>
+    <record id="edit_project_impl" model="ir.ui.view">
+      <field name="name">project.project.form.impl</field>
+      <field name="model">project.project</field>
+      <field name="inherit_id" ref="project.edit_project"/>
+      <!--attrs="{'invisible': [('fhoimpl_exists', '=', False)]}" invisible="1"-->
+      <field name="arch" type="xml">
+        <!--<xpath expr="//field[@name='state']" position="replace">-->
+        <!--<field name="state" invisible="1"/>-->
+        <!--<field name="curstate" widget="statusbar" statusbar_visible="plan,design,build,switch,support"-->
+        <!--statusbar_colors='{"design":"red"}' readonly="1"/>-->
+        <!--</xpath>-->
+
+        <xpath expr="//sheet" position="before">
+          <header>
+            <!--<field name="curstate" widget="statusbar" statusbar_visible="plan,design,build,switch,support"-->
+                   <!--statusbar_colors='{"design":"red"}' clickable="1" readonly="0"/>-->
+
+             <field name="curstage_id" widget="statusbar" clickable="True"
+                            options="{'fold_field': 'fold'}"/>
+          </header>
+        </xpath>
+        <xpath expr="//field[@name='partner_id']" position="after">
+          <newline/>
+          <field name="date_contract"/>
+          <newline/>
+          <field name="date_impl"/>
+        </xpath>
+      </field>
+    </record>
+
+    <!--<record id="project_task_form_project_doc" model="ir.ui.view">-->
+    <!--<field name="name">project.task.form.project_doc</field>-->
+    <!--<field name="model">project.task</field>-->
+    <!--<field name="inherit_id" ref="project.view_task_form2"/>-->
+    <!--<field name="arch" type="xml">-->
+
+    <!--&lt;!&ndash;<field name="stage_id" position="before">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button id="do_log_task" name="do_log" type="object" string="工作日志" class="oe_highlight"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;</field>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<xpath expr="//header/field[@name='stage_id']" position="before">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button id="do_log_task" name="do_log" type="object" string="工作日志" class="oe_highlight"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;</xpath>&ndash;&gt;-->
+
+    <!--<field name="legend_done" position="after">-->
+    <!--<field name="project_newdoc"/>-->
+    <!--</field>-->
+
+    <!--&lt;!&ndash;<tree string="Task Work" editable="top" position="attributes">&ndash;&gt;-->
+    <!--&lt;!&ndash;<attribute name="create">false</attribute>&ndash;&gt;-->
+    <!--&lt;!&ndash;<attribute name="edit">false</attribute>&ndash;&gt;-->
+    <!--&lt;!&ndash;<attribute name="delete">false</attribute>&ndash;&gt;-->
+    <!--&lt;!&ndash;</tree>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<field name="date" position="before">&ndash;&gt;-->
+    <!--&lt;!&ndash;<field name="time_start"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;</field>&ndash;&gt;-->
+    <!--</field>-->
+    <!--</record>-->
+
+    <!--<record id="project_task_tree_editable" model="ir.ui.view">-->
+    <!--<field name="name">project.task.tree.editable</field>-->
+    <!--<field name="model">project.task</field>-->
+    <!--<field name="inherit_id" ref="project.view_task_tree2"/>-->
+    <!--<field name="arch" type="xml">-->
+    <!--<tree position="attributes">-->
+    <!--<attribute name="editable">bottom</attribute>-->
+    <!--</tree>-->
+    <!--</field>-->
+    <!--</record>-->
+
+
+    <!--<record id="project_task_calendar_implement" model="ir.ui.view">-->
+    <!--<field name="name">project.task.calendar.implement</field>-->
+    <!--<field name="model">project.task</field>-->
+    <!--<field name="inherit_id" ref="project.view_task_calendar"/>-->
+    <!--<field name="arch" type="xml">-->
+    <!--<calendar position="replace">-->
+    <!--<calendar color="user_id" date_start="date_start" date_stop="date_end" string="Tasks">-->
+    <!--<field name="project_id"/>-->
+    <!--<field name="name"/>-->
+    <!--<field name="user_id"/>-->
+    <!--</calendar>-->
+    <!--</calendar>-->
+    <!--</field>-->
+    <!--</record>-->
+
+
+    <!--<record id="project_task_gantt_implement" model="ir.ui.view">-->
+    <!--<field name="name">project.task.gantt.implement</field>-->
+    <!--<field name="model">project.task</field>-->
+    <!--<field name="inherit_id" ref="project.view_task_gantt"/>-->
+    <!--<field name="arch" type="xml">-->
+    <!--<gantt position="replace">-->
+    <!--<gantt date_start="date_start" date_delay="planned_hours" progress="progress" string="Tasks"-->
+    <!--default_group_by="stage_id">-->
+    <!--</gantt>-->
+    <!--</gantt>-->
+    <!--</field>-->
+    <!--</record>-->
+    <record id="product_product_expense_form_view_qt" model="ir.ui.view">
+      <field name="name">product.product.expense.form.qt</field>
+      <field name="model">product.product</field>
+      <field name="inherit_id" ref="hr_expense.product_product_expense_form_view"/>
+      <field name="arch" type="xml">
+        <field name="supplier_taxes_id" widget="many2many_tags"/>
+
+        <xpath expr="//group/field[@name='supplier_taxes_id']" position="after">
+          <field name="grptype_id"/>
+        </xpath>
+      </field>
+    </record>
+
+    <!-- extend res.groups search view -->
+    <record id="group_search_view_qt" model="ir.ui.view">
+      <field name="name">Group Search Qt</field>
+      <field name="model">res.groups</field>
+      <field name="inherit_id" ref="base.view_groups_search"/>
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+          <filter name="expensetype" string="费用分组" domain="[('is_expensetype','=',True)]"/>
+          <filter name="no_expensetype" string="非费用分组" domain="[('is_expensetype','=',False)]"/>
+          <separator orientation="vertical"/>
+        </field>
+      </field>
+    </record>
+
+    <!-- extend res.groups form view -->
+    <record id="group_form_view_qt" model="ir.ui.view">
+      <field name="name">Portal Form Qt</field>
+      <field name="model">res.groups</field>
+      <field name="inherit_id" ref="base.view_groups_form"/>
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+          <field name="is_expensetype"/>
+        </field>
+      </field>
+    </record>
+
+    <!--<record model="ir.ui.view" id="view_task_form2_inherited_ct">-->
+            <!--<field name="name">project.task.form.inherited.ct</field>-->
+            <!--<field name="model">project.task</field>-->
+            <!--<field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited" />-->
+            <!--<field name="groups_id" eval="[(4, ref('base.group_user'))]"/>-->
+            <!--<field name="arch" type="xml">-->
+
+               <!--<xpath expr="//tree/field[@name='date']" position="after">-->
+                     <!--<field name="mydatetime" />-->
+                <!--</xpath>-->
+
+            <!--</field>-->
+    <!--</record>-->
+
+     <!--<record id="project.act_project_project_2_project_task_all" model="ir.actions.act_window">-->
+            <!--<field name="name">Tasks</field>-->
+            <!--<field name="res_model">project.task</field>-->
+            <!--<field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>-->
+            <!--<field name="context">{-->
+                <!--'group_by': 'stage_id',-->
+                <!--'search_default_project_id': [active_id],-->
+                <!--'default_project_id': active_id,-->
+                <!--'default_task_id': 5,-->
+            <!--}</field>-->
+            <!--<field name="search_view_id" ref="project.view_task_search_form"/>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">-->
+                    <!--Here, you can create new tasks-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--You can now manage your tasks in order to get things done efficiently. Track progress, discuss, attach documents, etc.-->
+                <!--</p>-->
+            <!--</field>-->
+        <!--</record>-->
+
+  </data>
+</odoo>

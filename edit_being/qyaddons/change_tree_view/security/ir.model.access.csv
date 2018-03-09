@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ir_ui_view_employee,ir.ui.view.employee,base.model_ir_ui_view,group_change_tree,1,1,1,1
+access_ir_module_module_employee,ir.module.module.employee,base.model_ir_module_module,group_change_tree,1,1,1,1
+access_ir_model_fields_employee,ir.model.fields.employee,base.model_ir_model_fields,group_change_tree,1,1,1,1
+access_change_tree_view_wizard,change.tree.view.wizard,change_tree_view.model_change_tree_view_wizard,group_change_tree,1,1,1,1

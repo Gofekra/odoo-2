@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+
+
+        <record id="oscg_ebiz_shop_template_form" model="ir.ui.view">
+            <field name="name">oscg.ebiz.shop.template</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='default_code']"  position="after">
+                        <field name="num_iid"/>
+                    </xpath>
+                </data>
+            </field>        
+        </record>
+
+        <!-- SO-->
+        <record id="oscg_ebiz_shop_sales_form" model="ir.ui.view">
+            <field name="name">oscg.ebiz.shop.sales</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='partner_shipping_id']"  position="after">
+                        <field name="shop_id" attrs="{'invisible': [('slaes_type', '!=', 'taob')]}"/>
+                        <field name="buyer_memo"  attrs="{'invisible': [('slaes_type', '!=', 'taob')]}"/>
+                    </xpath>
+                    <xpath expr="//field[@name='currency_id']"  position="after">
+                        <field name="slaes_type"/>
+                        <field name="seller_memo"  attrs="{'invisible': [('slaes_type', '!=', 'taob')]}"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+
+        <record id="taobao_shop_sales_merge_view_tree" model="ir.ui.view">
+            <field name="name">taobao.shop.sales.merge.view.tree</field>
+            <field name="model">sale.order</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Sales Orders" colors="grey:state=='cancel';blue:state in ('waiting_date','manual');red:state in ('invoice_except','shipping_except')">
+                    <field name="message_unread" invisible="1"/>
+                    <field name="name" string="Order Number"/>
+                    <field name="date_order"/>
+                    <field name="partner_id"/>
+                    <field name="partner_shipping_id"/>
+                    <field name="user_id"/>
+                    <field name="amount_total" sum="Total Tax Included"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+        <record id="action_taobao_shop_sales_merge" model="ir.actions.act_window">
+            <field name="name">淘宝订单</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="taobao_shop_sales_merge_view_tree"/>
+            <field name="domain">[('state','!=','cancel'),('state','!=','done'),('slaes_type','=','taob')]</field>
+            <field name="search_view_id" ref="sale.view_sales_order_filter"/>
+            <field name="context">{"tb_so_merge":True,"search_default_date_order":datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S')}</field>
+        </record>
+
+       <menuitem id="menu_taobao_shop" parent="sales_team.menu_sales" name='淘宝订单'  action="action_taobao_shop_sales_merge" sequence="13"/>
+
+
+      <record id="inhert_taobao_form" model="ir.ui.view">
+            <field name="name">inhert_taobao_form</field>
+            <field name="model">delivery.carrier</field>
+            <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='delivery_type']"  position="before">
+                        <field name="taob_code"  placeholder="淘宝承运商代码"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</openerp>

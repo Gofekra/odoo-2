@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- <record id="view_users_form_inherit" model="ir.ui.view"> <field name="name">res.users.form.openeducate</field> 
+			<field name="model">res.users</field> <field name="inherit_id" ref="base.view_users_form" 
+			/> <field name="arch" type="xml"> <xpath expr="//field[@name='company_id']" 
+			position="after"> <field name="save_change_tree" /> </xpath> </field> </record> -->
+		<record id="view_change_tree_view_wizard" model="ir.ui.view">
+			<field name="name">Change Tree View Wizard</field>
+			<field name="model">change.tree.view.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Change Tree View">
+					<group>
+						<field name="model_id" invisible="1" />
+						<field name="view_xml_id" invisible="1" />
+						<field name="state_visible"/>
+					</group>
+					<group>
+						<group string="Customize And Sort Tree Fields">
+							<field name="custom_tree_fields_ids" domain="[('model_id','=',model_id)]"
+								nolabel="1" options="{'reload_on_button': true}">
+								<tree string="Fields">
+									<field name="sequence" widget="handle"/><!--widget="handle"-->
+									<field name="name" />
+									<field name="field_description" />
+								</tree>
+							</field>
+						</group>
+					</group>
+					<footer>
+						<button name="change_tree_view" string="Change Tree View"
+							type="object" class="oe_highlight"
+							/><!--confirm="Apply changes? if ok please, refresh the page after clicking Ok to apply your changes."-->
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+	</data>
+</openerp>

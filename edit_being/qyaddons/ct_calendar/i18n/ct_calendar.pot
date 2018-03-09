@@ -1,0 +1,265 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ct_calendar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-21 09:07+0000\n"
+"PO-Revision-Date: 2017-06-21 09:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_config_settings
+msgid "Apply"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_ct_is_attendee
+msgid "Attendee"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_calendar_attendee
+msgid "Attendee information"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_config_settings
+msgid "Cancel"
+msgstr ""
+
+#. module: ct_calendar
+#: selection:calendar.event,stage:0
+msgid "Canceled"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_contact_id
+msgid "Contact"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_contact_mobile
+msgid "Contact Mobile"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_contact_phone
+msgid "Contact Phone"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+msgid "Contact infos"
+msgstr ""
+
+#. module: ct_calendar
+#: model:res.groups,name:ct_calendar.group_meeting_root
+msgid "Cotong meeting administrator"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.actions.act_window,name:ct_calendar.followers_config_action
+msgid "Cotong meeting settings"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_create_uid
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_create_date
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_ct_visible_to_user
+msgid "Ct visible to user"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_customer_id
+#: model:ir.model.fields,field_description:ct_calendar.field_hr_expense_customer_id
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+#: model:ir.ui.view,arch_db:ct_calendar.view_expense_search
+msgid "Customer"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_customer_name
+msgid "Customer name"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_display_name
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_calendar_event
+msgid "Event"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_hr_expense
+msgid "Expense"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_expense_ids
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+msgid "Expenses"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_id
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_id
+msgid "ID"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_calendar_event_is_responsible
+msgid "If the current user is responsible of the meeting"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_calendar_event_is_own
+msgid "If the meeting was created by the current user"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_res_partner_is_employee
+msgid "Is employee"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_is_own
+msgid "Is own"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_is_responsible
+msgid "Is responsible"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings___last_update
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_write_uid
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_write_date
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_event_clean_wizard_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_hr_expense_meeting_id
+msgid "Meeting"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.ui.menu,name:ct_calendar.menu_meeting_rights_configuration
+msgid "Meeting Rights configuration"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+msgid "Mobile"
+msgstr ""
+
+#. module: ct_calendar
+#: selection:calendar.event,stage:0
+msgid "Normal"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_config_settings
+msgid "PMO Groups Management"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_ct_calendar_config_settings_user_ids
+msgid "PMO group members"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.ui.view,arch_db:ct_calendar.view_calendar_form
+msgid "Phone"
+msgstr ""
+
+#. module: ct_calendar
+#: selection:calendar.event,stage:0
+msgid "Postponed"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_project_id
+msgid "Project"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_res_partner_same_company
+msgid "Same company"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,field_description:ct_calendar.field_calendar_event_stage
+msgid "Stage"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_calendar_event_ct_is_attendee
+msgid "True if the current user is an attendee of that meeting"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_res_partner_is_employee
+msgid "True if the partner is an employee"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model.fields,help:ct_calendar.field_res_partner_same_company
+msgid "True if the partner is in the same company as the current user"
+msgstr ""
+
+#. module: ct_calendar
+#: code:addons/ct_calendar/models/models.py:149
+#: code:addons/ct_calendar/models/models.py:173
+#, python-format
+msgid "You are not allowed to perform this action. Contact your Administrator if you think there is an error."
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_ct_calendar_config_settings
+msgid "ct_calendar.config.settings"
+msgstr ""
+
+#. module: ct_calendar
+#: model:ir.model,name:ct_calendar.model_ct_calendar_event_clean_wizard
+msgid "ct_calendar.event_clean.wizard"
+msgstr ""
+

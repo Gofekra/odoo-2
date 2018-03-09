@@ -1,0 +1,73 @@
+<odoo>
+  <data>
+
+
+   <record id="view_Fitlter_Fidels_from" model="ir.ui.view">
+            <field name="name">view_Fitlter_Fidels_from</field>
+            <field name="model">ir.model.fields</field>
+            <field name="inherit_id" ref="base.view_model_fields_form"/>
+            <field name="arch" type="xml">
+                  <field name="copy" position="after">
+                    <field name='cancel_filter'/>
+                </field>
+            </field>
+    </record>
+
+     <record id="view_ir_model_fidels_from" model="ir.ui.view">
+            <field name="name">view_ir_model_fidels_from</field>
+            <field name="model">ir.model</field>
+            <field name="inherit_id" ref="base.view_model_form"/>
+            <field name="arch" type="xml">
+                  <field name="readonly" position="after">
+                    <field name='cancel_filter'/>
+                </field>
+            </field>
+    </record>
+
+
+
+
+        <record model="ir.ui.view" id="Edit_Fidels_form">
+            <field name="name">Edit_Fidels_form</field>
+            <field name="model">edit.fidels</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="批量调整">
+                    <group>
+                        <group>
+                            <field name="models_name"  required="1"/>
+                            <field name="fields_name" required="1"/>
+                        </group>
+                       <group>
+                             <field name="fields_type"/>
+                            <field name="value_res" required="1"/>
+                       </group>
+                    </group>
+                    <notebook>
+                        <page string="条件">
+                            <field name="condition" placeholder="填写规则： 字段='数值' 例如：name='张三'  "/>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button name="btn_sure" string="确认" type="object"   class="oe_highlight"/>
+                        <button string="取消"  special="cancel"  class="btn-default"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+    <record model="ir.actions.act_window" id="Edit_Fidels_action_window">
+      <field name="name">批量调整</field>
+      <field name="res_model">edit.fidels</field>
+        <field name="view_type">form</field>
+      <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem name="批量调整" id="Edit_Fidels_menu" parent="base.menu_administration" sequence="21"
+              action="Edit_Fidels_action_window"/>
+
+
+  </data>
+</odoo>

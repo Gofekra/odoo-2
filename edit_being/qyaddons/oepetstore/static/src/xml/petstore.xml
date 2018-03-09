@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+<!--#################################-->
+    <!---->
+    <!--<t t-name="HomePage">-->
+        <!--<div class="oe_petstore_homepage">-->
+        <!--</div>-->
+    <!--</t>-->
+
+
+    <!--<t t-name="MessagePage">-->
+        <!--<div class="oe_petstore_motd">-->
+            <!--<p class="oe_mywidget_message_of_the_day">-->
+               <!--<t t-foreach='widget.message' t-as='message'>-->
+                   <!--<p><t t-esc="message.message"/></p>-->
+               <!--</t>-->
+            <!--</p>-->
+        <!--</div>-->
+    <!--</t>-->
+
+    <!--<t t-name="PetToy">-->
+        <!--<div class="oe_petstore_pettoy">-->
+            <!--<t t-log="1111"/>-->
+              <!--<t t-foreach='widget.item' t-as='item'>-->
+                <!--<p><t t-esc="item.name"/></p>-->
+                <!--<p><img t-att-src="'data:image/jpg;base64,'+item.image"/></p>-->
+              <!--</t>-->
+        <!--</div>-->
+    <!--</t>-->
+
+
+
+        <!--<t t-name="ColorInputWidget">-->
+            <!--<div>-->
+                <!--Red: <input type="text" class="oe_color_red" value="00"></input><br />-->
+                <!--Green: <input type="text" class="oe_color_green" value="00"></input><br />-->
+                <!--Blue: <input type="text" class="oe_color_blue" value="00"></input><br />-->
+            <!--</div>-->
+        <!--</t>-->
+<!--#############################-->
+
+
+    <t t-name="HomePage">
+        <div class="oe_petstore_homepage">
+            <div class="oe_petstore_homepage_left"></div>
+            <div class="oe_petstore_homepage_right"></div>
+        </div>
+    </t>
+    <t t-name="MessageOfTheDay">
+        <div class="oe_petstore_motd">
+            <p class="oe_mywidget_message_of_the_day"></p>
+        </div>
+    </t>
+    <t t-name="PetToysList">
+        <div class="oe_petstore_pettoyslist">
+        </div>
+    </t>
+    <t t-name="PetToy">
+        <div class="oe_petstore_pettoy" t-att-data-id="item.id">
+            <p><t t-esc="item.name"/></p>
+            <p><img t-att-src="'data:image/jpg;base64,'+item.image"/></p>
+        </div>
+    </t>
+
+
+
+</templates>

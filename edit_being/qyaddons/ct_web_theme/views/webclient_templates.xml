@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="less_helpers" name="ct_web_theme less helpers" inherit_id="web.less_helpers" priority='1'>
+        <xpath expr="//link[@href='/web/static/src/less/variables.less']" position="after">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/variables.less"/>
+        </xpath>
+    </template>
+
+    <template id="assets_common" name="ct_web_theme assets common" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/fonts.less"/>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/navbar.less"/>
+        </xpath>
+    </template>
+
+    <template id="assets_backend" name="ct_web_theme assets backend" inherit_id="web.assets_backend">
+        <xpath expr="//script[@src='/web/static/src/js/web_client.js']" position="replace">
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/web_client.js"></script>
+        </xpath>
+        <xpath expr="//script[@src='/web/static/src/js/menu.js']" position="replace">
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/menu.js"></script>
+        </xpath>
+        <xpath expr="//script[@src='/web/static/src/js/views/form_upgrade_widgets.js']" position="replace">
+        </xpath>
+
+        <xpath expr="//link[@href='/web/static/src/less/bootstrap_overridden.less']" position="replace">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/bootstrap_overridden.less"/>
+        </xpath>
+        <xpath expr="//link[@href='/web/static/src/less/webclient_extra.less']" position="replace">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/webclient.less"/>
+        </xpath>
+        <xpath expr="//link[@href='/web/static/src/less/webclient_layout.less']" position="replace">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/webclient_layout.less"/>
+        </xpath>
+        <xpath expr="//link[@href='/web/static/src/less/views_extra.less']" position="replace">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/views.less"/>
+        </xpath>
+        <xpath expr="//link[@href='/web/static/src/less/form_view_extra.less']" position="replace">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/form_view.less"/>
+        </xpath>
+        <xpath expr="//link[@href='/web/static/src/less/form_view_layout_extra.less']" position="replace">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/form_view_layout.less"/>
+        </xpath>
+        <xpath expr="//link[@href='/web/static/src/less/search_view_extra.less']" position="replace">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/search_view.less"/>
+        </xpath>
+        <xpath expr="//link[@href='/web/static/src/less/dropdown_extra.less']" position="replace">
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/dropdown.less"/>
+        </xpath>
+        <xpath expr="//script[@src='/web/static/src/js/framework/crash_manager.js']" position="after">
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/framework/crash_manager.js"></script>
+        </xpath>
+
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/css" href="/ct_web_theme/static/src/css/swiper.min.css"/>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/lib/swiper.min.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/apps.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/web_home.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/BackEndMenu.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/app_switcher.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/control_panel.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/view_manager.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/views/form_view.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/views/form_widgets.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/widgets/debug_manager.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/widgets/user_menu.js"></script>
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/BugAfter.js"></script>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/app_switcher.less"/>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/app_switcher_layout.less"/>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/menu_search.less"/>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/control_panel_layout.less"/>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/datepicker.less"/>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/kanban_view.less"/>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/list_view.less"/>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/touch_device.less"/>
+            <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/keyboard.less"/>
+            <link rel="stylesheet" type="text/css" href="/ct_web_theme/static/src/less/Webhome.less"/>
+            <link rel="stylesheet" type="text/css" href="/ct_web_theme/static/src/css/theme.css"/>
+        </xpath>
+    </template>
+
+    <template id="theme_style_media" name="theme_style_media" inherit_id="web.assets_backend" priority='10000'>
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/Media/theme_media_min.less"/>
+                <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/Media/theme_media_xs.less"/>
+                <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/Media/theme_media_sm.less"/>
+                <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/Media/theme_media_md.less"/>
+                <link rel="stylesheet" type="text/less" href="/ct_web_theme/static/src/less/Media/theme_media_lg.less"/>
+            </xpath>
+    </template>
+
+    <template id="webclient_bootstrap" inherit_id="web.webclient_bootstrap">
+        <xpath expr="//nav[@id='oe_main_menu_navbar']" position="replace"/>
+        <xpath expr="//div[hasclass('o_main')]" position="replace"/>
+
+        <xpath expr="//t[@t-set='head']" position="after">
+            <t t-set="head_ct_web_theme">
+                <!-- Chrome, Firefox OS and Opera -->
+                <meta name="theme-color" content="#875A7B"/>
+                <link rel="icon" sizes="192x192" href="/ct_web_theme/static/src/img/mobile-icons/android-192x192.png"/>
+
+                <!-- iOS Safari -->
+                <meta name="apple-mobile-web-app-capable" content="yes"/>
+                <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+                <link rel="apple-touch-icon" href="/ct_web_theme/static/src/img/mobile-icons/apple-152x152.png"/>
+
+                <!-- Windows Phone -->
+                <meta name="msapplication-navbutton-color" content="#875A7B"/>
+                <meta name="msapplication-TileColor" content="#875A7B"/>
+                <meta name="msapplication-TileImage" content="/ct_web_theme/static/src/img/mobile-icons/windows-144x144.png"/>
+            </t>
+            <t t-set="head" t-value="head_ct_web_theme + (head or '')"/>
+        </xpath>
+    </template>
+
+    <template id="assets_backend_mail_utils" name="backend_mail_utils assets backend" inherit_id="mail.assets_backend">
+        <xpath expr="//script[@src='/mail/static/src/js/utils.js']" position="replace">
+            <script type="text/javascript" src="/ct_web_theme/static/src/js/utils.js"></script>
+        </xpath>
+    </template>
+</odoo>

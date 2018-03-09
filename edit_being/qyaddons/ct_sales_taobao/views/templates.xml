@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <template id="assets_taobao" name="account assets" inherit_id="account.assets_backend">
+            <xpath expr="//script[@src='/account/static/src/js/account_payment_widget.js']" position="replace">
+                <script type="text/javascript" src="/ct_sales_taobao/JS/addons.js"></script>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

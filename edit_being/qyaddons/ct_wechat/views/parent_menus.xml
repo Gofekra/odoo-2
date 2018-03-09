@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem id="parent_menu_1000" name="微信公众号" parent="" sequence="10"/>
+		<!-- 二级菜单 -->
+		<menuitem id="function_1100" name="功能" parent="parent_menu_1000" sequence="10"/>
+		<menuitem id="manage_1200" name="管理" parent="parent_menu_1000" sequence="20"/>
+		<menuitem id="setting_1300" name="公众号设置" parent="parent_menu_1000" sequence="30"/>
+		<!-- 三级菜单 -->
+		<menuitem id="auto_reply_1110" name="自动回复" parent="function_1100" sequence="10"/>
+		<menuitem id="material_manage_1210" name="素材管理" parent="manage_1200" sequence="10"/>
+    </data>
+</openerp>
