@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record  id = "payment_acquirer_chanpay" model="payment.acquirer">
+            <field name="name">Chanpay</field>
+            <field name="provider">chanpay</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="chanpay_acquirer_button"/>
+            <field name="environment">test</field>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the chanpay website after clicking on the payment button.</p>]]></field>
+            <field name="service">cjt_create_instant_trade</field>
+            <field name="partner_id"></field>
+             <field name="private_key"></field>
+             <field name="public_key"></field>
+             <field name="form_url">https://pay.chanpay.com/mag/gateway/receiveOrder.do?</field>
+        </record>
+
+    </data>
+</odoo>

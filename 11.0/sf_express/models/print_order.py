@@ -61,8 +61,6 @@ class PrintOrder(models.Model):
 
             listStr = '%s%s%s%s' % (j_province, j_city, j_county, j_address)
             strSendMessage = '%s %s %s' % (j_company, j_company, j_tel)
-            print(strSendMessage)
-            print(listStr)
             data = {
                 'strExpresstype': res.express_order_type,  # 顺丰业务类型
                 'strMailID': res.mailno,  # 条码物流单号
@@ -75,7 +73,9 @@ class PrintOrder(models.Model):
                 'strPayMethod': res.payment_method,  # 顺丰付款方式
                 'strSendMessage': strSendMessage,  # 顺丰付款方式
                 'strSendaddres': listStr,  # 地址
-                'SFMonthlyAccount': u'月结账号:%s' % res.name.carrier_id.custid
+                'SFMonthlyAccount': u'月结账号:%s' % res.name.carrier_id.custid,
+                'dai_proprice': u'月结账号:%s' % res.name.carrier_id.dai_proprice,
+                'proprice': u'月结账号:%s' % res.name.carrier_id.proprice,
             }
             listjson.append(data)
 

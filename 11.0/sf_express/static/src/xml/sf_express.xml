@@ -1,7 +1,11 @@
 <templates>
+
+
     <div t-name="express_extra_buttons" class="express_extra_buttons">
-        <button type="button" t-if='widget.model=="print.order"'
+        <button type="button" t-if='widget.mode=="stock.picking"'
                 class="btn btn-sm btn-primary sf_express_print">
+            <t t-esc="widget"/>
+            <t t-value="widget"/>
             批量打印
         </button>
     </div>
@@ -11,4 +15,5 @@
             <t t-call="express_extra_buttons"/>
         </t>
     </t>
+
 </templates>

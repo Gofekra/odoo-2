@@ -18,6 +18,8 @@ class DeliveryCarrier(models.Model):
     checkword = fields.Char(string=u'秘钥')
     custid = fields.Char(string=u'月结卡号')
     url = fields.Char(string=u"请求地址")
+    proprice = fields.Float(string=u"保价金额(非代收)")
+    dai_proprice = fields.Float(string=u"保价金额(代收)")
 
 
 class ExpressOrder(models.Model):

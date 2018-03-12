@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ct_feedback_client_question_user,access_ct_feedback_client_question,model_ct_feedback_client_question,base.group_user,1,1,1,0
-access_ct_feedback_client_question_feedback_user,access_ct_feedback_client_question,model_ct_feedback_client_question,ct_feedback_client.group_feedback_client_user,1,1,0,0

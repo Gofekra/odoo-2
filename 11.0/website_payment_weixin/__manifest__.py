@@ -8,7 +8,7 @@
     'description': """商城微信支付""",
     'author': "Gavin Gu",
     'website': "http://www.bankcall.net",
-    'depends': ['payment'],
+    'depends': ['payment', 'website_payment_return'],
     'data': [
         'templates/payment_weixin_templates.xml',
         'data/weixin.xml',

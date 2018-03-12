@@ -21,7 +21,8 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'website_sale', 'website_sale_delivery', 'stock_logistics'],
+    'depends': ['base', 'website_sale', 'website_sale_delivery', 'stock_logistics', 'website_payment_return',
+                'website_sale_return'],
 
     # always loaded
     'data': [

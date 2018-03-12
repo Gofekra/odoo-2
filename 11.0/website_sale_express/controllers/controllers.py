@@ -127,35 +127,56 @@ class WebsiteSaleExpress(CustomerPortal):
                 res_payment = request.env['payment.transaction'].sudo().search([('sale_order_id', '=', id)])
                 if res_payment.state == 'refunding':
                     res_payment.state = 'done'
+
+                stock = request.env['stock.picking'].sudo().search(
+                    [('sale_id', '=', id), ('picking_type_code', '=', 'outgoing')])
+                for stock in stock:
+                    stock.after_done_state = False
+
                 res.after_done_state = False
+
         return redirect('/my/orders')
 
+    # 申请退款
     @http.route('/my/orders_cancel_1/<int:id>', type='http', auth="public", website=True)
     def website_cancel_order_1(self, id=None, **kw):
         if id:
             res = request.env['payment.transaction'].sudo().search([('sale_order_id', '=', id)])
-            if res.state == 'done':
-                res.state = 'refunding'
+            for res in res:
+                if res.state == 'done':
+                    res.state = 'refunding'
             res_order = request.env['sale.order'].sudo().browse(id)
             if res_order.state == 'done':
                 res_order.after_done_state = '2'
         return redirect('/my/orders')
 
+    # 申请退货
     @http.route('/my/orders_cancel_2/<int:id>', type='http', auth="public", website=True)
     def website_cancel_order_2(self, id=None, **kw):
         if id:
             res = request.env['sale.order'].sudo().browse(id)
             if res.state == 'done':
                 res.after_done_state = '1'
+
+            stock = request.env['stock.picking'].sudo().search(
+                [('sale_id', '=', id), ('picking_type_code', '=', 'outgoing')])
+            for stock in stock:
+                stock.after_done_state = 'refunding'
+
         return redirect('/my/orders')
 
+    # 退货退款
     @http.route('/my/orders_cancel_3/<int:id>', type='http', auth="public", website=True)
     def website_cancel_order_3(self, id=None, **kw):
         if id:
-
+            stock = request.env['stock.picking'].sudo().search(
+                [('sale_id', '=', id), ('picking_type_code', '=', 'outgoing')])
+            for stock in stock:
+                stock.after_done_state = 'refunding'
             res = request.env['payment.transaction'].sudo().search([('sale_order_id', '=', id)])
-            if res.state == 'done':
-                res.state = 'refunding'
+            for res in res:
+                if res.state == 'done':
+                    res.state = 'refunding'
             res_order = request.env['sale.order'].sudo().browse(id)
             if res_order.state == 'done':
                 res_order.after_done_state = '3'

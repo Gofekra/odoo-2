@@ -167,3 +167,10 @@ class TxAlipay(models.Model):
             _logger.info(error)
             res.update(state='error', state_message=error)
             return self.write(res)
+
+    @api.multi
+    def action_returns_commit(self):
+        # ==================
+        # 确认退款操作
+        # ==================
+        super(TxAlipay, self).action_returns_commit()

@@ -1,11 +1,11 @@
-odoo.define('zx_express.sf_print', function (require) {
+odoo.define('sf_express.sf_print', function (require) {
     'use strict';
-    // var core = require('web.core');
-    // var _t = core._t;
+    var core = require('web.core');
+    var _t = core._t;
     var ListView = require('web.ListView');
     var Model = require('web.Model');
-    // var ajax = require('web.ajax');
-    var lodop = require('zx_express.lodop');
+    var ajax = require('web.ajax');
+    var lodop = require('sf_express.lodop');
 
 
     function ReplaceNull(str) {
@@ -30,15 +30,18 @@ odoo.define('zx_express.sf_print', function (require) {
         var strDay = "";//日
         var strPaytype = "";//代收货款
         var strPaymount = "";//代收金额
-        var SFMonthlyAccount = ReplaceNull(res_data[o].SFMonthlyAccount);//月结号
+        var SFMonthlyAccount = "";//月结号
         var strSMJZ = "";//保价声明金额，规则在线支付大于等于1800元按销售金额，代收货款大于等于1000元按销售金额
         var strBJFY = "";//保价费用
         var strProduct = "";//产品
         var strRemark = "货到联系务必本人签收！";//备注
         var strPayMethod = "";//顺丰付款方式
-        var strSendMessage = ReplaceNull(res_data[o].strSendMessage);//寄件人信息，默认值为志行合力
+        var strSendMessage = "";//寄件人信息，默认值为志行合力
         var errMessage = "";
         var strSendaddres = "";
+        var Account = "";
+        var proprice = "";
+        var dai_proprice = "";
         PrintInit();//打印初始化
 
 
@@ -73,6 +76,11 @@ odoo.define('zx_express.sf_print', function (require) {
                     strE = "";
                     break;
             }
+            proprice = ReplaceNull(res_data[o].proprice)
+            dai_proprice = ReplaceNull(res_data[o].dai_proprice)
+            strSendMessage = ReplaceNull(res_data[o].strSendMessage)
+            Account = ReplaceNull(res_data[o].SFMonthlyAccount)
+            SFMonthlyAccount = "月结账号：" + ReplaceNull(res_data[o].SFMonthlyAccount)
             strDestcode = ReplaceNull(res_data[o].strDestcode);
             // strAddress = ReplaceNull(res_data[o].strAddress).replaceAll('"', ' ');
             strAddress = ReplaceNull(res_data[o].strAddress);
@@ -105,9 +113,9 @@ odoo.define('zx_express.sf_print', function (require) {
                 strCOD = "COD";
                 strPaytype = "代收货款";
                 strPaymount = "¥" + ReplaceNull(res_data[o].strPaymount) + "元";
-                strCard = "卡号:" + "0210307610";
+                strCard = "卡号:" + Account;
                 //保价信息打印
-                if (ReplaceNull(res_data[o].strPaymount) >= 1000)//代收大于等于1000元保价
+                if (ReplaceNull(res_data[o].strPaymount) >= dai_proprice)//代收大于等于1000元保价
                 {
                     strSMJZ = "声明价值:" + ReplaceNull(res_data[o].strPaymount) + "元";
                     strBJFY = "保价费用:" + ReplaceNull(res_data[o].strPaymount) * 5 / 1000 + "元";//千分之五
@@ -125,7 +133,7 @@ odoo.define('zx_express.sf_print', function (require) {
                 strPaymount = "";
                 strCard = "";
                 //保价信息打印
-                if (ReplaceNull(res_data[o].strPaymount) >= 1800)//在线支付大于等于1800元保价
+                if (ReplaceNull(res_data[o].strPaymount) >= proprice)//在线支付大于等于1800元保价
                 {
                     strSMJZ = "声明价值:" + ReplaceNull(res_data[o].strPaymount) + "元";
                     strBJFY = "保价费用:" + ReplaceNull(res_data[o].strPaymount) * 5 / 1000 + "元";
@@ -198,7 +206,7 @@ odoo.define('zx_express.sf_print', function (require) {
     function CreatePrintPage(strExpresstype, strDestcode, strAddress, strSendMessage, strName, strPhone, strPayMethod,
                              strSMJZ, strBJFY, strPaytype, strPaymount, strE, strCOD, strCard, strProduct, strRemark, strDate,
                              strPageCount, strChild, strMother, strMotherid, strMailid, SFMonthlyAccount, strSendaddres) {
-        LODOP.ADD_PRINT_SETUP_BKIMG('<img border="0" src="/zx_express/static/src/images/210.jpg"/>');
+        LODOP.ADD_PRINT_SETUP_BKIMG('<img border="0" src="/sf_express/static/src/images/210.jpg"/>');
         LODOP.SET_SHOW_MODE("BKIMG_WIDTH", 756);
         LODOP.SET_SHOW_MODE("BKIMG_HEIGHT", 1070);
         LODOP.SET_SHOW_MODE("BKIMG_IN_PREVIEW", true);
@@ -239,7 +247,7 @@ odoo.define('zx_express.sf_print', function (require) {
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 10);
         LODOP.SET_PRINT_STYLEA(0, "LineSpacing", -1);
-        LODOP.ADD_PRINT_TEXT(383, 237, 340, 31, strSendaddres);
+        LODOP.ADD_PRINT_TEXT(395, 236, 340, 31, strSendaddres);
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 8);
         LODOP.SET_PRINT_STYLEA(0, "LineSpacing", -4);
@@ -259,13 +267,14 @@ odoo.define('zx_express.sf_print', function (require) {
         LODOP.ADD_PRINT_TEXT(415, 211, 101, 20, strPayMethod);
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
-        LODOP.ADD_PRINT_TEXT(424, 211, 120, 20, SFMonthlyAccount);//月结账号
+        // LODOP.ADD_PRINT_TEXT(424, 211, 120, 20, "月结账号:<%=SFMonthlyAccount%>");
+        LODOP.ADD_PRINT_TEXT(424, 211, 120, 20, SFMonthlyAccount);
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
         LODOP.ADD_PRINT_TEXT(415, 312, 110, 20, strSMJZ);//声明价值
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
-        LODOP.ADD_PRINT_TEXT(424, 312, 95, 20, strBJFY);//保价费用
+        // LODOP.ADD_PRINT_TEXT(424, 312, 95, 20, strBJFY);//保价费用
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
         LODOP.ADD_PRINT_TEXT(461, 217, 20, 35, "托寄物");
@@ -293,6 +302,10 @@ odoo.define('zx_express.sf_print', function (require) {
         LODOP.ADD_PRINT_TEXT(555, 217, 13, 20, "寄件人");
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
+        LODOP.SET_PRINT_STYLEA(0, "LineSpacing", -4);
+        LODOP.ADD_PRINT_TEXT(567, 237, 340, 31, strSendaddres);
+        LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", 8);
         LODOP.SET_PRINT_STYLEA(0, "LineSpacing", -4);
         LODOP.ADD_PRINT_BARCODE(496, 329, 211, 40, "128C", strMailid);
         LODOP.SET_PRINT_STYLEA(0, "ShowBarText", 0);
@@ -328,6 +341,10 @@ odoo.define('zx_express.sf_print', function (require) {
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
         LODOP.SET_PRINT_STYLEA(0, "LineSpacing", -4);
+        LODOP.ADD_PRINT_TEXT(793, 237, 340, 31, strSendaddres);
+        LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
+        LODOP.SET_PRINT_STYLEA(0, "FontSize", 8);
+        LODOP.SET_PRINT_STYLEA(0, "LineSpacing", -4);
         LODOP.ADD_PRINT_TEXT(817, 218, 10, 20, "收件人");
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
@@ -346,13 +363,13 @@ odoo.define('zx_express.sf_print', function (require) {
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 8);
         LODOP.SET_PRINT_STYLEA(0, "LineSpacing", -4);
-        LODOP.ADD_PRINT_IMAGE(731, 226, 59, 18, '<img border="0" src="/zx_express/static/src/images/LOGO.jpg"/>');
+        LODOP.ADD_PRINT_IMAGE(731, 226, 59, 18, '<img border="0" src="/sf_express/static/src/images/LOGO.jpg"/>');
         LODOP.SET_PRINT_STYLEA(0, "Stretch", 1);
-        LODOP.ADD_PRINT_IMAGE(752, 225, 63, 20, '<img border="0" src="/zx_express/static/src/images/95338.jpg"/>');
+        LODOP.ADD_PRINT_IMAGE(752, 225, 63, 20, '<img border="0" src="/sf_express/static/src/images/95338.jpg"/>');
         LODOP.SET_PRINT_STYLEA(0, "Stretch", 1);
-        LODOP.ADD_PRINT_IMAGE(509, 227, 59, 18, '<img border="0" src="/zx_express/static/src/images/LOGO.jpg"/>');
+        LODOP.ADD_PRINT_IMAGE(509, 227, 59, 18, '<img border="0" src="/sf_express/static/src/images/LOGO.jpg"/>');
         LODOP.SET_PRINT_STYLEA(0, "Stretch", 1);
-        LODOP.ADD_PRINT_IMAGE(529, 225, 63, 20, '<img border="0" src="/zx_express/static/src/images/95338.jpg"/>');
+        LODOP.ADD_PRINT_IMAGE(529, 225, 63, 20, '<img border="0" src="/sf_express/static/src/images/95338.jpg"/>');
         LODOP.SET_PRINT_STYLEA(0, "Stretch", 1);
         LODOP.ADD_PRINT_TEXT(236, 463, 126, 35, strPaytype);
         LODOP.SET_PRINT_STYLEA(0, "FontName", "黑体");
@@ -432,10 +449,26 @@ odoo.define('zx_express.sf_print', function (require) {
         render_buttons: function () {
             this._super.apply(this, arguments);
             var self = this;
+            //批量发货操作
+            if (self.model === 'zxsale.order') {
+                this.$buttons.on('click', 'button.sf_express_send', function () {
+                    var list_ids = self.groups.get_selection().ids;
+                    self.do_action({
+                        'title': '批量发货',
+                        'type': 'ir.actions.act_window',
+                        'res_model': 'send.express.order',
+                        'views': [[false, 'form']],
+                        'view_mode': 'form',
+                        'target': 'new',
+                        'context': {'default_express_order_id': list_ids}
+                    });
+                });
+            }
+
             //批量打印操作
             if (self.model === 'print.order') {
                 var model = new Model("print.order");
-                this.$buttons.on('click', 'button.zx_express_print', function () {
+                this.$buttons.on('click', 'button.sf_express_print', function () {
                     return lodop.loadRequiredJS().always(function () {
                         // 如果loadjs成功，初始化LODOP
                         // 失败，getLodop将会提供下载链接

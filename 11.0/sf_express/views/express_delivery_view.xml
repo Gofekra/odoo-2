@@ -10,6 +10,8 @@
                     <field name="checkword" attrs="{'invisible':[('api','!=','2')]}"/>
                     <field name="custid" attrs="{'invisible':[('api','!=','2')]}"/>
                     <field name="url" attrs="{'invisible':[('api','!=','2')]}"/>
+                    <field name="proprice" attrs="{'invisible':[('api','!=','2')]}"/>
+                    <field name="dai_proprice" attrs="{'invisible':[('api','!=','2')]}"/>
                 </field>
             </field>
         </record>

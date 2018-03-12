@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d1a14ee0-ab75-49be-83f9-c10d5b53d6c3" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/demo/payment_acquirer_data.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/change_tree_view/__openerp__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/change_tree_view/__openerp__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/af.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/am.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ar.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/bg.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/bs.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ca.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/crm_project_issue.pot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/cs.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/da.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/de.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/el.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/en_AU.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/en_GB.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_AR.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_BO.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_CL.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_CO.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_CR.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_DO.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_EC.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_PA.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_PE.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_PY.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/es_VE.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/et.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/eu.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/fa.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/fi.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/fo.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/fr.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/fr_BE.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/fr_CA.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/gl.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/gu.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/he.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/hi.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/hr.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/hu.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/hy.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/id.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/is.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/it.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ja.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ka.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/kab.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/kk.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/km.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ko.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ln.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/lo.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/lt.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/lv.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/mk.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ml_IN.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/mn.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/my.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/nb.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/nl.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/nl_BE.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/pl.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/pt.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/pt_BR.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ro.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ru.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/sk.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/sl.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/sq.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/sr.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/sr@latin.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/sv.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/ta.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/th.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/tr.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/uk.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/vi.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/zh_CN.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/i18n/zh_TW.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/security/ir.model.access.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/views/crm_lead_views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/wizard/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/wizard/crm_lead2projectissue_wizard.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/wizard/crm_lead2projectissue_wizard_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_import_export/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_import_export/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_import_export/__openerp__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_import_export/__openerp__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_import_export/i18n/zh_CN.po" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_import_export/i18n/zh_CN.po" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_import_export/security/data_impexp_security.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_import_export/security/data_impexp_security.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_import_export/static/description/icon.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/static/description/icon.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_import_export/static/src/js/ct_base_import_export.js" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_import_export/static/src/js/base_import_export.js" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_import_export/views/webclient_templates.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_import_export/views/webclient_templates.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_single_login/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_single_login/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_single_login/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_single_login/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_single_login/constroller/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_single_login/constroller/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_single_login/constroller/web.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_single_login/constroller/web.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_single_login/res_users.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_single_login/res_users.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_single_login/single_login.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_single_login/single_login.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_single_login/static/description/icon.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/static/description/icon.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_base_single_login/static/js/single_login.js" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_single_login/static/js/single_login.js" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/controllers/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/controllers/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/controllers/controllers.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/data/data.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/i18n/ct_calendar.pot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/i18n/zh_CN.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/models/models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/models/res_config.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/models/res_partner.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/models/res_users.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/security/ir.model.access.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/security/security.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/static/description/icon.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/static/description/icon.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/views/res_config.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/views/templates.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/views/views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/demo/payment_acquirer_data.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/models/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/models/controllers.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/models/controllers.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/models/func.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/models/func.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/models/payment.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/models/payment.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/security/ir.model.access.csv" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/security/ir.model.access.csv" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/static/description/icon.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/icon.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/views/account_config_settings_views.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/views/account_config_settings_views.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/views/payment_alipay_templates.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/views/payment_alipay_templates.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/views/payment_views.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/views/payment_views.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/controllers/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_error_rewrite/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/controllers/controllers.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/controllers/controllers.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/controllers/util.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/controllers/util.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/models/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/models/models.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/models/models.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/security/ir.model.access.csv" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/security/ir.model.access.csv" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/static/description/icon.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/static/description/icon.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/static/js/cut.js" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/static/js/cut.js" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/static/less/cut.less" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/static/less/cut.less" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/static/xml/pos.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/static/xml/pos.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_pos/views/views.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/views/views.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/demo/payment_acquirer_data.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/models/controllers.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/models/func.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/models/payment.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/security/ir.model.access.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/views/account_config_settings_views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/views/payment_alipay_templates.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/views/payment_views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/i18n/zh_CN.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/models/hm_city.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/models/hm_partner.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/models/hm_region.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/models/hm_users.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/models/res_company.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/static/src/js/test.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/views/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/views/hm_city_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/views/hm_partner_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/views/hm_region_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/views/res_company_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/全国行政区域划分表.xls" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/controllers/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_error_rewrite/controllers/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/controllers/controllers.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/controllers/controllers.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/demo/demo.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/demo/demo.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/models/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/models/models.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/models/models.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/security/ir.model.access.csv" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/security/ir.model.access.csv" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/static/description/clear_data_00.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/static/description/clear_data_01.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/static/description/clear_data_02.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/static/description/clear_data_04.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/static/description/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/views/views.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/views/views.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_contacts_baidu_map/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/contacts_baidu_map/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_contacts_baidu_map/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/contacts_baidu_map/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_contacts_baidu_map/models/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/contacts_baidu_map/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_contacts_baidu_map/models/model.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/contacts_baidu_map/models/model.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_contacts_baidu_map/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_contacts_baidu_map/views/layoutone.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/contacts_baidu_map/views/layoutone.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_contacts_baidu_map/views/res_company.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/contacts_baidu_map/views/res_company.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/controllers/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/controllers/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/controllers/controllers.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/demo/demo.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/models/public_user.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/security/ir.model.access.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/views/templates.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/views/views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/event_baidu_map/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/models/dashboard.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/security/ir.model.access.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/static/src/css/dashboard.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/static/src/js/dashboard.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/static/src/js/home.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/static/src/js/lib/echarts.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/views/dashboard_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/controllers/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/data/res_config.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/demo/demo.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/models/hiden_fields.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/models/ir_ui_view.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/models/model.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/models/report.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/models/res_users.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/models/user_config.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/security/ir.model.access.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/views/hidden_fields.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/views/report.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/views/templates.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/views/user_config.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb/views/views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/controllers/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/models/ir_http.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/models/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/models/res_users.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/description/app.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/description/back.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/description/icon_03.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/description/mail.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/description/news.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/description/news_active.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/description/pc.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/css/application-switcher-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/css/theme.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/License.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Black-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Black-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Black-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Black-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-BlackItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-BlackItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-BlackItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-BlackItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Bold-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Bold-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Bold-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Bold-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-BoldItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-BoldItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-BoldItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-BoldItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Light-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Light-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Light-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Light-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-LightItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-LightItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-LightItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-LightItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Medium-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Medium-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Medium-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Medium-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-MediumItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-MediumItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-MediumItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-MediumItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Regular-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Regular-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Regular-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Regular-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-RegularItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-RegularItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-RegularItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-RegularItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Thin-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Thin-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Thin-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-Thin-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-ThinItalic-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-ThinItalic-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-ThinItalic-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/fonts/Roboto/Roboto-ThinItalic-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Attendance.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Billing.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Enclosure.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Filess.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Flip1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Group1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Issue.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Job.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Manufacture.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Meets.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Payroll.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Purchase.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Route.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Sales.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Set.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Set_hover1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Shape.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Smile.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Stars.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/Variants.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/activity.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/add.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/add2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/application-switcher-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/ascend.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/bar-chart.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/bills.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/calendar.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/calendar1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/calendar2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/cancel.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/ceshi.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/checked.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/coll.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/collect.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/compress.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/compress_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/default_icon_app.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/del.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/dels.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/down-arrow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/download1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/effective.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/evaluate.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/expand.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/expand_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/fa-ent.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/fangda.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/fangda1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/fenzu.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/fenzu1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/fenzu2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/follow1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/inbox.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/inbox_action.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/inventory.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/jiange.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/kalendar.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/kanban.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/kanban1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/kanban2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/left1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/line.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/list1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/list2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/mails.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/materiel.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/money.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/money2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/money3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/network.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/open.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/opportunity.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/ordination.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/phones.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/pie-chart.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/pie-list.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/produce.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/refresh.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/refresh_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/reorder.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/right1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/screen1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/search_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/search_icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/searchdels.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/shai.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/shai1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/shai2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/shebao.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/shezhi.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/shment.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/shoucang.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/shoucang1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/shoucang2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/taolun4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/task1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/toushi1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/toushi2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/tracker.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/treaty.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/white_Enclosure.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/white_smile.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/write.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/xdelete.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/xingjian.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/zhuzhaung2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/img/zhuzhuang1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/Media/theme_media_lg.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/Media/theme_media_md.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/Media/theme_media_min.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/Media/theme_media_sm.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/Media/theme_media_xs.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/Webhome.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/app_switcher.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/app_switcher_layout.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/bootstrap_overridden.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/control_panel_layout.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/datepicker.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/dropdown.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/fonts.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/form_view.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/form_view_layout.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/kanban_view.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/keyboard.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/list_view.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/menu_search.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/navbar.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/search_view.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/touch_device.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/variables.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/views.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/webclient.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/less/webclient_layout.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/Stars.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/calendar2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/compress_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/dels.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/expand_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/fangda.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/kanban.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/list2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/mail.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/open.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/refresh_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/search_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/toushi1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/img/zhuzhaung2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/js/theme_app_path.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/blue/less/theme.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/Stars.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/calendar2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/compress_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/dels.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/expand_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/fangda.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/kanban.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/list2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/mail.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/open.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/refresh_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/search_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/toushi1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/img/zhuzhaung2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/js/theme_app_path.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/deepblue/less/theme.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/default/js/theme_app_path.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/default/less/theme.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/Stars.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/calendar2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/compress_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/dels.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/expand_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/fangda.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/kanban.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/list2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/mail.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/open.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/refresh_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/search_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/toushi1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/img/zhuzhaung2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/js/theme_app_path.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/green/less/theme.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/Stars.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/calendar2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/compress_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/dels.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/expand_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/fangda.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/kanban.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/list2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/mail.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/open.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/refresh_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/search_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/toushi1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/img/zhuzhaung2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/js/theme_app_path.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/palm/less/theme.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/theme_style.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/static/src/theme/theme_switch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/views/switch/config.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/views/switch/model.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_home/views/webclient_templates.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/README.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/models/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/static/src/css/pos.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/static/src/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/static/src/img/POS.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/static/src/xml/pos_debranding.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/views/pos_config_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_local/views/views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/controllers/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/models/model.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/description/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/description/johnny-automatic-scales-of-justice.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/description/legal_page_00.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/description/legal_page_01.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/description/legal_page_02.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/description/legal_page_03.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/css/lib/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/css/pos_login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/img/iphone.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/img/login_icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/img/register_03.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/img/register_06.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/img/register_08.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/img/register_10.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/js/Observer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/js/clause.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/js/lib/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/js/register.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/static/src/less/clause.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/views/module_intro.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/views/module_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_register/views/service_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/controllers/ir_ui_view.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/controllers/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/css/pos.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/ascend.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/bar-chart.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/company_logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/effective.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/jiange.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/kanban.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/kanban2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/list1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/list2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/menu_left_icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/pie-chart.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/search_hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/search_icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/toushi1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/toushi2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/zhuzhaung2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/img/zhuzhuang1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/app_window_title.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/control_panel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/lib/DatePicker/bootstrap-datepicker.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/lib/DatePicker/bootstrap-datepicker.zh-CN.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/lib/config.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/lib/echarts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/lib/echarts.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/menu.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/pos.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/views/form_view.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/js/web_client.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/less/bootstrap-datepicker3.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/less/pos.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/less/web.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/xml/index.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/xml/pos.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/static/src/xml/web.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/views/pos_index_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/views/pos_template.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_theme/views/webclient_template.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/controllers/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/css/lib/bootstrap-table.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/css/lib/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/css/weixin.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/img/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/img/home_03.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/img/home_06.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/img/home_08.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/img/icon_03.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/img/icon_06.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/img/live_weixin.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/img/product.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/js/lib/bootstrap-table.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/js/lib/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/js/weixin.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/less/weixin.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/less/weixin_tip.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/static/src/xml/pos.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/views/weixin_module.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_dxb_weixin/views/weixin_template.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_error_rewrite/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/controllers/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_error_rewrite/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_error_rewrite/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_error_rewrite/controllers/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/controllers/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_error_rewrite/controllers/controllers.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_error_rewrite/controllers/controllers.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_error_rewrite/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_event_baidu_map/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_event_baidu_map/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/event_baidu_map/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_event_baidu_map/i18n/zh_CN.po" afterPath="$PROJECT_DIR$/edit_being/qyaddons/event_baidu_map/i18n/zh_CN.po" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_event_baidu_map/models/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/event_baidu_map/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_event_baidu_map/models/model.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/event_baidu_map/models/model.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_event_baidu_map/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_event_baidu_map/views/event_view.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/event_baidu_map/views/event_view.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_event_baidu_map/views/layoutone.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/event_baidu_map/views/layoutone.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/data/data.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/models/models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/models/res_config.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/security/ir.model.access.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/security/security.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/css/bootstrap-table.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/css/feedback.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/css/wangEditor.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/img/feedback1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/img/feedback2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/js/bootstrap-table-zh-CN.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/js/bootstrap-table.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/js/feedback.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/js/wangEditor.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/xml/feedback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/static/src/xml/res_config_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/views/feedback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/views/res_config_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/wizard/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback/wizard/wizard.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_answer/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_answer/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_answer/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_answer/models/models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_answer/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_answer/views/views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/controllers/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/controllers/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/controllers/controllers.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/data/data.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/i18n/ct_feedback_client.pot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/i18n/zh_CN.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/models/models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/models/res_users.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/security/ir.model.access.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/security/security.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/css/bootstrap-table.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/css/feedback.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/css/wangEditor.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/img/feedback1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/img/feedback2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/js/bootstrap-table-zh-CN.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/js/bootstrap-table.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/js/feedback.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/js/feedback_client.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/js/wangEditor.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/xml/feedback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/static/src/xml/res_config_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/views/templates.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/views/views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/wizard/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_client/wizard/wizard.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/controllers/controllers.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/data/data.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/i18n/ct_feedback_server.pot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/i18n/zh_CN.po" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/models/models.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/models/res_users.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/security/ir.model.access.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/security/security.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/static/src/js/ct_kanban_view.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/views/templates.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/views/views.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/views/wizard.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/wizard/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_feedback_server/wizard/wizard.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/controllers/controllers.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/controllers/controllers.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/demo/demo.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/demo/demo.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/models/models.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/models/models.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/security/ir.model.access.csv" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/security/ir.model.access.csv" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/static/src/js/filter.js" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/static/src/js/filter.js" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/static/src/xml/filter.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/static/src/xml/filter.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/views/templates.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/views/templates.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/views/views.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/views/views.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_contract_archive/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_contract_archive/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_contract_archive/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_contract_archive/models/contract.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_contract_archive/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_contract_archive/views/contract.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/controllers/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/models/hr.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/static/src/css/hr.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/static/src/js/hr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/static/src/xml/hr.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_hr_home/views/hr_index_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/controllers/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/controllers/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/controllers/main.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/controllers/main.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/models/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/models/im_livechat_channel.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/models/im_livechat_channel.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/im_livechat_00.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/im_livechat_00.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/im_livechat_01.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/im_livechat_01.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/im_livechat_02.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/im_livechat_02.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/im_livechat_03.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/im_livechat_03.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/index.html" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/index.html" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/sale_sc_00.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/sale_sc_00.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/sale_sc_01.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/sale_sc_01.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/sale_sc_02a.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/sale_sc_02a.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/sale_sc_02b.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/sale_sc_02b.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/sale_sc_02c.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/sale_sc_02c.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/sale_sc_03.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/sale_sc_03.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/description/sale_sc_05.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/description/sale_sc_05.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/js/ct_im_livechat.js" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/js/ct_im_livechat.js" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/static/xml/im_livechat.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/static/xml/im_livechat.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_im_livechat/views/res_users_views.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/views/res_users_views.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/__manifest__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/controllers/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/data/module_data.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/models/model.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/background/1/cloud10.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/background/1/index.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/background/1/js/Detector.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/background/1/js/three.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/description/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/description/johnny-automatic-scales-of-justice.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/description/legal_page_00.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/description/legal_page_01.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/description/legal_page_02.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/description/legal_page_03.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/css/lib/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/css/pos_login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/img/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/img/iphone.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/img/login_icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/img/register_03.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/img/register_06.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/img/register_08.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/img/register_10.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/js/Observer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/js/clause.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/js/lib/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/js/register.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/static/src/less/clause.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/views/module_intro.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/views/module_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/views/service_view.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mail_server_smtp/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/mail_server_smtp/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mail_server_smtp/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/mail_server_smtp/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mail_server_smtp/ir_mail_server.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/mail_server_smtp/ir_mail_server.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mail_server_smtp/static/description/icon.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/mail_server_smtp/static/description/icon.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/controllers/controllers.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/controllers/controllers.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/demo/demo.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/demo/demo.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/models/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/models/message.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/models/message.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/models/message_config_settings.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/models/message_config_settings.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/models/models.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/models/models.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/models/sms.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/models/sms.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/models/sms_config.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/models/sms_config.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/models/test.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/models/test.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/security/ir.model.access.csv" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/security/ir.model.access.csv" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/views/message_config_settings.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/views/message_config_settings.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/views/sms_config.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/views/sms_config.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_message/views/views.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/views/views.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/controllers/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/controllers/controllers.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/controllers/controllers.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/demo/demo.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/demo/demo.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/models/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/models/audio_config_settings.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/models/audio_config_settings.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/models/dudu.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/models/dudu.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/models/models.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/models/models.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/models/test.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/models/test.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/security/ir.model.access.csv" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/security/ir.model.access.csv" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/static/audio/20170914082920.mp3" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/static/audio/20170914082920.mp3" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/static/css/slide.css" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/static/css/slide.css" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/static/js/lib/jquery.easyaudioeffects.1.0.0.min.js" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/static/js/lib/jquery.easyaudioeffects.1.0.0.min.js" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/static/js/voice_audio.js" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/static/js/voice_audio.js" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/static/xml/slide_audio.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/static/xml/slide_audio.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/views/audio_config_settings.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/views/audio_config_settings.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/views/templates.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/views/templates.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/views/views.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/views/views.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/__manifest__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/__manifest__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/hooks.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/hooks.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/i18n/zh_CN.po" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/i18n/zh_CN.po" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/i18n/zh_TW.po" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/i18n/zh_TW.po" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/models/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/models/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/models/ir_model_fields.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/models/ir_model_fields.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/models/mass_object.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/models/mass_object.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/security/ir.model.access.csv" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/security/ir.model.access.csv" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/static/description/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/static/description/mass_editing-1.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/static/description/mass_editing-1.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/static/description/mass_editing-2.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/static/description/mass_editing-2.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/static/description/mass_editing-3.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/static/description/mass_editing-3.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/static/description/mass_editing-4.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/static/description/mass_editing-4.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/static/description/mass_editing-5.png" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/static/description/mass_editing-5.png" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/tests/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/tests/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/tests/test_mass_editing.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/tests/test_mass_editing.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/views/mass_editing_view.xml" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/views/mass_editing_view.xml" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/wizard/__init__.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/wizard/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/wizard/mass_editing_wizard.py" afterPath="$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/wizard/mass_editing_wizard.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="__manifest__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/__manifest__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ct_base_import_export</find>
+      <find>ct_base_single_login</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>base_import_export</replace>
+      <replace>base_single_login</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/edit_being/qyaddons/base_import_export</dir>
+      <dir>$PROJECT_DIR$/edit_being/qyaddons/base_single_login</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/ct_base_import_export/__openerp__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/base_import_export/static/src/js/ct_base_import_export.js" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/ct_base_single_login/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/base_single_login/single_login.xml" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/change_tree_view/__openerp__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay/demo/payment_acquirer_data.xml" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/ct_clear_data/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/base_error_rewrite/controllers/controllers.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/contacts_baidu_map/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/ct_event_baidu_map/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/marketing_message/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/ct_marketing_voice/__manifest__.py" />
+        <option value="$PROJECT_DIR$/edit_being/qyaddons/ct_mass_editing/__manifest__.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="293" />
+    <option name="y" value="53" />
+    <option name="width" value="1380" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="odoo_erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="odoo_erp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="odoo_erp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="odoo_erp" type="462c0819:PsiDirectoryNode" />
+              <item name="edit_being" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1a14ee0-ab75-49be-83f9-c10d5b53d6c3" name="Default" comment="" />
+      <created>1520586706875</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1520586706875</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22028354" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2562396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_import_export/views/webclient_templates.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_import_export/static/description/icon.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_import_export/security/data_impexp_security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_import_export/__openerp__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_single_login/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_single_login/single_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_single_login/constroller/web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_single_login/static/description/icon.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/change_tree_view/__openerp__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/crm_project_issue/__manifest__.py" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_single_login/static/js/single_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_calendar/__manifest__.py" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/demo/payment_acquirer_data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/pos_payment_chanpay/static/description/icon.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/website_payment_chanpay/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/__manifest__.py" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_chanpay_website/demo/payment_acquirer_data.xml" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_china_city/__manifest__.py" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/static/description/clear_data_00.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/static/description/clear_data_01.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/static/description/clear_data_02.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/static/description/clear_data_04.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/static/description/icon.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/static/description/index.html" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_clear_data/views/views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_cross_registr/__manifest__.py" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_dashboard/__manifest__.py" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_error_rewrite/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_error_rewrite/static/description/icon.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_error_rewrite/controllers/controllers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="66" column="53" lean-forward="false" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/contacts_baidu_map/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/contacts_baidu_map/models/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/controllers/controllers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/demo/demo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/base_fitlter_fidels/models/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_fitlter_fidels/static/description/icon.png" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/event_baidu_map/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_hr_contract_archive/__manifest__.py" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_hr_contract_archive/models/contract.py" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/website_im_livechat/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/ct_legal_page/__manifest__.py" />
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/marketing_message/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/mail_server_smtp/ir_mail_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/static/description/mass_editing-4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/static/description/mass_editing-2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/cmass_editing/static/description/mass_editing-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_being/qyaddons/marketing_voice/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -22,7 +22,7 @@
         By using this module you can changes the fields of the current view by adding or removing fields from the tree using the jlist.
         * Also you can using this module for reporting.
     """,
-    'website': 'http://qitongyun.com/',
+    'website': '',
     'category': 'web',
     'sequence': 17,
     'data': [
