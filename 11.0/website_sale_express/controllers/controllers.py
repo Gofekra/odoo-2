@@ -5,6 +5,7 @@ from odoo.exceptions import AccessError
 from odoo.http import request
 from odoo.tools import consteq
 from werkzeug.utils import redirect
+import datetime
 from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager, get_records_pager
 
 
@@ -145,6 +146,7 @@ class WebsiteSaleExpress(CustomerPortal):
             for res in res:
                 if res.state == 'done':
                     res.state = 'refunding'
+                    res.return_date = datetime.datetime.now()
             res_order = request.env['sale.order'].sudo().browse(id)
             if res_order.state == 'done':
                 res_order.after_done_state = '2'
@@ -162,6 +164,7 @@ class WebsiteSaleExpress(CustomerPortal):
                 [('sale_id', '=', id), ('picking_type_code', '=', 'outgoing')])
             for stock in stock:
                 stock.after_done_state = 'refunding'
+                stock.return_date = datetime.datetime.now()
 
         return redirect('/my/orders')
 
@@ -173,10 +176,12 @@ class WebsiteSaleExpress(CustomerPortal):
                 [('sale_id', '=', id), ('picking_type_code', '=', 'outgoing')])
             for stock in stock:
                 stock.after_done_state = 'refunding'
+                stock.return_date = datetime.datetime.now()
             res = request.env['payment.transaction'].sudo().search([('sale_order_id', '=', id)])
             for res in res:
                 if res.state == 'done':
                     res.state = 'refunding'
+                    res.return_date = datetime.datetime.now()
             res_order = request.env['sale.order'].sudo().browse(id)
             if res_order.state == 'done':
                 res_order.after_done_state = '3'

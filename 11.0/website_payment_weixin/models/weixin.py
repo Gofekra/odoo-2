@@ -11,13 +11,16 @@ import urllib
 from lxml import etree
 import random
 import string, datetime, time
-from odoo.tools.float_utils import float_compare
 from . import util
 from odoo.addons.payment.models.payment_acquirer import ValidationError
 from odoo.http import request
 from odoo import api, fields, models
 
 _logger = logging.getLogger(__name__)
+
+
+def random_generator(size=32, chars=string.ascii_uppercase + string.digits):
+    return ''.join([random.choice(chars) for n in range(size)])
 
 
 class AcquirerWeixin(models.Model):
@@ -77,9 +80,6 @@ class AcquirerWeixin(models.Model):
         res.close()
         return result
 
-    def random_generator(self, size=32, chars=string.ascii_uppercase + string.digits):
-        return ''.join([random.choice(chars) for n in range(size)])
-
     def get_wx_appid(self):
 
         return self.wx_appid,
@@ -89,7 +89,7 @@ class AcquirerWeixin(models.Model):
         self.ensure_one()
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         amount = int(tx_values.get('amount', 0) * 100)
-        nonce_str = self.random_generator()
+        nonce_str = random_generator()
         data_post = {}
         now_time = time.strftime('%Y%m%d%H%M%S')
         data_post.update(
@@ -110,10 +110,6 @@ class AcquirerWeixin(models.Model):
         _, prestr = util.params_filter(data_post)
         sign = util.build_mysign(prestr, self.weixin_key, 'MD5')
         data_post['sign'] = sign
-        payid = self.env['payment.transaction'].search(
-            [('create_uid', '=', self.env.uid), ('state', '=', 'draft'), ('acquirer_id', '=', self.id)])
-        for payid in payid:
-            payid.acquirer_reference = data_post['out_trade_no']
 
         # data_xml = "<xml>" + self.json2xml(data_post) + "</xml>"
         # url = self._get_weixin_urls(self.environment)['weixin_url']
@@ -189,8 +185,8 @@ class TxWeixin(models.Model):
     def _weixin_form_validate(self, data):
         status = data.get('trade_state')
         data = {
-            # 'acquirer_reference': data.get('out_trade_no'),
-            'weixin_txn_id': data.get('out_trade_no'),
+            'acquirer_reference': data.get('transaction_id'),
+            'weixin_txn_id': data.get('transaction_id'),
             'weixin_txn_type': data.get('fee_type'),
         }
 
@@ -210,4 +206,35 @@ class TxWeixin(models.Model):
         # ==================
         # 确认退款操作
         # ==================
-        super(TxWeixin, self).action_returns_commit()
+        data = {
+            'appid', self.acquirer_id.appid,
+            'mch_id', self.acquirer_id.mch_id,
+            'nonce_str', random_generator(),
+            'out_refund_no', self.reference,
+            'refund_fee', int(self.amount * 100),
+            'total_fee', int(self.amount * 100),
+            'transaction_id', self.acquirer_reference,
+
+        }
+        _, prestr = util.params_filter(data)
+        sign = util.build_mysign(prestr, self.acquirer_id.weixin_key, 'MD5')
+        data.update({'sign': sign})
+
+        data_xml = "<xml>" + self.json2xml(data) + "</xml>"
+        url = 'https://api.mch.weixin.qq.com/secapi/pay/refund'
+        # print(data_xml)
+        request_data = urllib.request.Request(url, data_xml.encode(encoding='utf-8'))
+        result = urllib.request.urlopen(request_data).read()
+        return_xml = etree.fromstring(result)
+        if return_xml.find('return_code').text == "SUCCESS" and return_xml.find('sign').text != False:
+            transaction_id = return_xml.find('transaction_id').text
+            out_refund_no = return_xml.find('out_refund_no').text
+            sign = return_xml.find('sign').text
+            res = self.env['payment.transaction'].sudo().search(
+                [('acquirer_reference', '=', transaction_id), ('reference', '=', out_refund_no)])
+            if res:
+                super(TxWeixin, self).action_returns_commit()
+        else:
+            return_code = return_xml.find('return_code').text
+            return_msg = return_xml.find('return_msg').text
+            raise ValidationError("%s, %s" % (return_code, return_msg))

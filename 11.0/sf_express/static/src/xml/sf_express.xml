@@ -2,10 +2,13 @@
 
 
     <div t-name="express_extra_buttons" class="express_extra_buttons">
-        <button type="button" t-if='widget.mode=="stock.picking"'
+
+        <button type="button" t-if='widget.modelName=="stock.picking"'
+                class="btn btn-sm btn-primary sf_express_send">
+            批量发货
+        </button>
+        <button type="button" t-if="widget.modelName=='print.order'"
                 class="btn btn-sm btn-primary sf_express_print">
-            <t t-esc="widget"/>
-            <t t-value="widget"/>
             批量打印
         </button>
     </div>

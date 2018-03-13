@@ -2,9 +2,11 @@
 
 
 import logging
+from . import func
+from odoo.addons.website_payment_alipay.controllers import main
+import json
 from urllib.parse import urljoin
-from odoo.addons.website_payment_alipay.models import func
-
+import urllib
 from odoo import api, fields, models, _
 from odoo.addons.payment.models.payment_acquirer import ValidationError
 from odoo.addons.website_payment_alipay.controllers.main import AlipayController
@@ -53,7 +55,7 @@ class AcquirerAlipay(models.Model):
             }
         else:
             return {
-                'alipay_form_url': 'https://openapi.alipaydev.com/gateway.do?',
+                'alipay_form_url': 'https://openapi.alipay.com/gateway.do?',
             }
 
     @api.multi
@@ -104,7 +106,6 @@ class AcquirerAlipay(models.Model):
         subkey = ['service', 'partner', '_input_charset', 'return_url', 'notify_url', 'out_trade_no', 'subject',
                   'payment_type', 'total_fee', 'seller_id', 'body']
         need_sign = {key: alipay_tx_values[key] for key in subkey}
-        #  params,sign = func.buildRequestMysign(need_sign,open('rsa_private_key.pem','r').read())
         params, sign = func.buildRequestMysign(need_sign, self.alipay_private_key)
         alipay_tx_values.update({
             'sign': sign,
@@ -173,4 +174,34 @@ class TxAlipay(models.Model):
         # ==================
         # 确认退款操作
         # ==================
-        super(TxAlipay, self).action_returns_commit()
+        url = 'https://openapi.alipay.com/gateway.do'
+        data = {
+            'out_trade_no': self.reference,
+            'trade_no': self.acquirer_reference,
+            'refund_amount': self.reference,
+            'refund_reason': '正常退款',
+            'out_trade_no': self.reference,
+            'out_trade_no': self.reference,
+        }
+        request_data = urllib.request.Request(url, data)
+        result = urllib.request.urlopen(request_data).read()
+        json_result = json.dumps(result)
+        refund_response = json_result['alipay_trade_refund_response']
+        if refund_response['msg'] == 'Success':
+            res = {
+                'sign': refund_response['sign'],
+                'trade_no': refund_response['trade_no'],
+                'out_trade_no': refund_response['out_trade_no'],
+                'refund_fee': refund_response['refund_fee'],
+                'gmt_refund_pay': refund_response['gmt_refund_pay'],
+                'sign_type': "RSA",
+            }
+            isSign = main.getSignVeryfy(res)
+
+            res = self.env['payment.transaction'].sudo().search(
+                [('acquirer_reference', '=', refund_response['trade_no']),
+                 ('reference', '=', refund_response['out_trade_no'])])
+            if isSign and res:
+                super(TxAlipay, self).action_returns_commit()
+        else:
+            raise ValidationError("%s, %s" % (refund_response['sub_code'], refund_response['sub_msg']))

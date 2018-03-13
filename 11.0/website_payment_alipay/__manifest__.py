@@ -8,7 +8,7 @@
     'summary': '支付宝支付',
     'version': '1.0',
     'description': """支付宝支付 """,
-    'depends': ['payment','website_payment_return'],
+    'depends': ['payment', 'website_payment_return'],
     'data': [
         'templates/payment_alipay_templates.xml',
         'data/payment_acquirer_data.xml',
