@@ -1,11 +1,8 @@
 odoo.define('sf_express.ListRenderer', function (require) {
     'use strict';
-    var ListView = require('web.ListView');
-    // var BasicController = require('web.BasicController');
-    // var AbstractModel = require('web.AbstractModel');
-    // var BasicRenderer = require('web.BasicRenderer');
-    // var lodop = require('sf_express.lodop');
-
+    var Model = require('web.data');
+    var lodop = require('sf_express.lodop');
+    var ListController = require('web.ListController');
 
     function ReplaceNull(str) {
         if (str == null || str == "null") {
@@ -444,57 +441,45 @@ odoo.define('sf_express.ListRenderer', function (require) {
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
     }
 
-    ListView.include({
-        // init: function () {
-        //     this._super.apply(this, arguments);
-        //     var self = this;
-        //     console.log(self)
-        //     var list_ids = self.recordID;
-        //     console.log(list_ids)
-        // },
-
-        _renderButton: function (record, node) {
-            console.log("111")
+    ListController.include({
+        renderButtons: function ($node) {
             this._super.apply(this, arguments);
             var self = this;
-            console.log(self)
-            //批量发货操作
-            // if (self.modelName === 'stock.picking') {
-            //     this.$buttons.on('click', 'button.sf_express_send', function () {
-            //         var list_ids = self.recordID;
-            //         console.log(list_ids)
-            //         self.do_action({
-            //             'title': '批量发货',
-            //             'type': 'ir.actions.act_window',
-            //             'res_model': 'send.express.order',
-            //             'views': [[false, 'form']],
-            //             'view_mode': 'form',
-            //             'target': 'new',
-            //             'context': {'default_express_order_id': list_ids}
-            //         });
-            //     });
-            // }
+            // 批量发货操作
+            if (self.modelName === 'stock.picking') {
+                this.$buttons.on('click', 'button.sf_express_send', function () {
+                    var list_ids = self.getSelectedIds()
+                    self.do_action({
+                        'title': '批量发货',
+                        'type': 'ir.actions.act_window',
+                        'res_model': 'send.express.order',
+                        'views': [[false, 'form']],
+                        'view_mode': 'form',
+                        'target': 'new',
+                        'context': {'default_picking_id': list_ids}
+                    });
+                });
+            }
 
             //批量打印操作
-            // if (self.modelName === 'print.order') {
-            //     var model = new Model("print.order");
-            //     this.$buttons.on('click', 'button.sf_express_print', function () {
-            //         return lodop.loadRequiredJS().always(function () {
-            //             // 如果loadjs成功，初始化LODOP
-            //             // 失败，getLodop将会提供下载链接
-            //             window.LODOP = lodop.getLodop();
-            //         }).then(function () {
-            //             var list_ids = self.groups.get_selection().ids;
-            //             if (!list_ids.length) return;
-            //             if (window.LODOP) {
-            //                 model.call("get_json_data", [list_ids]).then(function (res_data) {
-            //                     BatchPrint(res_data);
-            //                     model.call("print_done", [list_ids]);
-            //                 });
-            //             }
-            //         });
-            //     });
-            // }
+            if (self.modelName === 'print.order') {
+                this.$buttons.on('click', 'button.sf_express_print', function () {
+                    return lodop.loadRequiredJS().always(function () {
+                        // 如果loadjs成功，初始化LODOP
+                        // 失败，getLodop将会提供下载链接
+                        window.LODOP = lodop.getLodop();
+                    }).then(function () {
+                        var list_ids = self.getSelectedIds()
+                        if (!list_ids.length) return;
+                        if (window.LODOP) {
+                            self.model.call("get_json_data", [list_ids]).then(function (res_data) {
+                                BatchPrint(res_data);
+                                model.call("print_done", [list_ids]);
+                            });
+                        }
+                    });
+                });
+            }
         }
     })
     ;
